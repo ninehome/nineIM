@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:orientation="vertical"
+            app:elevation="0dp">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentScrim="@color/transparent"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <!--<<< 折叠区 >>>-->
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+            <!--<<< 悬浮区 >>>-->
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!--<<< 内容区 >>>-->
+        <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

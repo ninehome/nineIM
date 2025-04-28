@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--<item >
+        <shape android:shape="rectangle">
+            <padding
+                android:left="@dimen/dp_xu_all"
+                android:right="@dimen/dp_xu_all"
+                android:bottom="@dimen/dp_xu_all" />
+            <solid android:color="#10CCCCCC" />
+            <corners android:bottomLeftRadius="@dimen/dp_8" android:bottomRightRadius="@dimen/dp_8" />
+        </shape>
+    </item>
+    <item >
+        <shape android:shape="rectangle">
+            <padding
+                android:left="@dimen/dp_xu_all"
+                android:right="@dimen/dp_xu_all"
+                android:bottom="@dimen/dp_xu_all" />
+            <solid android:color="#20CCCCCC" />
+            <corners android:bottomLeftRadius="@dimen/dp_8" android:bottomRightRadius="@dimen/dp_8" />
+        </shape>
+    </item>-->
+
+    <item >
+        <shape android:shape="rectangle">
+            <padding
+                android:left="@dimen/dp_xu_all"
+                android:right="@dimen/dp_xu_all"
+                android:bottom="@dimen/dp_xu_all" />
+            <solid android:color="@color/gray_e9e9e9" />
+            <corners android:bottomLeftRadius="@dimen/dp_8" android:bottomRightRadius="@dimen/dp_8" />
+        </shape>
+    </item>
+    <!--<item >
+        <shape android:shape="rectangle">
+            <corners android:bottomLeftRadius="@dimen/dp_8" android:bottomRightRadius="@dimen/dp_8" />
+            <padding android:left="2dp"
+                android:right="2dp"
+                android:top="2dp"
+                android:bottom="2dp"
+                />
+        </shape>
+    </item>-->
+    <item>
+        <ripple android:color="@color/gray_e9e9e9">
+            <item >
+                <shape android:shape="rectangle">
+                    <corners android:bottomLeftRadius="8dp" android:bottomRightRadius="8dp" />
+                    <solid android:color="@color/white"/>
+                </shape>
+            </item>
+        </ripple>
+    </item>
+</layer-list>

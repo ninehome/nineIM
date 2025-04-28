@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation" >
+    <string name="mark_unread">đánh dấu chưa đọc </string>
+    <string name="tag_member">nhãn thành viên </string>
+    <string name="tag_member0">nhãn thành viên(0) </string>
+    <string name="edit_tag">thiết lập nhãn </string>
+    <string name="create_tag">tạo nhãn mới </string>
+    <string name="finish">hoàn thành </string>
+
+    <string name="select_all">chọn toàn bộ </string>
+
+    <string name="room_count_place_holder">số lượng nhóm chat (%d)</string>
+
+    <string name="pass_invite">xác nhận lời mời </string>
+    <string name="tip_invite_count_place_holder">mời người bạn này vào nhóm chat </string>
+    <string name="wanna_in">mời gia nhập nhóm </string>
+    <string name="has_confirm">đã xác nhận </string>
+
+    <string name="chat_loc">vị trí </string>
+
+    <string name="tip_auto_location_failed">tự động định vị thất bại ，</string>
+    <string name="tip_places_around_failed">lấy địa chỉ xung quanh thất bại ，</string>
+    <string name="location">địa chỉ hiện tại </string>
+</resources>

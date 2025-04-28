@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_bg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="29dp"
+            android:background="@drawable/tio_app_update_bg"
+            android:contentDescription="@string/empty"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_aircraft" />
+
+        <ImageView
+            android:id="@+id/iv_aircraft"
+            android:layout_width="199dp"
+            android:layout_height="165dp"
+            android:background="@drawable/tio_app_update_aircraft"
+            android:contentDescription="@string/empty"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="145dp"
+            android:layout_marginRight="20dp"
+            android:text="发现新版本v2.1.0"
+            android:textColor="#333333"
+            android:textSize="17sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginTop="15dp"
+            android:lineSpacingMultiplier="1.2"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:scrollbarSize="1dp"
+            android:scrollbars="vertical"
+            android:text="@string/test_update_content"
+            android:textColor="#666666"
+            android:textSize="15sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+        <com.watayouxiang.appupdate.view.NumberProgressBar
+            android:id="@+id/nbpProgress"
+            style="@style/NumberProgressBar_Default"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="20dp"
+            android:visibility="visible"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvContent"
+            app:progress_current="0"
+            app:progress_max="100"
+            app:progress_reached_bar_height="4dp"
+            app:progress_reached_color="#4F97EF"
+            app:progress_text_color="#3498DB"
+            app:progress_text_offset="1dp"
+            app:progress_text_size="10sp"
+            app:progress_text_visibility="visible"
+            app:progress_unreached_bar_height="4dp"
+            app:progress_unreached_color="#CCCCCC" />
+
+        <TextView
+            android:id="@+id/btnUpdateLater"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/tio_sel_btn_cancel"
+            android:gravity="center"
+            android:text="暂不更新"
+            android:textColor="#333333"
+            android:textSize="17sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@id/btnUpdateNow"
+            app:layout_constraintEnd_toStartOf="@id/btnUpdateNow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btnUpdateNow" />
+
+        <TextView
+            android:id="@+id/btnUpdateNow"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/tio_sel_btn_confirm"
+            android:gravity="center"
+            android:text="立即更新"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnUpdateLater"
+            app:layout_constraintTop_toBottomOf="@id/nbpProgress"
+            app:layout_goneMarginLeft="0dp"
+            app:layout_goneMarginStart="20dp"
+            app:layout_goneMarginTop="26dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

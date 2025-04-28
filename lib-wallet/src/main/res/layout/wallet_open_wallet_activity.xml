@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.text.TextUtils" />
+
+        <variable
+            name="view"
+            type="com.watayouxiang.wallet.feature.open.OpenWalletActivity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/statusBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.watayouxiang.androidutils.widget.WtTitleBar
+            android:id="@+id/titleBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/statusBar"
+            app:tb_isLightMode="true"
+            app:tb_tvTitle_text="" />
+
+        <TextView
+            android:id="@+id/tv_explain_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="@string/qianbaozhanghukaitong"
+            android:textColor="@color/gray_333333"
+            android:textSize="@dimen/sp_20"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleBar" />
+
+        <TextView
+            android:id="@+id/tv_explain_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_19"
+            android:layout_marginRight="@dimen/dp_15"
+            android:lineSpacingExtra="3dp"
+            android:text="@string/wallet_open_content"
+            android:textColor="@color/gray_333333"
+            android:textSize="@dimen/sp_16"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_explain_title" />
+
+        <!--姓名-->
+        <LinearLayout
+            android:id="@+id/ll_userName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_50"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_explain_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_explain_content">
+
+            <TextView
+                android:id="@+id/tv_userName"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                android:textColor="#666666"
+                android:textSize="@dimen/sp_13" />
+
+            <EditText
+                android:id="@+id/et_userName"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/wallet_open_et_bg"
+                android:hint="@string/shurubenrenxingming"
+                android:inputType="text"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="@={view.userName}"
+                android:textColor="@color/gray_333333"
+                android:textColorHint="#9C9C9C"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!--身份证号-->
+        <LinearLayout
+            android:id="@+id/ll_userId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="@id/ll_userName"
+            app:layout_constraintStart_toStartOf="@id/ll_userName"
+            app:layout_constraintTop_toBottomOf="@id/ll_userName">
+
+            <TextView
+                android:id="@+id/tv_userId"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:text="@string/shenfenhzenghao"
+                android:textColor="#666666"
+                android:textSize="@dimen/sp_13" />
+
+            <EditText
+                android:id="@+id/et_userId"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/wallet_open_et_bg"
+                android:hint="@string/shurushenfenhzenghao"
+                android:inputType="text"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="@={view.userId}"
+                android:textColor="@color/gray_333333"
+                android:textColorHint="#9C9C9C"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!--手机号-->
+        <LinearLayout
+            android:id="@+id/ll_userPhone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="@id/ll_userId"
+            app:layout_constraintStart_toStartOf="@id/ll_userId"
+            app:layout_constraintTop_toBottomOf="@id/ll_userId">
+
+            <TextView
+                android:id="@+id/tv_userPhone"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:text="@string/benrenshoujihao"
+                android:textColor="#666666"
+                android:textSize="@dimen/sp_13" />
+
+            <EditText
+                android:id="@+id/et_userPhone"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/wallet_open_et_bg"
+                android:hint="@string/shurubenrenshoujihao"
+                android:inputType="phone"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="@={view.userPhone}"
+                android:textColor="@color/gray_333333"
+                android:textColorHint="#9C9C9C"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="@dimen/dp_15"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_userPhone">
+
+            <TextView
+                android:id="@+id/tv_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/wallet_sel_checkbox"
+                android:gravity="center"
+                android:onClick="@{view.clickCheckBox}"
+                android:text="@string/yiyuedutongyi"
+                android:textColor="@color/gray_666666"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_user_service_protocol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{view.clickServiceProtocol}"
+                android:text="@string/zhifuyonghufuwu"
+                android:textColor="@color/blue_4c94ff"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_pay_private_policy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{view.clickPrivateProtocol}"
+                android:text="@string/zhifuyinsi"
+                android:textColor="@color/blue_4c94ff"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_agree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:alpha="@{TextUtils.isEmpty(view.userName) || TextUtils.isEmpty(view.userId) || TextUtils.isEmpty(view.userPhone) || !view.isCheckbox? 0.3f : 1f}"
+            android:background="@drawable/wallet_btn_bg_blue"
+            android:enabled="@{!(TextUtils.isEmpty(view.userName) || TextUtils.isEmpty(view.userId) || TextUtils.isEmpty(view.userPhone) || !view.isCheckbox)}"
+            android:gravity="center"
+            android:onClick="@{view.clickAgreeBtn}"
+            android:text="@string/tongyishouquan"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

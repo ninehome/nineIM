@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation" >
+    <string name="mark_unread">标为未读</string>
+    <string name="tag_member">标签成员</string>
+    <string name="tag_member0">标签成员(0)</string>
+    <string name="edit_tag">设置标签</string>
+    <string name="create_tag">新建标签</string>
+    <string name="finish">完成</string>
+
+    <string name="select_all">全选</string>
+
+    <string name="room_count_place_holder">群聊数量(%d)</string>
+
+    <string name="pass_invite">确认邀请</string>
+    <string name="tip_invite_count_place_holder">邀请%d位朋友加入群聊</string>
+    <string name="wanna_in">申请加入群组</string>
+    <string name="has_confirm">已确认</string>
+
+    <string name="chat_loc">位置</string>
+
+    <string name="tip_auto_location_failed">自动定位失败，</string>
+    <string name="tip_places_around_failed">获取周边地址失败，</string>
+    <string name="location">所在位置</string>
+
+
+
+
+
+
+
+
+</resources>

@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.text.TextUtils" />
+
+        <variable
+            name="data"
+            type="com.tiocloud.account.feature.retrieve_pwd.InputPhoneFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--状态栏-->
+        <FrameLayout
+            android:id="@+id/statusBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--顶部底图-->
+        <!--<ImageView
+            android:id="@+id/iv_top_bg"
+            android:layout_width="match_parent"
+            android:layout_height="104dp"
+            android:background="@drawable/account_page_top_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:visibility="invisible"
+            app:layout_constraintTop_toBottomOf="@id/statusBar" />-->
+
+        <!--logo-->
+<!--        <TextView
+            android:id="@+id/tv_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="43dp"
+            android:drawableTop="@drawable/account_ic_logo"
+            android:drawablePadding="16dp"
+            android:gravity="center_horizontal"
+            android:text="@string/app_name"
+            android:textColor="#666666"
+            android:textSize="22sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />-->
+
+        <!--标题栏-->
+<!--
+        <com.watayouxiang.androidutils.widget.WtTitleBar
+            android:id="@+id/titleBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/statusBar"
+            app:tb_background="@color/transparent"
+            app:tb_tvTitle_text="返回" />
+-->
+
+        <!--标题-->
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="@dimen/account_top_height"
+            android:text="@string/find_pwd"
+            android:textColor="#333333"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--手机号-->
+        <com.watayouxiang.androidutils.widget.TioShadowLayout
+            android:id="@+id/ll_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="36dp"
+            android:layout_marginRight="36dp"
+            android:layout_marginTop="74dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv1">
+
+            <com.watayouxiang.androidutils.widget.edittext.TioEditText
+                android:id="@+id/et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:background="@drawable/edit_bg"
+                android:drawableLeft="@drawable/icon_mobilephone"
+                android:drawablePadding="4dp"
+                android:gravity="center_vertical"
+                app:tet_clearIconEnable="true"
+                android:hint="@string/hint_input_phone"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:text="@={data.txt_phone}"
+                android:textColor="#333333"
+                android:textColorHint="#D5D5D5"
+                android:textSize="16sp" />
+        </com.watayouxiang.androidutils.widget.TioShadowLayout>
+
+        <com.watayouxiang.androidutils.widget.TioShadowLayout
+            android:id="@+id/ll_sms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="36dp"
+            android:layout_marginRight="36dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_phone">
+
+            <com.watayouxiang.androidutils.widget.edittext.TioEditText
+                android:id="@+id/et_sms"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:background="@drawable/edit_bg"
+                android:drawableLeft="@drawable/icon_vertification"
+                android:drawablePadding="4dp"
+                android:gravity="center_vertical"
+                android:hint="@string/short_code"
+                android:imeOptions="actionDone"
+                android:inputType="phone"
+                android:singleLine="true"
+                android:textColor="#333333"
+                android:textColorHint="#D5D5D5"
+                android:textSize="16sp" />
+        </com.watayouxiang.androidutils.widget.TioShadowLayout>
+
+        <com.watayouxiang.androidutils.widget.TioShadowLayout
+            android:id="@+id/ll_pwd1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="36dp"
+            android:layout_marginRight="36dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_sms">
+
+            <com.watayouxiang.androidutils.widget.edittext.TioEditText
+                android:id="@+id/et_pwd1"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:background="@drawable/edit_bg"
+                android:drawableLeft="@drawable/icon_password"
+                android:drawablePadding="4dp"
+                android:gravity="center_vertical"
+                android:hint="@string/input_six_pwd"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColor="#333333"
+                android:textColorHint="#D5D5D5"
+                android:textSize="16sp" />
+        </com.watayouxiang.androidutils.widget.TioShadowLayout>
+
+        <com.watayouxiang.androidutils.widget.TioShadowLayout
+            android:id="@+id/ll_pwd2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="36dp"
+            android:layout_marginRight="36dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_pwd1">
+
+            <com.watayouxiang.androidutils.widget.edittext.TioEditText
+                android:id="@+id/et_pwd2"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:background="@drawable/edit_bg"
+                android:drawableLeft="@drawable/icon_password"
+                android:drawablePadding="4dp"
+                android:gravity="center_vertical"
+                android:hint="@string/confirm_new_pwd"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColor="#333333"
+                android:textColorHint="#D5D5D5"
+                android:textSize="16sp" />
+        </com.watayouxiang.androidutils.widget.TioShadowLayout>
+
+        <!--注册-->
+        <com.watayouxiang.androidutils.widget.TioShadowLayout
+            android:id="@+id/ll_ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="36dp"
+            android:layout_marginRight="36dp"
+            android:layout_marginTop="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_pwd2">
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:enabled="@{!TextUtils.isEmpty(data.txt_phone)}"
+                android:gravity="center"
+                android:onClick="@{data.onClick_ok}"
+                android:text="@string/confirm"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:qmui_backgroundColor="@color/account_sel_ok_bg_color"
+                app:qmui_borderColor="@color/transparent"
+                app:qmui_borderWidth="0px"
+                app:qmui_radius="24dp" />
+        </com.watayouxiang.androidutils.widget.TioShadowLayout>
+
+        <com.qmuiteam.qmui.alpha.QMUIAlphaImageButton
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_close_black"
+            android:layout_marginTop="@dimen/dp_36"
+            android:layout_marginLeft="@dimen/dp_36"
+            android:background="@null"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+        <!--<com.qmuiteam.qmui.alpha.QMUIAlphaImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_close_gray"
+            app:layout_constraintBottom_toBottomOf="@id/ll_phone"
+            android:background="@null"
+            app:layout_constraintEnd_toEndOf="@id/ll_phone"
+            android:layout_marginBottom="@dimen/dp_10"
+            />-->
+
+        <com.qmuiteam.qmui.alpha.QMUIAlphaTextView
+            android:id="@+id/tv_get_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/ll_sms"
+            app:layout_constraintEnd_toEndOf="@id/ll_sms"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:text="@string/get_code"
+            android:textColor="@color/theme_color"
+            />
+        <com.qmuiteam.qmui.alpha.QMUIAlphaTextView
+            android:id="@+id/tv_seconds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/ll_sms"
+            app:layout_constraintEnd_toEndOf="@id/ll_sms"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:text="已发送(59)"
+            android:visibility="gone"
+            android:textColor="@color/gray_aaaaaa"
+            />
+        <!--<CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/ll_pwd1"
+            android:checked="false"
+            app:layout_constraintBottom_toBottomOf="@id/ll_pwd1"
+            android:button="@drawable/select_pwd_eye"
+            android:layout_marginBottom="@dimen/dp_10"
+            />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/ll_pwd2"
+            android:checked="false"
+            app:layout_constraintBottom_toBottomOf="@id/ll_pwd2"
+            android:button="@drawable/select_pwd_eye"
+            android:layout_marginBottom="@dimen/dp_10"
+            />-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

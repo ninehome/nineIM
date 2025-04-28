@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/gray_f4f5f6"
+    android:orientation="vertical">
+
+    <com.watayouxiang.androidutils.widget.WtTitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tb_isLightMode="true"
+        app:tb_background="@color/gray_f4f5f6"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl_account_safe"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56"
+        android:background="@drawable/ripple_corner_non">
+
+        <TextView
+            android:id="@+id/tv_account_safe"
+            style="@style/AccountTitle"
+            android:textStyle="bold"
+            android:text="@string/account_safe" />
+
+
+        <ImageView
+            android:id="@+id/iv_account_safe_arrow"
+            style="@style/AccountForward"
+            android:src="@drawable/arrow_right" />
+
+    </RelativeLayout>
+
+    <View
+       android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/gray_f4f5f6"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl_language_switch"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56"
+        android:background="@drawable/ripple_corner_non">
+
+        <TextView
+            android:id="@+id/tv_language_switch"
+            style="@style/AccountTitle"
+            android:textStyle="bold"
+            android:text="@string/language_switch" />
+
+
+        <ImageView
+            android:id="@+id/iv_language_switch_arrow"
+            style="@style/AccountForward"
+            android:src="@drawable/arrow_right" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_e9e9e9"
+            android:layout_marginLeft="15dp"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_disturb"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56"
+        android:background="@drawable/ripple_corner_non">
+
+        <TextView
+            android:id="@+id/tv_disturb"
+            style="@style/AccountTitle"
+            android:textStyle="bold"
+            android:text="@string/no_disturb" />
+
+
+        <ImageView
+            android:id="@+id/iv_disturb_arrow"
+            style="@style/AccountForward"
+            android:src="@drawable/arrow_right" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_e9e9e9"
+            android:layout_marginLeft="15dp"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_privacy"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56"
+        android:background="@drawable/ripple_corner_non">
+
+        <TextView
+            android:id="@+id/tv_privacy"
+            style="@style/AccountTitle"
+            android:textStyle="bold"
+            android:text="@string/privacy" />
+
+
+        <ImageView
+            android:id="@+id/iv_privacy_arrow"
+            style="@style/AccountForward"
+            android:src="@drawable/arrow_right" />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/gray_f4f5f6"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl_about"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56"
+        android:background="@drawable/ripple_corner_non">
+
+        <TextView
+            android:id="@+id/tv_about"
+            style="@style/AccountTitle"
+            android:textStyle="bold"
+            android:text="@string/about_us" />
+
+
+        <ImageView
+            android:id="@+id/iv_about_arrow"
+            style="@style/AccountForward"
+            android:src="@drawable/arrow_right" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_e9e9e9"
+            android:layout_marginLeft="15dp"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_clear_cache"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56"
+        android:background="@drawable/ripple_corner_non">
+
+        <TextView
+            android:id="@+id/tv_clear_cache"
+            style="@style/AccountTitle"
+            android:textStyle="bold"
+            android:text="@string/clear_cache" />
+
+
+        <ImageView
+            android:id="@+id/iv_clear_cache_arrow"
+            style="@style/AccountForward"
+            android:src="@drawable/arrow_right" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/gray_f4f5f6"
+        />
+
+    <TextView
+        android:id="@+id/tv_login_exit"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:textStyle="bold"
+        android:text="@string/exit_login"
+        android:gravity="center"
+        android:textColor="@color/gray_333333"
+        android:background="@color/white"
+        android:textSize="@dimen/sp_16"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+        <!--加我好友时需要验证-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_56"
+            >
+
+            <TextView
+                android:id="@+id/tv_verifyAddFriend"
+                style="@style/AccountTitle"
+                android:textStyle="bold"
+                android:text="加我好友时需要验证" />
+
+            <CheckBox
+                android:id="@+id/switch_verifyAddFriend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:button="@drawable/btn_switch"
+                android:layout_marginRight="@dimen/dp_15"
+                android:checked="false" />
+
+            <View
+                style="@style/AccountLine"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <!--允许别人搜索到我-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_56"
+            >
+
+            <TextView
+                android:id="@+id/tv_searchMeAuth"
+                style="@style/AccountTitle"
+                android:textStyle="bold"
+                android:text="允许别人搜索到我" />
+
+            <CheckBox
+                android:id="@+id/switch_searchMeAuth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:button="@drawable/btn_switch"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_15"
+                android:checked="false" />
+
+            <View
+                style="@style/AccountLine"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <!--消息提醒开关-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_56"
+            >
+
+            <TextView
+                android:id="@+id/tv_msgRemind"
+                style="@style/AccountTitle"
+                android:textStyle="bold"
+                android:text="消息提醒" />
+
+            <CheckBox
+                android:id="@+id/switch_msgRemind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_15"
+                android:button="@drawable/btn_switch"
+                android:checked="false" />
+
+            <View
+                style="@style/AccountLine"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_notice"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_56"
+            >
+
+            <TextView
+                android:id="@+id/tv_msgNotice"
+                style="@style/AccountTitle"
+                android:textStyle="bold"
+                android:text="消息通知" />
+
+            <CheckBox
+                android:id="@+id/switch_msgNotice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_15"
+                android:button="@drawable/btn_switch"
+                android:checked="false" />
+
+            <View
+                style="@style/AccountLine"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <!--清除历史消息-->
+        <RelativeLayout
+            android:id="@+id/rl_clearHistoryMsg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_56"
+            android:background="@color/white"
+            android:foreground="?attr/selectableItemBackground"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_clearHistoryMsg_title"
+                style="@style/AccountTitle"
+                android:text="清除历史消息" />
+
+            <TextView
+                android:id="@+id/tv_clearHistoryMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_4"
+                android:layout_toLeftOf="@id/iv_clearHistoryMsg_arrow"
+                android:layout_toRightOf="@id/tv_clearHistoryMsg_title"
+                android:gravity="end"
+                android:singleLine="true"
+                android:textColor="@color/gray_9c9c9c"
+                android:textSize="@dimen/sp_14" />
+
+            <ImageView
+                android:id="@+id/iv_clearHistoryMsg_arrow"
+                style="@style/AccountForward"
+                android:src="@drawable/btn_forward_9c9c9c" />
+
+            <View
+                style="@style/AccountLine"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <!--当前版本-->
+        <RelativeLayout
+            android:id="@+id/rl_version"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_56"
+            android:background="@drawable/ripple_corner_non">
+
+            <TextView
+                android:id="@+id/tv_version_title"
+                style="@style/AccountTitle"
+                android:textStyle="bold"
+                android:text="@string/curr_version" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_4"
+                android:layout_toLeftOf="@id/iv_version_arrow"
+                android:layout_toRightOf="@id/tv_version_title">
+
+                <TextView
+                    android:id="@+id/tv_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:singleLine="true"
+                    android:textColor="@color/gray_9c9c9c"
+                    android:textSize="@dimen/sp_14" />
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/iv_version_arrow"
+                style="@style/AccountForward"
+                android:src="@drawable/arrow_right" />
+
+            <View
+                style="@style/AccountLine"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <!--当前版本-->
+        <RelativeLayout
+            android:id="@+id/rl_group_send"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_56"
+            android:visibility="gone"
+            android:background="@drawable/ripple_corner_bottom">
+
+            <TextView
+                android:id="@+id/tv_group_send_title"
+                style="@style/AccountTitle"
+                android:textStyle="bold"
+                android:text="群发消息" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_4"
+                android:layout_toLeftOf="@id/iv_group_send_arrow"
+                android:layout_toRightOf="@id/tv_group_send_title">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:text=""
+                    android:singleLine="true"
+                    android:textColor="@color/gray_9c9c9c"
+                    android:textSize="@dimen/sp_14" />
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/iv_group_send_arrow"
+                style="@style/AccountForward"
+                android:src="@drawable/arrow_right" />
+
+        </RelativeLayout>
+        <!--退出登录-->
+        <TextView
+            android:id="@+id/tv_logoutBtn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_56"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginRight="@dimen/dp15"
+            android:background="@drawable/selector_round_white_bg2"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="@string/logout"
+            android:textColor="#FFFF4D4D"
+            android:textSize="@dimen/sp_16" />
+    </LinearLayout>
+
+
+</LinearLayout>

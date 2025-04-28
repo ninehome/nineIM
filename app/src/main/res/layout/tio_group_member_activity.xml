@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--标题栏-->
+    <com.watayouxiang.androidutils.widget.WtTitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tb_background="@color/grayf4f5f6"
+        app:tb_tvTitle_text="@string/group_member" />
+
+    <!--搜索区域-->
+
+    <!--群成员列表-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grayf4f5f6"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/frameLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleBar">
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/grayf4f5f6"
+        android:layout_height="wrap_content">
+        <com.watayouxiang.androidutils.widget.edittext.TioEditText
+            android:id="@+id/et_input"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:background="@drawable/tio_search_view_bg"
+            android:drawableLeft="@drawable/ic_search_find"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:hint="@string/search"
+            android:paddingLeft="@dimen/dp_12"
+            android:paddingRight="@dimen/dp_12"
+            android:textColor="@color/gray_333333"
+            android:textColorHint="@color/gray_999999"
+            android:textSize="@dimen/sp_16"
+            app:tet_clearIconEnable="true"
+            app:tet_leftDrawable="@drawable/ic_search_find" />
+    </RelativeLayout>
+
+
+
+    <com.tiocloud.chat.widget.TioRefreshView
+        android:id="@+id/refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_memberList"
+            android:background="@color/grayf4f5f6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.tiocloud.chat.widget.TioRefreshView>
+
+</LinearLayout>

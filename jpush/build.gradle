@@ -1,0 +1,68 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 29
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0.0"
+
+        manifestPlaceholders = [
+                JPUSH_APPKEY : "xxx",
+                JPUSH_CHANNEL: "xxx",
+                XIAOMI_APPID:"MI-xxx",
+                XIAOMI_APPKEY:"MI-xxx",
+                OPPO_APPKEY:"OP-xxx",
+                OPPO_APPID:"OP-xxx",
+                OPPO_APPSECRET:"OP-xxx",
+                VIVO_APPKEY:"xxx",
+                VIVO_APPID:"xxx"
+        ]
+
+        resConfigs "en", "zh-rCN"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    android.libraryVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "${project.name}-${defaultConfig.versionName}-${buildType.name}.aar"
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation fileTree(dir: "libs", include: ["*.aar"])
+
+    testImplementation 'junit:junit:4.13.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+
+    implementation 'com.huawei.hms:push:5.0.2.300'
+
+    implementation 'com.blankj:utilcodex:1.30.5'
+
+}

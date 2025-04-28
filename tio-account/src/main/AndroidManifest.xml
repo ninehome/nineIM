@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tiocloud.account">
+
+    <application>
+
+        <activity
+            android:name=".feature.login.LoginActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/WtTheme.Blue.NoActionBar" />
+        <activity
+            android:name=".feature.register.RegisterActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/WtTheme.Blue.NoActionBar" />
+        <activity
+            android:name=".feature.retrieve_pwd.RetrievePwdActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/WtTheme.Blue.NoActionBar" />
+        <activity
+            android:name=".feature.bind_phone.BindPhoneActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/WtTheme.Blue.NoActionBar" />
+        <activity
+            android:name=".feature.t_bind_phone.TBindPhoneActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/WtTheme.Blue.NoActionBar" />
+        <activity
+            android:name=".feature.login_sms.SmsLoginActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/WtTheme.Blue.NoActionBar" />
+        <activity android:name=".feature.login.OneKeyLoginActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/WtTheme.Blue.NoActionBar" />
+        <activity android:name=".feature.login.InputNickActivity" />
+        <activity android:name=".feature.modify_pwd.ModifyPwdActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/WtTheme.Blue.NoActionBar"/>
+        <activity android:name=".feature.register.RegisterSuccessActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/ll_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layer_list_bottom"
+        android:foreground="@drawable/ripple_corner_bottom"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginRight="@dimen/dp15"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="15dp">
+
+        <TextView
+            android:id="@+id/tvLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textColor="@color/gray_333333"
+            android:textSize="14sp"
+            android:text="@string/xuanze_label_zhuanfa"
+            android:textStyle="normal"/>
+
+        <TextView
+            android:id="@+id/tvValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/Grey_400"
+            android:textSize="12sp"
+            android:visibility="gone"
+            tools:text="@string/xuanze_label_zhuanfa"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+</LinearLayout>
+
+
+                

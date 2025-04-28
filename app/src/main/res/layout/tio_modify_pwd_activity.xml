@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/gray_f4f5f6"
+    android:orientation="vertical">
+
+    <com.watayouxiang.androidutils.widget.WtTitleBar
+        android:id="@+id/titleBar"
+        app:tb_background="@color/gray_f4f5f6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <!--原密码-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/uid"
+            style="@style/AccountTitle"
+            android:text="UID          "
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_uid"
+            style="@style/AccountSubtitle"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_toRightOf="@id/uid"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="888888" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="15dp"
+            android:background="@color/gray_e9e9e9" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/pwd1"
+            style="@style/AccountTitle"
+            android:textStyle="bold"
+            android:text="@string/yuan_pwd" />
+
+
+        <com.watayouxiang.androidutils.widget.edittext.TioEditText
+            android:id="@+id/et_oldPwd"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:hint="@string/hint_inpur_yuan_pwd"
+            android:layout_toRightOf="@id/pwd1"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/transparent"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textCursorDrawable="@null"
+            android:textColor="@color/gray_333333"
+            android:textColorHint="@color/gray_9c9c9c"
+            android:textSize="@dimen/sp_14" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/gray_e9e9e9"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <!--新密码-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_58"
+        android:background="@color/white">
+
+
+        <TextView
+            android:id="@+id/pwd2"
+            style="@style/AccountTitle"
+            android:textStyle="bold"
+            android:text="@string/new_pwd" />
+
+
+        <com.watayouxiang.androidutils.widget.edittext.TioEditText
+            android:id="@+id/et_newPwd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/pwd2"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/transparent"
+            android:gravity="center_vertical"
+            android:hint="@string/hint_input_new_pwd"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="@color/gray_333333"
+            android:textColorHint="@color/gray_9c9c9c"
+            android:textSize="@dimen/sp_14" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/gray_e9e9e9"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_58"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/pwd3"
+            style="@style/AccountTitle"
+            android:textStyle="bold"
+            android:text="@string/confirm_new_pwd" />
+
+        <com.watayouxiang.androidutils.widget.edittext.TioEditText
+            android:id="@+id/et_newPwdConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_toRightOf="@id/pwd3"
+            android:background="@color/transparent"
+            android:gravity="center_vertical"
+            android:hint="@string/reconfirm_new_pwd"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="@color/gray_333333"
+            android:textColorHint="@color/gray_9c9c9c"
+            android:textSize="@dimen/sp_14" />
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/bt_save"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/selector_confirm"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="32dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16"
+        android:text="@string/save"
+        />
+
+    <TextView
+        android:id="@+id/tv_other_type"
+        android:text="@string/other_type"
+        style="@style/AccountSubtitle"
+        android:textColor="@color/gray_9c9c9c"
+        android:textSize="@dimen/sp_16"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+        android:background="@drawable/selector_common"
+        />
+
+</LinearLayout>

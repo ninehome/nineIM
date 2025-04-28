@@ -1,0 +1,10 @@
+<resources>
+    <string name="drag_login">滑动验证登录</string>
+    <string name="word_login">文字验证登录</string>
+    <string name="finnish_safe_check">请完成安全验证</string>
+    <string name="data_loading">数据加载中......</string>
+    <string name="loading_fail">加载失败,请刷新</string>
+    <string name="check_success">验证成功</string>
+    <string name="check_fail">验证失败</string>
+    <string name="please_kick">请依此点击【%s】</string>
+</resources>

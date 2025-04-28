@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.watayouxiang.androidutils.widget.WtTitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tb_background="@color/transparent"
+        android:layout_marginTop="@dimen/dp_40"
+        app:tb_tvTitle_text="@string/charge_money" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_14_text_size"
+        android:text="@string/charge_money_amount"
+        android:textStyle="bold"
+        android:padding="@dimen/dp15"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TableLayout
+            android:id="@+id/tableLayoutRechargeMoney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:stretchColumns="1">
+
+            <TableRow>
+
+                <include layout="@layout/item_recharge_money" />
+
+                <include layout="@layout/item_recharge_money" />
+
+                <include layout="@layout/item_recharge_money" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <include layout="@layout/item_recharge_money" />
+
+                <include layout="@layout/item_recharge_money" />
+
+                <include layout="@layout/item_recharge_money" />
+
+            </TableRow>
+
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="24dp"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="@dimen/dp_21"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="￥"
+                android:textColor="@color/app_black"
+                android:textSize="@dimen/sp_24" />
+
+            <com.watayouxiang.wallet.yanxun.view.EditTextWithSuffix
+                android:id="@+id/select_money_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="14dp"
+                android:background="@null"
+                android:hint="@string/need_input_money"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:inputType="numberDecimal"
+                android:textSize="20sp"
+                app:suffix="@string/yuan" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_16"
+            android:background="#FFF7F8FA"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14_text_size"
+            android:text="@string/please_input_pay_type"
+            android:textStyle="bold"
+            android:padding="@dimen/dp15"
+            />
+        <RadioGroup
+            android:id="@+id/rgGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dp_16"
+            android:background="@color/white"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rb_wx"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/dp_72"
+                android:gravity="center"
+                android:background="@drawable/recharge_money_bg_selector"
+                android:text="@string/wx_pay"
+                android:checked="true"
+                android:layout_marginLeft="@dimen/dp15"
+                android:drawableTop="@mipmap/ic_wx_small"
+                android:textColor="@color/black"
+                android:padding="@dimen/dp_13"
+                android:textSize="@dimen/sp_12_text_size"
+                android:button="@null"
+                />
+            <RadioButton
+                android:id="@+id/rb_zfb"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/dp_72"
+                android:gravity="center"
+                android:background="@drawable/recharge_money_bg_selector"
+                android:text="@string/zfb_pay"
+                android:layout_marginLeft="@dimen/dp15"
+                android:drawableTop="@mipmap/ic_alipay_small"
+                android:textColor="@color/black"
+                android:padding="@dimen/dp_13"
+                android:textSize="@dimen/sp_12_text_size"
+                android:button="@null"
+                />
+            <RadioButton
+                android:id="@+id/rb_band"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/dp_72"
+                android:gravity="center"
+                android:background="@drawable/recharge_money_bg_selector"
+                android:text="@string/uni_pay"
+                android:layout_marginLeft="@dimen/dp15"
+                android:layout_marginRight="@dimen/dp15"
+                android:drawableTop="@mipmap/ic_band_small"
+                android:textColor="@color/black"
+                android:padding="@dimen/dp_13"
+                android:textSize="@dimen/sp_12_text_size"
+                android:button="@null"
+                />
+        </RadioGroup>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_16"
+            android:background="#FFF7F8FA"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/recharge_wechat"
+                style="@style/IMTble_No_Line"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/wechat_text"
+                    style="@style/IMTbleLine_TextKey"
+                    android:text="@string/wechat_pay" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/wechat_arrow_img"
+                    app:srcCompat="@mipmap/ic_wx_small" />
+
+                <ImageView
+                    android:id="@+id/wechat_arrow_img"
+                    style="@style/basic_info"
+                    android:contentDescription="@string/app_name" />
+
+            </RelativeLayout>
+
+            <View
+                style="@style/View_Line"
+                android:layout_marginStart="@dimen/margin_screen_old" />
+
+            <RelativeLayout
+                android:id="@+id/recharge_alipay"
+                style="@style/IMTble_No_Line"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/alipay_text"
+                    style="@style/IMTbleLine_TextKey"
+                    android:text="@string/alipay_pay" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/alipay_arrow_img"
+                    app:srcCompat="@mipmap/ic_alipay_small" />
+
+                <ImageView
+                    android:id="@+id/alipay_arrow_img"
+                    style="@style/basic_info"
+                    android:contentDescription="@string/app_name" />
+
+            </RelativeLayout>
+
+            <View
+                style="@style/View_Line"
+                android:layout_marginStart="@dimen/margin_screen_old" />
+
+            <RelativeLayout
+                android:id="@+id/recharge_band"
+                style="@style/IMTble_No_Line">
+
+                <TextView
+                    android:id="@+id/band_text"
+                    style="@style/IMTbleLine_TextKey"
+                    android:text="@string/band_transfer" />
+
+                <ImageView
+                    android:layout_width="21dp"
+                    android:layout_height="21dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/band_arrow_img"
+                    app:srcCompat="@mipmap/ic_band_small" />
+
+                <ImageView
+                    android:id="@+id/band_arrow_img"
+                    style="@style/basic_info"
+                    android:contentDescription="@string/app_name" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_charge"
+        style="@style/BossGreenBtn"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginRight="@dimen/dp_30"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginTop="@dimen/dp_32"
+        android:text="@string/lijichongzhi" />
+</LinearLayout>

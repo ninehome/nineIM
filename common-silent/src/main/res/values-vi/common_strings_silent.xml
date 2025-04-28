@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="common_detecting">"đang kiểm tra trực tiếp"&#8230;</string>
+	<string name="common_face_too_far">"vui lòng di chuyển điện lên gần khuôn mặt"</string>
+	<string name="common_face_too_close">"vui lòng di chuyển điện thoại ra xa khuôn mặt"</string>
+	<string name="common_tracking_missed">"vui lòng di chuyển mặt người vào trong khung"</string>
+	<string name="common_tracking_out_of_bound">"vui lòng di chuyển mặt người vào trong khung"</string>
+	<string name="common_tracking_covered">vui lòng giảm độ che sáng 1% trên điện thoại。</string>
+    <string name="common_tracking_covered_brow">lông mày</string>
+	<string name="common_tracking_covered_eye">đôi mắt</string>
+	<string name="common_tracking_covered_nose">mũi</string>
+	<string name="common_tracking_covered_mouth">miệng</string>
+	<string name="common_txt_back">"quay lại"</string>
+</resources>

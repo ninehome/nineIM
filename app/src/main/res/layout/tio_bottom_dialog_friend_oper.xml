@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_botton_bg"
+    android:paddingTop="32dp"
+    android:paddingBottom="@dimen/dp_20"
+    android:paddingLeft="@dimen/dp_20"
+    android:paddingRight="@dimen/dp_20"
+    android:orientation="vertical">
+
+   <!-- <View
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:background="@drawable/tio_group_oper_dialog_top_item_bg" />-->
+
+    <TextView
+        android:id="@+id/tv_black"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/shape_lable_item"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:text="@string/black_list_oprate"
+        android:textColor="@color/gray_333333"
+        android:textSize="@dimen/sp_16" />
+
+
+    <TextView
+        android:id="@+id/tv_delete"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/shape_lable_item"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:text="@string/delete_friend"
+        android:layout_marginTop="@dimen/dp_20"
+        android:textColor="@color/gray_333333"
+        android:textSize="@dimen/sp_16" />
+
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/shape_lable_item"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dp_24"
+        android:text="@string/cancel"
+        android:textColor="@color/gray_999999"
+        android:textSize="@dimen/sp_16" />
+
+</LinearLayout>

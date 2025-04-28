@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.watayouxiang.wallet">
+
+    <application android:supportsRtl="true">
+        <activity
+            android:name=".feature.wallet.WalletActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/WtTheme.Blue.NoActionBar" />
+        <activity
+            android:name=".feature.open.OpenWalletActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/WtTheme.Blue.NoActionBar" />
+        <activity
+            android:name=".feature.account.AccountActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/WtTheme.Blue.NoActionBar" />
+        <activity
+            android:name=".feature.bill.BillActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/WtTheme.Blue.NoActionBar" />
+        <activity
+            android:name=".feature.bill_detail.BillDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/WtTheme.Blue.NoActionBar" />
+        <activity
+            android:name=".feature.recharge.RechargeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/WtTheme.Blue.NoActionBar" />
+        <activity
+            android:name=".feature.recharge_result.RechargeResultActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/WtTheme.Blue.NoActionBar" />
+        <activity
+            android:name=".feature.withdraw.WithdrawActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/WtTheme.Blue.NoActionBar" />
+        <activity
+            android:name=".feature.withdraw_record.WithdrawRecordActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/WtTheme.Blue.NoActionBar" />
+        <activity
+            android:name=".feature.withdraw_result.WithdrawResultActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/WtTheme.Blue.NoActionBar" />
+        <activity
+            android:name=".feature.withdraw_detail.WithdrawDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/WtTheme.Blue.NoActionBar" />
+        <activity
+            android:name=".feature.redpacket.RedPacketActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/WtTheme.Red.NoActionBar" />
+        <activity
+            android:name=".feature.redpaper.RedPaperActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/WtTheme.Red.NoActionBar" />
+        <activity
+            android:name=".feature.paperdetail.PaperDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/WtTheme.Red.NoActionBar" />
+        <activity android:name=".yanxun.activity.ScanRechargeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/WtTheme.Blue.NoActionBar"
+            />
+        <activity android:name=".yanxun.activity.ScanWithdrawActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/WtTheme.Blue.NoActionBar"
+            />
+        <activity android:name=".yanxun.activity.ScanWithdrawListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/WtTheme.Blue.NoActionBar"
+            />
+        <activity android:name=".yanxun.activity.ScanWithdrawAddActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".yanxun.activity.ScanWithdrawUpdateActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".feature.trans_amount.TransAmountActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            />
+        <activity android:name=".feature.trans_amount.TransRecieverActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            />
+        <activity android:name=".feature.trans_amount.TransHasRecieverActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            />
+    </application>
+</manifest>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 滚动条 -->
+    <style name="scroll_view" parent="@android:style/Widget.ScrollView">
+        <item name="android:scrollbarThumbVertical">@drawable/scrollbar_handle_holo_dark</item>
+        <item name="android:scrollbarThumbHorizontal">@drawable/scrollbar_handle_holo_dark
+        </item>
+    </style>
+
+    <!-- recyclerView 滚动条 -->
+    <style name="recycler_view" parent="scroll_view">
+        <item name="android:fadingEdge">none</item>
+        <item name="android:focusable">false</item>
+        <item name="android:overScrollMode">ifContentScrolls</item>
+        <item name="android:cacheColorHint">@android:color/transparent</item>
+    </style>
+
+    <!-- 水平分割线 -->
+    <style name="horizontal_light_thin_divider">
+        <item name="android:layout_height">1px</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/gray_d9d9d9</item>
+    </style>
+
+    <style name="editLoginStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/edit_bg_normal</item>
+        <item name="android:drawablePadding">15dp</item>
+        <item name="android:textColor">@color/gray_111111</item>
+        <item name="android:textColorHint">@color/gray_909090</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:textCursorDrawable">@null</item>
+    </style>
+
+    <style name="buttonLoginStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/submit_btn_bg</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+    </style>
+
+    <!-- 自定义CheckBox 样式 -->
+    <style name="TioCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/tio_checkbox_selector</item>
+    </style>
+
+    <style name="TioCheckboxTheme2" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/tio_checkbox_selector2</item>
+    </style>
+
+    <style name="TioCheckboxTheme3" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/tio_checkbox_selector3</item>
+    </style>
+
+    <style name="account_tip_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white_c1c4c7</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+</resources>

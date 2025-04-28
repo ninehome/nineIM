@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="view"
+            type="com.watayouxiang.wallet.widget.OpenRedPaperDialog" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_paperBg"
+            android:layout_width="257dp"
+            android:layout_height="423dp"
+            android:src="@drawable/wallet_redpaper_open_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <ImageView
+            android:id="@+id/iv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="29dp"
+            android:layout_marginBottom="406dp"
+            android:onClick="@{view.clickCancel}"
+            android:src="@drawable/wallet_redpaper_ic_cancel2"
+            app:layout_constraintBottom_toBottomOf="@id/iv_paperBg"
+            app:layout_constraintEnd_toEndOf="@id/iv_paperBg" />
+
+        <com.watayouxiang.androidutils.widget.imageview.TioImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="132dp"
+            app:layout_constraintEnd_toEndOf="@id/iv_paperBg"
+            app:layout_constraintStart_toStartOf="@id/iv_paperBg"
+            app:layout_constraintTop_toTopOf="@id/iv_paperBg" />
+
+        <TextView
+            android:id="@+id/tv_fromInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@{view.fromInfo}"
+            android:textColor="#FFFED4A3"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/iv_avatar"
+            app:layout_constraintStart_toStartOf="@id/iv_avatar"
+            app:layout_constraintTop_toBottomOf="@id/iv_avatar" />
+
+        <TextView
+            android:id="@+id/tv_gift"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:text="@{view.gift}"
+            android:textColor="#FFFED4A3"
+            android:textSize="20sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="@id/iv_paperBg"
+            app:layout_constraintStart_toStartOf="@id/iv_paperBg"
+            app:layout_constraintTop_toBottomOf="@id/tv_fromInfo" />
+
+        <TextView
+            android:id="@+id/tv_showDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="19dp"
+            android:drawableRight="@drawable/wallet_arrow_right_yellow"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:text="@string/kankandajia"
+            android:textColor="#FFFED4A3"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_paperBg"
+            app:layout_constraintEnd_toEndOf="@id/iv_paperBg"
+            app:layout_constraintStart_toStartOf="@id/iv_paperBg" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

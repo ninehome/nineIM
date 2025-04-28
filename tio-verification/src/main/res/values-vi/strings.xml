@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="drag_login">trượt để xác minh đăng nhập</string>
+    <string name="word_login">mã xác minh đăng nhập</string>
+    <string name="finnish_safe_check">vui lòng hoàn thành xác minh an toàn</string>
+    <string name="data_loading">đang tải dữ liệu......</string>
+    <string name="loading_fail">tải thất bại, hãy làm mới</string>
+    <string name="check_success">xác minh thành công</string>
+    <string name="check_fail">xác minh thất bại</string>
+    <string name="please_kick">vui lòng nhấn vào đây【%s】</string>
+</resources>

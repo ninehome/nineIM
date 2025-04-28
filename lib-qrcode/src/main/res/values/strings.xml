@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="download">下载</string>
+    <string name="save_abulm_success">已成功保存至相册</string>
+    <string name="use">使用</string>
+    <string name="appsaoyisao">APP扫一扫，加我为好友</string>
+    <string name="download_fail">下载失败</string>
+    <string name="myqrcode">我的二维码</string>
+    <string name="openshanguangdeng">打开闪光灯</string>
+    <string name="closeshanguangdeng">关闭闪光灯</string>
+    <string name="xiangce">相册</string>
+    <string name="duizhun">将二维码对准框内，即可自动扫描</string>
+    <string name="havenoquanxian">权限不足，无法使用</string>
+    <string name="open_error">打开相机出错</string>
+    <string name="qrcode_look_s">二维码识别结果：%s</string>
+    <string name="taixinlianmeng">钛信联盟</string>
+    <string name="scan_add_cahat">扫码加入群聊</string>
+    <string name="app_scan_add_friend">使用APP扫一扫，加我为好友</string>
+    <string name="shibieshibai">识别失败</string>
+    <string name="qrcode_creat_fail">二维码生成失败</string>
+    <string name="group_qrcode">群二维码</string>
+</resources>

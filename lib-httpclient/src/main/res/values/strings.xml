@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="man">男</string>
+    <string name="woman">女</string>
+    <string name="baomi">保密</string>
+</resources>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="text_select">#fffa6015</color>
+    <color name="dialog_normal">@color/black</color>
+    <color name="color_violet">#9900FF</color>
+
+
+    <color name="divider">#ffd9d9d9</color>
+    <color name="color_read_unread_item">#FF9C00</color>
+    <color name="redpacket_bg">#FFFF4D4D</color>
+
+    <color name="filter_color_grey_light">#c4c4c4</color>
+
+    <color name="transparent2">#16000000</color>
+
+    <color name="blue">@color/theme_color</color>
+    <color name="dark_grey">#ff7a7a7a</color>
+    <color name="dark_dark_grey">#8b8a8a</color>
+    <color name="color1">@color/theme_color</color>
+    <color name="normal_bg">#f2f2f2</color>
+    <color name="alp_background">#55000000</color>
+
+    <color name="main_color">#53CAC3</color>
+
+    <color name="divbg">#BDBDBD</color>
+    <color name="scan_recharge_title">#ff556b95</color>
+    <color name="color_06D89A">#06D89A</color>
+    <color name="color_trans_06D89A">#5006D89A</color>
+    <color name="scan_recharge_title2">#999999</color>
+    <color name="scan_recharge_line">#F5F5F5</color>
+    <color name="scan_recharge_save">#EF0A15</color>
+    <color name="scan_recharge_tip">#959AA0</color>
+    <color name="scan_recharge_cancel">#90C1BF</color>
+    <color name="scan_recharge_confirm">@color/theme_color</color>
+
+    <color name="Grey_50">#FAFAFA</color>
+    <color name="Grey_100">#F5F5F5</color>
+    <color name="Grey_200">#EEEEEE</color>
+    <color name="Grey_300">#E0E0E0</color>
+    <color name="Grey_350">#d9d9d9</color>
+    <color name="Grey_400">#BDBDBD</color>
+    <color name="Grey_500">#9E9E9E</color>
+    <color name="Grey_600">#757575</color>
+    <color name="Grey_700">#616161</color>
+    <color name="Grey_800">#424242</color>
+    <color name="Grey_900">#212121</color>
+    <color name="Grey_gai">#d4d0ca</color>
+
+    <color name="button_text">#ff556b95</color>
+
+    <color name="link_nick_name_color">#ff556b95</color>
+</resources>

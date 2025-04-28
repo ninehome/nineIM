@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="WtTitleBar">
+        <!--是否为浅色模式-->
+        <attr name="tb_isLightMode" format="boolean" />
+        <!--背景-->
+        <attr name="tb_background" format="color" />
+        <!--标题-->
+        <attr name="tb_tvTitle_text" format="string" />
+        <!--返回图片-->
+        <attr name="tb_ivBack_src" format="reference" />
+        <attr name="tb_ivBack_hide" format="boolean" />
+        <!--右侧文字-->
+        <attr name="tb_tvRight_text" format="string" />
+        <attr name="tb_tvRight_textColor" format="color" />
+        <attr name="tb_tvRight_background" format="reference" />
+        <attr name="tb_tvRight_enable" format="boolean" />
+        <!--右侧图片-->
+        <attr name="tb_ivRight_src" format="reference" />
+        <!--右侧spinner是否可见-->
+        <attr name="tb_spinnerRight_show" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="TioEditText">
+        <attr name="tet_clearIconEnable" format="boolean" />
+        <attr name="clearIconType" format="integer" />
+        <attr name="tet_leftDrawable" format="reference" />
+    </declare-styleable>
+
+</resources>

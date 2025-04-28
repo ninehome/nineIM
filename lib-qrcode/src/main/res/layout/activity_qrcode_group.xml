@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--状态栏-->
+        <FrameLayout
+            android:id="@+id/statusBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--二维码区块-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_qrcode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/qrcode_bg_inner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/statusBar">
+
+            <!--中间背景-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/bg_center"
+                android:layout_width="309dp"
+                android:layout_height="384dp"
+                android:layout_marginTop="92dp"
+                android:layout_marginBottom="54dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--头像-->
+            <com.watayouxiang.androidutils.widget.imageview.TioImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="@dimen/avatar_wh_77"
+                android:layout_height="@dimen/avatar_wh_77"
+                android:layout_marginTop="52dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--昵称-->
+            <TextView
+                android:id="@+id/tv_nick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:maxWidth="200dp"
+                android:singleLine="true"
+                android:text="@string/taixinlianmeng"
+                android:textColor="#333333"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@id/iv_avatar"
+                app:layout_constraintStart_toStartOf="@id/iv_avatar"
+                app:layout_constraintTop_toBottomOf="@id/iv_avatar" />
+
+            <!--二维码-->
+            <ImageView
+                android:id="@+id/iv_myQRCode"
+                android:layout_width="227dp"
+                android:layout_height="227dp"
+                android:layout_marginTop="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_nick" />
+            <com.watayouxiang.androidutils.widget.imageview.TioImageView
+                android:id="@+id/my_avator"
+                android:layout_width="39dp"
+                android:layout_height="39dp"
+                app:roundedCornerRadius="2dp"
+                app:layout_constraintStart_toStartOf="@id/iv_myQRCode"
+                app:layout_constraintEnd_toEndOf="@id/iv_myQRCode"
+                app:layout_constraintTop_toTopOf="@id/iv_myQRCode"
+                app:layout_constraintBottom_toBottomOf="@id/iv_myQRCode"
+                app:roundingBorderWidth="@dimen/dp_2"
+                app:roundingBorderColor="@color/white"
+                />
+            <!--提示-->
+            <TextView
+                android:id="@+id/tv_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:text="@string/scan_add_cahat"
+                android:textColor="#9C9C9C"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_myQRCode" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--标题栏-->
+        <com.watayouxiang.androidutils.widget.WtTitleBar
+            android:id="@+id/titleBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/statusBar"
+            app:tb_background="@color/transparent"
+            app:tb_isLightMode="false"
+            app:tb_ivRight_src="@drawable/qrcode_ic_scan"
+            app:tb_tvTitle_text="@string/group_qrcode" />
+
+        <!--分享-->
+        <TextView
+            android:id="@+id/tv_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="54dp"
+            android:drawableTop="@drawable/qrcode_ic_share"
+            android:drawablePadding="12dp"
+            android:gravity="center_horizontal"
+            android:text="分享"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_download"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cl_qrcode" />
+
+        <!--下载-->
+        <TextView
+            android:id="@+id/tv_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="54dp"
+            android:drawableTop="@drawable/qrcode_ic_download"
+            android:drawablePadding="12dp"
+            android:gravity="center_horizontal"
+            android:text="@string/download"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_share"
+            app:layout_constraintTop_toBottomOf="@id/cl_qrcode" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

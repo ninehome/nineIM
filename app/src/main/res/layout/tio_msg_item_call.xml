@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_message"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:autoLink="phone|email|web"
+    android:gravity="center_vertical|start"
+    android:includeFontPadding="false"
+    android:lineSpacingExtra="3dip"
+    android:maxWidth="@dimen/dp_222"
+    android:text="通话消息"
+    android:textColor="@color/gray_333333"
+    android:textColorLink="@color/blue_2e52a3"
+    android:textIsSelectable="false"
+    android:textSize="@dimen/sp_16" />

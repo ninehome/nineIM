@@ -1,0 +1,4 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="shanghuquxiaofasong">上滑取消发送</string>
+    <string name="songkaiquxiaofasong">松开取消发送</string>
+</resources>

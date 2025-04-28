@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.text.TextUtils" />
+
+        <variable
+            name="data"
+            type="com.watayouxiang.wallet.feature.recharge.RechargeActivity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/statusBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.watayouxiang.androidutils.widget.WtTitleBar
+            android:id="@+id/titleBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/statusBar"
+            app:tb_isLightMode="true"
+            app:tb_tvTitle_text="余额充值" />
+
+        <View
+            android:id="@+id/v_bg_gray"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleBar" />
+
+        <View
+            android:id="@+id/v_bg_white"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v_bg_gray" />
+
+        <TextView
+            android:id="@+id/tv_tip_recharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/charge_money_amount"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v_bg_gray" />
+
+        <TextView
+            android:id="@+id/tv_tip_rmb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            android:text="¥"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_tip_recharge" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:digits="@string/digits_amount"
+            android:hint="@string/shurujine"
+            android:includeFontPadding="false"
+            android:inputType="numberDecimal"
+            android:text="@={data.amount}"
+            android:textColor="#333333"
+            android:textColorHint="#E8E8E8"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_tip_rmb"
+            app:layout_constraintEnd_toStartOf="@id/iv_clear"
+            app:layout_constraintStart_toEndOf="@id/tv_tip_rmb"
+            app:layout_constraintTop_toTopOf="@id/tv_tip_rmb"
+            app:layout_goneMarginRight="20dp" />
+
+        <ImageView
+            android:id="@+id/iv_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:onClick="@{data.clickClear}"
+            android:padding="10dp"
+            android:src="@drawable/wallet_ic_clear_txt"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@id/tv_tip_rmb"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_tip_rmb" />
+
+        <TextView
+            android:id="@+id/tv_recharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:alpha="@{TextUtils.isEmpty(data.amount) ? 0.3f : 1f}"
+            android:background="@drawable/wallet_btn_bg_blue"
+            android:enabled="@{!TextUtils.isEmpty(data.amount)}"
+            android:gravity="center"
+            android:onClick="@{data.clickRecharge}"
+            android:text="@string/chongzhi"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_bg_white" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

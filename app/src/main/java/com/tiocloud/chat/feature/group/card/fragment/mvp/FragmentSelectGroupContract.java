@@ -1,0 +1,40 @@
+package com.tiocloud.chat.feature.group.card.fragment.mvp;
+
+import android.app.Activity;
+
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.watayouxiang.httpclient.model.response.MailListResp;
+import com.watayouxiang.androidutils.mvp.BaseModel;
+import com.watayouxiang.androidutils.mvp.BasePresenter;
+import com.watayouxiang.androidutils.mvp.BaseView;
+
+import java.util.List;
+
+/**
+ * author : TaoWang
+ * date : 2020/2/26
+ * desc :
+ */
+public interface FragmentSelectGroupContract {
+    interface View extends BaseView {
+
+        Activity getActivity();
+
+        void finishPage();
+    }
+
+    abstract class Model extends BaseModel {
+        public abstract void getMailList(String searchKey, DataProxy<List<MailListResp.Group>> proxy);
+    }
+
+    abstract class Presenter extends BasePresenter<Model, View> {
+        public Presenter(Model model, View view) {
+            super(model, view);
+        }
+
+        public abstract void initRecyclerView(RecyclerView recyclerView);
+
+        public abstract void search(String keyWord);
+    }
+}

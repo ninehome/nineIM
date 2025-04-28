@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".TestVerificationActivity">
+
+    <TextView
+        android:id="@+id/bGo"
+        android:layout_width="290dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/vercode_selector_btn_bg"
+        android:gravity="center"
+        android:text="@string/drag_login"
+        android:textColor="@android:color/white"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/bGo_word"
+        android:layout_width="290dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/vercode_selector_btn_bg"
+        android:gravity="center"
+        android:text="@string/word_login"
+        android:textColor="@android:color/white"
+        android:textSize="17sp" />
+
+    <TextView
+        android:layout_width="290dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/vercode_selector_btn_bg"
+        android:gravity="center"
+        android:text="滑动验证"
+        android:onClick="onClick_tioBlockPuzzle"
+        android:textColor="@android:color/white"
+        android:textSize="17sp" />
+
+</LinearLayout>

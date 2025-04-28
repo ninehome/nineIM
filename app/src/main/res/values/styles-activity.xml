@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+    ========================================================================================
+    theme
+    ========================================================================================
+    -->
+
+    <!-- Tio 主题 -->
+    <style name="TioTheme" parent="QMUITheme.Blue.NoActionBar">
+        <item name="colorPrimary">@color/gray_f4f5f6</item>
+        <item name="colorPrimaryDark">@color/gray_f4f5f6</item>
+    </style>
+
+    <style name="TioTheme2" parent="QMUITheme.Blue.NoActionBar">
+        <item name="colorPrimary">@color/gray_f4f5f6</item>
+        <item name="colorPrimaryDark">@color/gray_f4f5f6</item>
+    </style>
+
+    <!-- 欢迎界面主题 -->
+    <style name="TioWelcomeTheme" parent="WtTheme.Blue.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+
+    </style>
+
+    <!--
+    ========================================================================================
+    style
+    ========================================================================================
+    -->
+
+    <!-- actionBarTheme -->
+    <style name="actionBarTheme_black" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="colorControlNormal">#FF111111</item>
+    </style>
+
+    <style name="titleTextAppearance_login" parent="@style/titleTextAppearance_main">
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <style name="titleTextAppearance_entrance" parent="@style/titleTextAppearance_main">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#FF111111</item>
+    </style>
+
+    <!-- ThemeOverlay -->
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:itemTextAppearance">?android:attr/actionMenuTextAppearance</item>
+        <item name="actionMenuTextAppearance">@style/ActionMenuTheme</item>
+    </style>
+
+    <!-- toolbar的弹出菜单 -->
+    <style name="ActionMenuTheme" parent="Theme.AppCompat.Light">
+        <item name="android:textColor">@color/gray_333333</item>
+    </style>
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">16sp</item>
+    </style>
+</resources>

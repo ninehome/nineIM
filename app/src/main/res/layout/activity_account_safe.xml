@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/gray_f4f5f6"
+        >
+
+        <com.watayouxiang.androidutils.widget.WtTitleBar
+            android:id="@+id/titleBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tb_tvTitle_text="@string/account_safe"
+            app:tb_background="@color/gray_f4f5f6"
+            />
+
+        <RelativeLayout
+            android:id="@+id/rl_modify_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_56"
+            android:background="@drawable/ripple_corner_non">
+
+            <TextView
+                style="@style/AccountTitle"
+                android:textStyle="bold"
+                android:text="@string/repair_pwd" />
+
+
+            <ImageView
+                android:id="@+id/iv_account_safe_arrow"
+                style="@style/AccountForward"
+                android:src="@drawable/arrow_right" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_login_exit"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="@string/other_login_type"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/gray_B3B3B3"
+            android:textSize="@dimen/sp_14"
+            />
+        <RelativeLayout
+            android:id="@+id/rl_tel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_56"
+            android:background="@drawable/ripple_corner_non">
+
+            <TextView
+                style="@style/AccountTitle"
+                android:textStyle="bold"
+                android:text="@string/phone" />
+
+            <ImageView
+                android:id="@+id/iv_tel_arrow"
+                style="@style/AccountForward"
+                android:src="@drawable/arrow_right"/>
+            <TextView
+                android:id="@+id/tv_tel"
+                android:text="888888"
+                style="@style/AccountSubtitle"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/iv_tel_arrow"
+                />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_e9e9e9"
+                android:layout_marginLeft="15dp"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_mail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_56"
+            android:background="@drawable/ripple_corner_non">
+
+            <TextView
+                style="@style/AccountTitle"
+                android:textStyle="bold"
+                android:text="@string/mail" />
+
+            <ImageView
+                android:id="@+id/iv_mail"
+                style="@style/AccountForward"
+                android:src="@drawable/arrow_right"/>
+            <TextView
+                android:id="@+id/tv_mail"
+                android:text="888888"
+                style="@style/AccountSubtitle"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/iv_mail"
+                />
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+</layout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 分页标签 -->
+    <declare-styleable name="PagerSlidingTabStrip">
+        <!-- 指针 -->
+        <attr name="psts_indicatorColor" format="color" />
+        <attr name="psts_indicatorHeight" format="dimension" />
+        <!-- 分割线 -->
+        <attr name="psts_underlineColor" format="color" />
+        <attr name="psts_underlineHeight" format="dimension" />
+        <!-- tabPadding -->
+        <attr name="psts_tabPaddingLeftRight" format="dimension" />
+        <attr name="psts_scrollOffset" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="SessionTitleBar">
+        <attr name="stb_title" format="string" />
+        <attr name="stb_background" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="TioEditText">
+        <attr name="tet_clearIconEnable" format="boolean" />
+        <attr name="tet_leftDrawable" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="LineBreakLayout">
+        <!--标签之间左右距离-->
+        <attr name="leftAndRightSpace" format="dimension" />
+        <!--标签行距-->
+        <attr name="rowSpace" format="dimension" />
+    </declare-styleable>
+</resources>

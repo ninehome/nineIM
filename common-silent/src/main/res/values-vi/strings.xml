@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="txt_start_detect">bắt đầu kiểm tra</string>
+    <string name="txt_detect_again">"kiểm tra lại"</string>
+    <string name="txt_detect_again1">kiểm tra lại</string>
+    <string name="txt_copyright">"Powered by SenseTime"</string>
+    <string name="txt_error_timeout">"kiểm tra quá giờ, vui lòng thử lại"</string>
+    <string name="txt_error_canceled">"đã hủy kiểm tra trực tiếp"</string>
+    <string name="txt_detect_success">"kiểm tra trực tiếp thành công"</string>
+    <string name="txt_detect_fail">"kiểm tra trực tiếp chưa thông qua"</string>
+    <string name="txt_error_permission">"quyền hạn kiểm tra thất bại, vui lòng chỉnh sửa cài đặt quyền hạn ứng dụng"</string>
+    <string name="txt_error_model_not_found">định dạng file không tồn tại</string>
+    <string name="txt_error_license_not_found">cấp quyền định dạng file không tồn tại</string>
+    <string name="txt_error_license">xác minh cấp quyền chưa thông qua</string>
+    <string name="txt_error_model">lỗi định dạng file</string>
+    <string name="txt_error_license_expire">ủy quyền file đã hết hạn</string>
+    <string name="txt_error_license_package_name">lỗi ràng buộc tên gói</string>
+    <string name="txt_error_state">lỗi điều phương pháp điều chỉnh trạng thái</string>
+    <string name="error_api_key_secret">"lỗi API_KEY hoặc API_SECRET"</string>
+    <string name="error_server">"lỗi truy cập máy chủ"</string>
+    <string name="invalid_arguments">cài đặt tham số không đúng</string>
+    <string name="txt_error_network_timeout">"liên kết mạng quá lâu, vui lòng kiểm tra cài đặt mạng, và thử lại"</string>
+</resources>
