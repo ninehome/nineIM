@@ -50,13 +50,13 @@ public class UserFragment extends TioFragment implements UserContract.View {
         binding.rlModifyInfo.setOnClickListener(v -> CurrDetailActivity.start(getActivity()));
         binding.llNick.setOnClickListener(v -> CurrDetailActivity.start(getActivity()));
         if (TioConfig.OpenCloseConfig.needSharePage()){
-            binding.rlShare.setVisibility(View.VISIBLE);
-            binding.rlShare.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    ShareActivity.start(getActivity());
-                }
-            });
+//            binding.rlShare.setVisibility(View.VISIBLE);
+//            binding.rlShare.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    ShareActivity.start(getActivity());
+//                }
+//            });
         }else {
             binding.rlShare.setVisibility(View.GONE);
         }

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -164,6 +165,7 @@ public class P2PSessionActivity extends SessionActivity implements P2PActivityCo
         // 标题
         getTitleBar().setTitle(StringUtil.nonNull(data.name));
         toName = StringUtil.nonNull(data.name);
+        Log.i("fighting","onChatInfoResp");
         // menu
         getTitleBar().getMoreBtn().setOnClickListener(v -> {
 //            P2PMoreInfoBottomDialog dialog = new P2PMoreInfoBottomDialog(v.getContext());

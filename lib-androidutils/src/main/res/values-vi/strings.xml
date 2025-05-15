@@ -5,7 +5,7 @@
     {值名称}
     {模块名称}_{值名称}
      -->
-    <string name="my_name">TTC</string>
+    <string name="my_name">Chat</string>
     <string name="my_find">khám phá</string>
     <string name="app_name">@string/my_name</string>
     <string name="have_read">Đã xem</string>

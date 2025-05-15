@@ -3,6 +3,7 @@ package com.tiocloud.chat.feature.account.safe;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 
@@ -105,6 +106,7 @@ public class PrivacyActivity extends TioActivity {
                 privacy("phoneFind",tel,switch_tel);
             }
         });
+        switch_tel.setVisibility(View.GONE);
         switch_mail = findViewById(R.id.switch_mail);
         switch_mail.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -113,6 +115,7 @@ public class PrivacyActivity extends TioActivity {
                 privacy("emailFind",mail,switch_mail);
             }
         });
+        switch_mail.setVisibility(View.GONE);
         switch_username = findViewById(R.id.switch_username);
         switch_username.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -121,6 +124,7 @@ public class PrivacyActivity extends TioActivity {
                 privacy("loginNameFind",username,switch_username);
             }
         });
+        switch_username.setVisibility(View.GONE);
         switch_group_chat = findViewById(R.id.switch_group_chat);
         switch_group_chat.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="common_text_size_normal">20sp</dimen>
+    <string name="common_detecting">"活体检测中"…</string>
+    <string name="common_face_too_close">"请移动手机远离面部"</string>
+    <string name="common_face_too_far">"请移动手机靠近面部"</string>
+    <string name="common_tracking_covered">请正对手机，去除%1$s遮挡。</string>
+    <string name="common_tracking_covered_brow">眉毛</string>
+    <string name="common_tracking_covered_eye">眼部</string>
+    <string name="common_tracking_covered_mouth">嘴部</string>
+    <string name="common_tracking_covered_nose">鼻部</string>
+    <string name="common_tracking_missed">"请将人脸移入框内"</string>
+    <string name="common_tracking_out_of_bound">"请将人脸移入框内"</string>
+    <string name="common_txt_back">"返回"</string>
+    <string name="error_api_key_secret">"API_KEY 或 API_SECRET 错误"</string>
+    <string name="error_server">"服务器访问错误"</string>
+    <string name="invalid_arguments">参数设置不合法</string>
+    <string name="txt_copyright">"Powered by SenseTime"</string>
+    <string name="txt_detect_again">"重新检测"</string>
+    <string name="txt_detect_again1">重新检测</string>
+    <string name="txt_detect_fail">"未通过活体检测"</string>
+    <string name="txt_detect_success">"活体检测成功"</string>
+    <string name="txt_error_canceled">"活体检测已取消"</string>
+    <string name="txt_error_license">未通过授权验证</string>
+    <string name="txt_error_license_expire">授权文件过期</string>
+    <string name="txt_error_license_not_found">授权文件不存在</string>
+    <string name="txt_error_license_package_name">绑定包名错误</string>
+    <string name="txt_error_model">模型文件错误</string>
+    <string name="txt_error_model_not_found">模型文件不存在</string>
+    <string name="txt_error_network_timeout">"网络连接超时，请查看网络设置，重试一次"</string>
+    <string name="txt_error_permission">"权限检测失败，请检查应用权限设置"</string>
+    <string name="txt_error_state">错误的方法状态调用</string>
+    <string name="txt_error_timeout">"检测超时，请重试一次"</string>
+    <string name="txt_start_detect">开始检测</string>
+</resources>

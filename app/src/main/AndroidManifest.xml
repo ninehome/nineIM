@@ -1,6 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.tiocloud.chat">
+    package="com.tiocloud.chat"
+    >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -11,6 +12,7 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
+
 
     <application
         android:name="TioApplication"
@@ -26,7 +28,18 @@
         android:theme="@style/TioTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.tiocloud.chat.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
 
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/merged_file_paths"
+                tools:replace="android:resource"/>
+        </provider>
         <meta-data
             android:name="OUT_APK_TIME"
             android:value="${OUT_APK_TIME}" />
@@ -458,6 +471,7 @@
             android:launchMode="singleTop"
             android:theme="@style/TioTheme"
             />
+
 
         <service
             android:name="com.baidu.location.f"

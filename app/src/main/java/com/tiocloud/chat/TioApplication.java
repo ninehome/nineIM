@@ -75,6 +75,7 @@ public class TioApplication extends Application {
         Constants.context = this;
         com.watayouxiang.imclient.utils.ConstantUtils.context = this;
 //        ToastUtils.showShort(getString(R.string.find_pwd));
+        System.out.println("_________________");
     }
 
     public static TioApplication getInstance() {

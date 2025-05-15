@@ -60,7 +60,7 @@ public class Presenter extends Contract.Presenter {
     }
 
     private void getMyQRCode(int uid,Activity activity) {
-        String baseUrl = "https://a.app.xx.com/o/simple.jsp?pkgname=com.xxx.xx";
+        String baseUrl = "https://a.app.xx.com/o/simple.jsp?pkgname=com.tiocloud.chat";
         String myQRCodeUrl = String.format(Locale.getDefault(), "%s&uid=%d", baseUrl, uid);
 
         ThreadUtils.executeByCached(new ThreadUtils.SimpleTask<Bitmap>() {

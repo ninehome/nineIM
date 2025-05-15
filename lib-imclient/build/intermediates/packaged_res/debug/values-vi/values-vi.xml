@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="bei">bị </string>
+    <string name="beijiechu">đã được gowc bỏ cấm ngôn </string>
+    <string name="beijinyan">đã bị cấm ngôn </string>
+    <string name="biaoqing">[biểu cẩm]</string>
+    <string name="chehuile">thu hồi </string>
+    <string name="chehuilexiaoxi">đã thu hồi 1 tin nhắn </string>
+    <string name="deguanliyuan">quản trị viên của </string>
+    <string name="dehongbao">hồng bao của </string>
+    <string name="dexiaoxi">tin nhắn của </string>
+    <string name="falegehongbao">đã gửi 1 hồng bao</string>
+    <string name="fenxiangmingpian">chia sẻ 1 danh thiếp</string>
+    <string name="fenxiangshipen">chia sẻ 1 video</string>
+    <string name="fenxiangtupian">chia sẻ 1 ảnh</string>
+    <string name="fenxiangyigewenjian">chia sẻ 1 file</string>
+    <string name="jiang">sẽ </string>
+    <string name="jiaruqunliao">thêm vào nhóm chat </string>
+    <string name="jiesanqun">giải tán nhóm </string>
+    <string name="lingqule">đã nhận được </string>
+    <string name="qunzhuanrang">chủ nhóm đã chuyển cho </string>
+    <string name="quxiaole">xóa rồi </string>
+    <string name="setting">thiết lập </string>
+    <string name="shipintonghua">[cuộc gọi video]</string>
+    <string name="tuichuqunliao">thoát nhóm chat </string>
+    <string name="weiguanliyuan">với tư cách quản trị viên </string>
+    <string name="weizhixinxi">[thông tin vị trí]</string>
+    <string name="xiaoxijilu">[lịch sử tin tức]</string>
+    <string name="xiugaiqungonggao">sửa thành nhóm công khai </string>
+    <string name="xiugaiqunming">sửa tên nhóm </string>
+    <string name="xiugaiqunshenhetishi1">tắt kiểm duyệt nhóm ：thành viên vào nhóm không cần kiểm duyệt </string>
+    <string name="xiugaiqunshenhetishi2">mở kiểm duyệt nhóm ：trước khi thành viên vào nhóm ，bắt buộc phải có chủ nhóm hoặc quản lí nhóm thông qua </string>
+    <string name="xiugaiqunshenhetishi3">tắt lời mời vào nhóm ：chỉ có chủ nhóm hoặc quản trị viên mới có thể mời người vào nhóm </string>
+    <string name="xiugaiqunshenhetishi4">mở lời mời vào nhóm ：tất cả mọi người đều có thể mời người vào nhóm </string>
+    <string name="yaoqing">mời </string>
+    <string name="yichulequnliao">xóa nhóm chat </string>
+    <string name="you">bạn</string>
+    <string name="yuyintonghua">[cuộc gọi ngữ âm]</string>
+    <string name="yuyinxiaoxi">[tin nhắn âm thanh]</string>
+    <string name="zhuanzhang">[chuyển tài khoản]</string>
+    <string name="zidongqunzhu">tự động thành chủ nhóm </string>
+</resources>

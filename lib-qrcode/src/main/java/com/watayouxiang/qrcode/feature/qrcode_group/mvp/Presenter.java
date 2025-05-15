@@ -66,7 +66,7 @@ public class Presenter extends Contract.Presenter {
     }
 
     private void getMyQRCode(String groupId, String applyuid,Activity activity) {
-        String baseUrl = "https://a.app.xx.com/o/simple.jsp?pkgname=com.xxx.xx";
+        String baseUrl = "https://a.app.xx.com/o/simple.jsp?pkgname=com.tiocloud.chat";
         String myQRCodeUrl = String.format(Locale.getDefault(), "%s&g=%s&applyuid=%s", baseUrl, groupId, applyuid);
 
         ThreadUtils.executeByCached(new ThreadUtils.SimpleTask<Bitmap>() {

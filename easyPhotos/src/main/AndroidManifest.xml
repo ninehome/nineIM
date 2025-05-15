@@ -33,6 +33,7 @@
             android:theme="@style/EasyPhotosTheme"
             android:windowSoftInputMode="adjustPan" />
 
+
         <activity
             android:name=".ui.PuzzleSelectorActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"

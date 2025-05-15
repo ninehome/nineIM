@@ -81,74 +81,74 @@
         </RelativeLayout>
 
         <!--消息提醒开关-->
-        <RelativeLayout
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/AccountTitle"
+            android:text="@string/phone"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/switch_tel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_15"
+            android:button="@drawable/btn_switch"
+            android:checked="false" />
+
+        <View
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp_56"
-            android:background="@color/white"
-            >
-
-            <TextView
-                style="@style/AccountTitle"
-                android:textStyle="bold"
-                android:text="@string/phone" />
-
-            <CheckBox
-                android:id="@+id/switch_tel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="@dimen/dp_15"
-                android:button="@drawable/btn_switch"
-                android:checked="false" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:background="@color/gray_e9e9e9"
-                android:layout_marginLeft="15dp"
-                android:layout_alignParentBottom="true" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dp_56"
-            android:background="@color/white"
-            >
-
-            <TextView
-                style="@style/AccountTitle"
-                android:textStyle="bold"
-                android:text="@string/mail" />
-
-            <CheckBox
-                android:id="@+id/switch_mail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="@dimen/dp_15"
-                android:button="@drawable/btn_switch"
-                android:checked="false" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:background="@color/gray_e9e9e9"
-                android:layout_marginLeft="15dp"
-                android:layout_alignParentBottom="true" />
-        </RelativeLayout>
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="15dp"
+            android:background="@color/gray_e9e9e9" />
+    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_56"
         android:background="@color/white"
-        >
+        android:visibility="gone">
 
         <TextView
             style="@style/AccountTitle"
-            android:textStyle="bold"
-            android:text="@string/username" />
+            android:text="@string/mail"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/switch_mail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_15"
+            android:button="@drawable/btn_switch"
+            android:checked="false" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="15dp"
+            android:background="@color/gray_e9e9e9" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/AccountTitle"
+            android:text="@string/username"
+            android:textStyle="bold" />
 
         <CheckBox
             android:id="@+id/switch_username"
