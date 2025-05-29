@@ -4,6 +4,7 @@ import com.blankj.utilcode.util.StringUtils;
 import com.lzy.okgo.OkGo;
 import com.watayouxiang.httpclient.TioHttpClient;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import okhttp3.Cookie;
@@ -44,7 +45,12 @@ public class CookieUtils {
         // base url
         HttpUrl baseUrl = HttpUrl.parse(TioHttpClient.getBaseUrl());
         // http all cookies
-        return OkGo.getInstance().getCookieJar().getCookieStore().getCookie(baseUrl);
+        System.out.println("fighting:CookieUtils"+baseUrl);
+        if (baseUrl != null){
+            return OkGo.getInstance().getCookieJar().getCookieStore().getCookie(baseUrl);
+        }
+        return new ArrayList<Cookie>();
+
     }
 
     /**

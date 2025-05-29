@@ -12,6 +12,8 @@ public class HttpPreferences extends PreferencesUtils {
 
     private static final String KEY_BASE_URL = "base_url";
     private static final String KEY_RES_URL = "res_url";
+
+    private static final String KEY_GETWAY_ID = "gate_id";
     private static final String KEY_SESSION_COOKIE_NAME = "session_cookie_name";
 
     // ====================================================================================
@@ -22,6 +24,13 @@ public class HttpPreferences extends PreferencesUtils {
         saveString(KEY_BASE_URL, baseUrl);
     }
 
+    public static void saveGatewayId(String id) {
+        saveString(KEY_GETWAY_ID, id);
+    }
+
+    public static String getGatewayId() {
+        return getString(KEY_GETWAY_ID, "0");
+    }
     public static String getBaseUrl() {
         return getString(KEY_BASE_URL, null);
     }

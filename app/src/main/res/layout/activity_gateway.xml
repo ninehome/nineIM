@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- 原有的企业 ID 输入框 -->
+    <EditText
+        android:id="@+id/et_enterprise_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+
+        android:hint="请输入企业 ID" />
+
+    <!-- 原有的登录按钮 -->
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_enterprise_id"
+        android:layout_marginTop="16dp"
+        android:text="登录" />
+
+    <!-- 底部超链接容器 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tv_link1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="免责声明"
+            android:textColor="@color/app_black"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp" />
+
+        <TextView
+            android:id="@+id/tv_link2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="隐私政策"
+            android:textColor="@color/app_black"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp" />
+
+        <TextView
+            android:id="@+id/tv_link3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="个人信息收集清单"
+            android:textColor="@color/app_black"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp" />
+    </LinearLayout>
+</RelativeLayout>

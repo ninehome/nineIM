@@ -1,45 +1,45 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/cl/Downloads/im2024/source/安卓源码/lib-imclient/src/main/AndroidManifest.xml:1:1-7:12
-INJECTED from /Users/cl/Downloads/im2024/source/安卓源码/lib-imclient/src/main/AndroidManifest.xml:1:1-7:12
-INJECTED from /Users/cl/Downloads/im2024/source/安卓源码/lib-imclient/src/main/AndroidManifest.xml:1:1-7:12
-INJECTED from /Users/cl/Downloads/im2024/source/安卓源码/lib-imclient/src/main/AndroidManifest.xml:1:1-7:12
-INJECTED from /Users/cl/Downloads/im2024/source/安卓源码/lib-imclient/src/main/AndroidManifest.xml:1:1-7:12
-INJECTED from /Users/cl/Downloads/im2024/source/安卓源码/lib-imclient/src/main/AndroidManifest.xml:1:1-7:12
-INJECTED from /Users/cl/Downloads/im2024/source/安卓源码/lib-imclient/src/main/AndroidManifest.xml:1:1-7:12
+ADDED from /Users/lei/Documents/fighting/im/安卓源码/lib-imclient/src/main/AndroidManifest.xml:1:1-7:12
+INJECTED from /Users/lei/Documents/fighting/im/安卓源码/lib-imclient/src/main/AndroidManifest.xml:1:1-7:12
+INJECTED from /Users/lei/Documents/fighting/im/安卓源码/lib-imclient/src/main/AndroidManifest.xml:1:1-7:12
+INJECTED from /Users/lei/Documents/fighting/im/安卓源码/lib-imclient/src/main/AndroidManifest.xml:1:1-7:12
+INJECTED from /Users/lei/Documents/fighting/im/安卓源码/lib-imclient/src/main/AndroidManifest.xml:1:1-7:12
+INJECTED from /Users/lei/Documents/fighting/im/安卓源码/lib-imclient/src/main/AndroidManifest.xml:1:1-7:12
+INJECTED from /Users/lei/Documents/fighting/im/安卓源码/lib-imclient/src/main/AndroidManifest.xml:1:1-7:12
 	package
-		ADDED from /Users/cl/Downloads/im2024/source/安卓源码/lib-imclient/src/main/AndroidManifest.xml:2:5-40
-		INJECTED from /Users/cl/Downloads/im2024/source/安卓源码/lib-imclient/src/main/AndroidManifest.xml
-		INJECTED from /Users/cl/Downloads/im2024/source/安卓源码/lib-imclient/src/main/AndroidManifest.xml
+		ADDED from /Users/lei/Documents/fighting/im/安卓源码/lib-imclient/src/main/AndroidManifest.xml:2:5-40
+		INJECTED from /Users/lei/Documents/fighting/im/安卓源码/lib-imclient/src/main/AndroidManifest.xml
+		INJECTED from /Users/lei/Documents/fighting/im/安卓源码/lib-imclient/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/cl/Downloads/im2024/source/安卓源码/lib-imclient/src/main/AndroidManifest.xml
-		ADDED from /Users/cl/Downloads/im2024/source/安卓源码/lib-imclient/src/main/AndroidManifest.xml:1:1-7:12
-		INJECTED from /Users/cl/Downloads/im2024/source/安卓源码/lib-imclient/src/main/AndroidManifest.xml
+		INJECTED from /Users/lei/Documents/fighting/im/安卓源码/lib-imclient/src/main/AndroidManifest.xml
+		ADDED from /Users/lei/Documents/fighting/im/安卓源码/lib-imclient/src/main/AndroidManifest.xml:1:1-7:12
+		INJECTED from /Users/lei/Documents/fighting/im/安卓源码/lib-imclient/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /Users/cl/Downloads/im2024/source/安卓源码/lib-imclient/src/main/AndroidManifest.xml
-		ADDED from /Users/cl/Downloads/im2024/source/安卓源码/lib-imclient/src/main/AndroidManifest.xml:1:1-7:12
-		INJECTED from /Users/cl/Downloads/im2024/source/安卓源码/lib-imclient/src/main/AndroidManifest.xml
+		INJECTED from /Users/lei/Documents/fighting/im/安卓源码/lib-imclient/src/main/AndroidManifest.xml
+		ADDED from /Users/lei/Documents/fighting/im/安卓源码/lib-imclient/src/main/AndroidManifest.xml:1:1-7:12
+		INJECTED from /Users/lei/Documents/fighting/im/安卓源码/lib-imclient/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/cl/Downloads/im2024/source/安卓源码/lib-imclient/src/main/AndroidManifest.xml:1:11-69
+		ADDED from /Users/lei/Documents/fighting/im/安卓源码/lib-imclient/src/main/AndroidManifest.xml:1:11-69
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /Users/cl/Downloads/im2024/source/安卓源码/lib-imclient/src/main/AndroidManifest.xml:4:5-79
+ADDED from /Users/lei/Documents/fighting/im/安卓源码/lib-imclient/src/main/AndroidManifest.xml:4:5-79
 	android:name
-		ADDED from /Users/cl/Downloads/im2024/source/安卓源码/lib-imclient/src/main/AndroidManifest.xml:4:22-76
+		ADDED from /Users/lei/Documents/fighting/im/安卓源码/lib-imclient/src/main/AndroidManifest.xml:4:22-76
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from /Users/cl/Downloads/im2024/source/安卓源码/lib-imclient/src/main/AndroidManifest.xml:5:5-75
+ADDED from /Users/lei/Documents/fighting/im/安卓源码/lib-imclient/src/main/AndroidManifest.xml:5:5-75
 	android:name
-		ADDED from /Users/cl/Downloads/im2024/source/安卓源码/lib-imclient/src/main/AndroidManifest.xml:5:22-72
+		ADDED from /Users/lei/Documents/fighting/im/安卓源码/lib-imclient/src/main/AndroidManifest.xml:5:22-72
 uses-sdk
-INJECTED from /Users/cl/Downloads/im2024/source/安卓源码/lib-imclient/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/cl/Downloads/im2024/source/安卓源码/lib-imclient/src/main/AndroidManifest.xml
-INJECTED from /Users/cl/Downloads/im2024/source/安卓源码/lib-imclient/src/main/AndroidManifest.xml
-INJECTED from /Users/cl/Downloads/im2024/source/安卓源码/lib-imclient/src/main/AndroidManifest.xml
-INJECTED from /Users/cl/Downloads/im2024/source/安卓源码/lib-imclient/src/main/AndroidManifest.xml
+INJECTED from /Users/lei/Documents/fighting/im/安卓源码/lib-imclient/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/lei/Documents/fighting/im/安卓源码/lib-imclient/src/main/AndroidManifest.xml
+INJECTED from /Users/lei/Documents/fighting/im/安卓源码/lib-imclient/src/main/AndroidManifest.xml
+INJECTED from /Users/lei/Documents/fighting/im/安卓源码/lib-imclient/src/main/AndroidManifest.xml
+INJECTED from /Users/lei/Documents/fighting/im/安卓源码/lib-imclient/src/main/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /Users/cl/Downloads/im2024/source/安卓源码/lib-imclient/src/main/AndroidManifest.xml
-		ADDED from /Users/cl/Downloads/im2024/source/安卓源码/lib-imclient/src/main/AndroidManifest.xml
-		INJECTED from /Users/cl/Downloads/im2024/source/安卓源码/lib-imclient/src/main/AndroidManifest.xml
+		INJECTED from /Users/lei/Documents/fighting/im/安卓源码/lib-imclient/src/main/AndroidManifest.xml
+		ADDED from /Users/lei/Documents/fighting/im/安卓源码/lib-imclient/src/main/AndroidManifest.xml
+		INJECTED from /Users/lei/Documents/fighting/im/安卓源码/lib-imclient/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/cl/Downloads/im2024/source/安卓源码/lib-imclient/src/main/AndroidManifest.xml
-		ADDED from /Users/cl/Downloads/im2024/source/安卓源码/lib-imclient/src/main/AndroidManifest.xml
-		INJECTED from /Users/cl/Downloads/im2024/source/安卓源码/lib-imclient/src/main/AndroidManifest.xml
+		INJECTED from /Users/lei/Documents/fighting/im/安卓源码/lib-imclient/src/main/AndroidManifest.xml
+		ADDED from /Users/lei/Documents/fighting/im/安卓源码/lib-imclient/src/main/AndroidManifest.xml
+		INJECTED from /Users/lei/Documents/fighting/im/安卓源码/lib-imclient/src/main/AndroidManifest.xml

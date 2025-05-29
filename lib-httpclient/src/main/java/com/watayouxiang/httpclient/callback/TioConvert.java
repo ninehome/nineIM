@@ -47,6 +47,7 @@ public class TioConvert<Data> implements Converter<BaseResp<Data>> {
         JsonReader jsonReader = new JsonReader(body.charStream());
         BaseResp<Data> tioResp = JsonUtils.fromJson(jsonReader, type);
         response.close();
+        System.out.println("fighting:resp:"+tioResp);
         return tioResp;
     }
 

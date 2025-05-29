@@ -3,6 +3,6 @@
 3    package="com.sensetime.sample.common" >
 4
 5    <uses-sdk android:minSdkVersion="19" />
-5-->/Users/cl/Downloads/im2024/source/安卓源码/common-silent/src/main/AndroidManifest.xml
+5-->/Users/lei/Documents/fighting/im/安卓源码/common-silent/src/main/AndroidManifest.xml
 6
 7</manifest>
