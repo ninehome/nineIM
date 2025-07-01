@@ -15,7 +15,7 @@ android {
 //    }
     compileSdkVersion 30
     defaultConfig {
-        applicationId "cn.zhikecheng.chat"
+        applicationId "cn.wangliantong.app"
 //        applicationId "com.dfadsgdsfdfasdfds.fdfsf.chaat"
         minSdkVersion 21
         targetSdkVersion 30
@@ -37,19 +37,19 @@ android {
     }
     signingConfigs{
         debug{
-            keyAlias 'key0'
-            keyPassword 'yanxun123488'
-            storeFile file('sig-adaptation/debug/geda.jks')
-            storePassword 'yanxun123488'
+            keyAlias 'im'
+            keyPassword '123456'
+            storeFile file('sig-adaptation/debug/apk_key')
+            storePassword '123456'
             v1SigningEnabled true
             v2SigningEnabled true
         }
 
         release {
-            keyAlias 'key0'
-            keyPassword 'yanxun123488'
-            storeFile file('sig-adaptation/debug/geda.jks')
-            storePassword 'yanxun123488'
+            keyAlias 'im'
+            keyPassword '123456'
+            storeFile file('sig-adaptation/debug/apk_key')
+            storePassword '123456'
             v1SigningEnabled true
             v2SigningEnabled true
         }
@@ -82,7 +82,7 @@ android {
     }
     android.applicationVariants.all { variant ->
         variant.outputs.all {
-            def appName = "企聊"
+            def appName = "讯聊"
             outputFileName = "${appName}-${variant.baseName}-V${variant.versionName}.apk"
         }
     }
@@ -134,7 +134,7 @@ dependencies {
     implementation project(path: ':pullToRefershLibraryMy')
     implementation files('lib/nineoldandroids.jar')
     implementation project(path: ':easyPhotos')
-   // implementation 'com.github.HuanTanSheng:EasyPhotos:3.1.5'
+    // implementation 'com.github.HuanTanSheng:EasyPhotos:3.1.5'
     implementation "com.alibaba:fastjson:1.2.59"
     implementation files('lib\\BaiduLBS_Android.jar')
 
@@ -142,9 +142,9 @@ dependencies {
 //    implementation files('lib/fastjson-1.2.40.jar')
     //保活
 //    implementation 'com.github.wangshihu123:DaemonLibrary:v1.2.1'
-
+    implementation 'com.shuyu:gsyVideoPlayer-java:7.1.4'
     implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.2'
     implementation "com.android.support:support-compat:27.1.1"
-   // implementation "androidx.core:core:1.9.0"
+    // implementation "androidx.core:core:1.9.0"
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.4.10"
 }

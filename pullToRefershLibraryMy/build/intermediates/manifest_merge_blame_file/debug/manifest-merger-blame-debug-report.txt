@@ -5,9 +5,9 @@
 5    android:versionName="1.1.0" >
 6
 7    <uses-sdk android:minSdkVersion="19" />
-7-->/Users/cl/Downloads/im2024/source/安卓源码/pullToRefershLibraryMy/src/main/AndroidManifest.xml
+7-->/Users/lei/Documents/fighting/im/im_android/pullToRefershLibraryMy/src/main/AndroidManifest.xml
 8
 9    <application />
-9-->/Users/cl/Downloads/im2024/source/安卓源码/pullToRefershLibraryMy/src/main/AndroidManifest.xml:7:5-20
+9-->/Users/lei/Documents/fighting/im/im_android/pullToRefershLibraryMy/src/main/AndroidManifest.xml:7:5-20
 10
 11</manifest>
