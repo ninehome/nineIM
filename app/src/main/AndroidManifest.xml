@@ -44,6 +44,14 @@
             android:name="OUT_APK_TIME"
             android:value="${OUT_APK_TIME}" />
 
+        <!-- 修改 Activity 名称 -->
+        <activity android:name=".GatewayActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <!-- 闪屏页 -->
         <activity
             android:name=".feature.splash.SplashActivity"
@@ -51,10 +59,10 @@
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/TioWelcomeTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
         </activity>
 
         <!-- 登录页 -->

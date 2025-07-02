@@ -200,6 +200,7 @@ public class TioHttpClient {
     }
 
     public static String getBaseUrl() {
+        System.out.println("fighting:"+TioHttpClient.class+" baseUrl:"+HttpCache.getBaseUrl());
         return HttpCache.getBaseUrl();
     }
 

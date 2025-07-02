@@ -20,9 +20,9 @@ public class HttpCache {
     private static String BASE_URL = null;
 
     public synchronized static String getBaseUrl() {
-        if (BASE_URL == null) {
+       // if (BASE_URL == null) {
             BASE_URL = HttpPreferences.getBaseUrl();
-        }
+      //  }
         if (BASE_URL == null) {
             BASE_URL = TIO_BASE_URL;
         }

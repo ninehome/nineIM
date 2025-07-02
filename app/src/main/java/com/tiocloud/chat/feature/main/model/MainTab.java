@@ -12,8 +12,8 @@ import com.tiocloud.chat.feature.main.fragment.MainUserFragment;
 public enum MainTab {
     CHAT(0, ReminderId.CHAT, MainChatFragment.class, R.string.talk, R.drawable.tio_main_chats_selector, R.layout.tio_main_chat_fragment),
     FRIEND(1, ReminderId.FRIEND, MainFriendFragment.class, R.string.good_friend, R.drawable.tio_main_friend_selector, R.layout.tio_main_friend_fragment),
-    GROUP(2, ReminderId.WEB, Nav1Fragment.class, R.string.my_name, R.drawable.tio_main_group_selector, R.layout.fragment_find),
-    USER(3, ReminderId.USER, MainUserFragment.class, R.string.mine, R.drawable.tio_main_user_selector, R.layout.tio_main_user_fragment);
+
+    USER(2, ReminderId.USER, MainUserFragment.class, R.string.mine, R.drawable.tio_main_user_selector, R.layout.tio_main_user_fragment);
 
     public final int tabIndex;
     public final int reminderId;

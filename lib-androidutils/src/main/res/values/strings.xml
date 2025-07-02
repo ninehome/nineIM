@@ -5,7 +5,7 @@
     {值名称}
     {模块名称}_{值名称}
      -->
-    <string name="my_name">企聊</string>
+    <string name="my_name">亿讯企业版</string>
     <string name="my_find">探索</string>
     <string name="app_name">@string/my_name</string>
     <string name="have_read">已读</string>

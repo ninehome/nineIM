@@ -29,10 +29,10 @@ abstract class BaseTabPagerAdapter extends FragmentPagerAdapter {
         int i = 0;
         for (MainTab tab : MainTab.values()) {
 //            LogUtils.e("fragments=======================tab>"+tab.tabIndex);
-            if (tab.tabIndex == MainTab.GROUP.tabIndex && !showWebTab()){
-//                LogUtils.e("fragments=============nav==========tab>不显示");
-                continue;
-            }
+//            if (tab.tabIndex == MainTab.GROUP.tabIndex && !showWebTab()){
+////                LogUtils.e("fragments=============nav==========tab>不显示");
+//                continue;
+//            }
             try {
                 // 获取已存在的 fragment
                 MainTabFragment fragment = null;

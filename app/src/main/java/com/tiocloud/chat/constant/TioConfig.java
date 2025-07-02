@@ -17,7 +17,10 @@ import java.util.Map;
 
 public class TioConfig {
 
+
     public static final String BASE_URL_ONLINE = "http://106.53.115.205:82";//
+
+
 //public static final String BASE_URL_ONLINE = "http://api.shelleytv.com:82";//测试
 
     public static final String HAND_SHAKE_KEY_ONLINE = "T"+"e"+"s"+"O"+"t"+"0"+"T";
