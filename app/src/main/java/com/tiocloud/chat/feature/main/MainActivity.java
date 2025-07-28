@@ -46,6 +46,7 @@ import com.tiocloud.chat.service.LiveSerice;
 import com.tiocloud.chat.util.AndroidBug5497Workaround;
 import com.tiocloud.chat.util.PreferencesUtil;
 import com.tiocloud.chat.util.SoftKeyboardFixerForFullscreen;
+
 import com.tiocloud.jpush.PushLauncher;
 import com.tiocloud.jpush.utils.LogUtils;
 import com.watayouxiang.androidutils.page.TioActivity;

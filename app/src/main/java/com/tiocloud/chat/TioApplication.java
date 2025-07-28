@@ -36,7 +36,7 @@ import com.tiocloud.chat.util.MultiLanguageService;
 import com.tiocloud.chat.widget.YxRefreshLayout;
 import com.tiocloud.chat.yanxun.map.helper.BdLocationHelper;
 import com.tiocloud.chat.yanxun.map.helper.MapHelper;
-import com.tiocloud.jpush.PushLauncher;
+
 import com.watayouxiang.androidutils.AndroidUtils;
 import com.watayouxiang.androidutils.util.TioLogger;
 import com.watayouxiang.androidutils.widget.dialog.confirm.SingletonConfirmDialog;

@@ -22,7 +22,7 @@ import com.tiocloud.chat.feature.session.common.model.SessionType;
 import com.tiocloud.chat.widget.titlebar.SessionTitleBar;
 import com.tiocloud.chat.yanxun.groupsend.fragment.GroupSendSessionFragment;
 import com.tiocloud.chat.yanxun.groupsend.select.SelectFriendItem;
-import com.tiocloud.jpush.utils.LogUtils;
+
 import com.watayouxiang.androidutils.widget.WtTitleBar;
 
 import java.util.ArrayList;

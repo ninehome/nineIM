@@ -22,7 +22,7 @@ import com.tiocloud.chat.R;
 import com.tiocloud.chat.yanxun.base.BaseLabelGridFragment;
 import com.watayouxiang.wallet.yanxun.utisl.SkinUtils;
 import com.tiocloud.chat.yanxun.base.UiUtils;
-import com.tiocloud.jpush.utils.LogUtils;
+
 import com.watayouxiang.db.prefernces.TioDBPreferences;
 import com.watayouxiang.httpclient.TioHttpClient;
 import com.watayouxiang.httpclient.callback.TaoCallback;
@@ -139,7 +139,7 @@ public class LabelFragment extends BaseLabelGridFragment<LabelFragment.LabelHold
         TioHttpClient.get(this, mailListReq, new TaoCallback<BaseResp<String>>() {
             @Override
             public void onSuccess(Response<BaseResp<String>> response) {
-                LogUtils.d("zlb=22223==>"+response.body());
+
                 if (response.body().isOk()){
                     ToastUtils.showShort(getString(R.string.del_success));
                     refreshLabelListFromService();
@@ -213,12 +213,12 @@ public class LabelFragment extends BaseLabelGridFragment<LabelFragment.LabelHold
                     mLabelList.add(label2);
                 }
                 update(mLabelList);
-                LogUtils.d("zlb==>"+JSON.toJSONString(mailListResp));
+
             }
 
             @Override
             public void onTioError(String msg) {
-                LogUtils.d("zlb==>"+msg);
+             
 //                proxy.onFailure(msg);
             }
         });

@@ -18,7 +18,7 @@ import com.tiocloud.chat.yanxun.groupsend.adapter.CommonAdapter;
 import com.tiocloud.chat.yanxun.groupsend.adapter.CommonViewHolder;
 import com.tiocloud.chat.yanxun.groupsend.select.SelectFriendItem;
 import com.tiocloud.chat.yanxun.lable.Label;
-import com.tiocloud.jpush.utils.LogUtils;
+
 import com.watayouxiang.androidutils.page.TioActivity;
 import com.watayouxiang.androidutils.widget.WtTitleBar;
 import com.watayouxiang.db.prefernces.TioDBPreferences;
@@ -120,7 +120,7 @@ public class SelectLabelActivity extends TioActivity {
 
             @Override
             public void onTioError(String msg) {
-                LogUtils.d("zlb==>"+msg);
+
 //                proxy.onFailure(msg);
             }
         });

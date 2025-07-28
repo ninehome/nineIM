@@ -7,7 +7,7 @@ import com.tiocloud.account.TioAccount;
 import com.tiocloud.chat.constant.TioConfig;
 import com.tiocloud.chat.feature.main.fragment.Nav1Fragment;
 import com.tiocloud.chat.preferences.ConfigPreferences;
-import com.tiocloud.jpush.utils.LogUtils;
+//import com.tiocloud.jpush.utils.LogUtils;
 import com.watayouxiang.androidutils.util.TioLogger;
 import com.watayouxiang.androidutils.yanxun.ConstantUtils;
 import com.watayouxiang.db.dao.CacheTableCrud;
@@ -44,7 +44,7 @@ public class LauncherModel extends LauncherContract.Model {
 //                ConstantUtils.websites = configResp.website;
                 Nav1Fragment.findItems = configResp.website;
                 TioAccount.inviteEnable = "1".equals(configResp.conf.get("inviteEnable"));
-                LogUtils.i("zlb==config==>>"+new Gson().toJson(configResp.conf));
+
                 TioConfig.OpenCloseConfig.confMap = configResp.conf;
                 TioAccount.sitename = TioConfig.OpenCloseConfig.getSitename();
                 // 回调
@@ -73,7 +73,7 @@ public class LauncherModel extends LauncherContract.Model {
 //                ConstantUtils.websites = configResp.website;
                     Nav1Fragment.findItems = configResp.website;
                     TioAccount.inviteEnable = "1".equals(configResp.conf.get("inviteEnable"));
-                    LogUtils.i("zlb==config==>>"+new Gson().toJson(configResp.conf));
+
                     TioConfig.OpenCloseConfig.confMap = configResp.conf;
                     TioAccount.sitename = TioConfig.OpenCloseConfig.getSitename();
                     // 回调

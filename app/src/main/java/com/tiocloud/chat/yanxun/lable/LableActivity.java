@@ -12,7 +12,7 @@ import com.lzy.okgo.cache.CacheMode;
 import com.tiocloud.chat.R;
 import com.tiocloud.chat.yanxun.group.MainGroupActivity;
 import com.tiocloud.chat.yanxun.view.LineBreakLayout;
-import com.tiocloud.jpush.utils.LogUtils;
+
 import com.watayouxiang.androidutils.page.TioActivity;
 import com.watayouxiang.androidutils.widget.WtTitleBar;
 import com.watayouxiang.db.prefernces.TioDBPreferences;
@@ -106,7 +106,7 @@ public class LableActivity extends TioActivity implements View.OnClickListener {
 
             @Override
             public void onTioError(String msg) {
-                LogUtils.d("zlb==>" + msg);
+
 //                proxy.onFailure(msg);
             }
         });

@@ -41,7 +41,7 @@ public class HeaderInterceptor implements Interceptor {
                 // 手机型号
                 .addHeader("tio-deviceinfo", ObjectUtils.nonNull(deviceInfo))
                 // IMEI
-                .addHeader("tio-imei", ObjectUtils.nonNull(encodeHeader(DeviceUtils.getImei(context))))
+             //   .addHeader("tio-imei", ObjectUtils.nonNull(encodeHeader(DeviceUtils.getImei(context))))
                 // App版本
                 .addHeader("tio-appversion", ObjectUtils.nonNull(appVersion))
                 // 渠道号
@@ -49,7 +49,7 @@ public class HeaderInterceptor implements Interceptor {
                 // 手机分辨率
                 .addHeader("tio-resolution", ObjectUtils.nonNull(resolution))
                 // 运营商
-                .addHeader("tio-operator", ObjectUtils.nonNull(encodeHeader(DeviceUtils.getOperator(context))))
+            //    .addHeader("tio-operator", ObjectUtils.nonNull(encodeHeader(DeviceUtils.getOperator(context))))
                 // 手机尺寸
                 .addHeader("tio-size", ObjectUtils.nonNull(size));
 

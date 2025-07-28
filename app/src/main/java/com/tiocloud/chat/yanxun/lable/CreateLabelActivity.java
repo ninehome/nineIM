@@ -31,7 +31,7 @@ import com.tiocloud.chat.yanxun.base.ViewHolder;
 import com.tiocloud.chat.yanxun.lable.create.CreateLableSelectContactActivity;
 import com.tiocloud.chat.yanxun.view.PullToRefreshSlideListView;
 import com.tiocloud.chat.yanxun.view.slidelistview.SlideBaseAdapter;
-import com.tiocloud.jpush.utils.LogUtils;
+
 import com.watayouxiang.androidutils.page.TioActivity;
 import com.watayouxiang.androidutils.widget.WtTitleBar;
 import com.watayouxiang.androidutils.widget.imageview.TioImageView;
@@ -267,7 +267,7 @@ public class CreateLabelActivity extends TioActivity implements View.OnClickList
         TioHttpClient.get(this, mailListReq, new TaoCallback<BaseResp<String>>() {
             @Override
             public void onSuccess(Response<BaseResp<String>> response) {
-                LogUtils.d("zlb=22223==>"+response.body());
+
                 if (response.body().isOk()){
                     ToastUtils.showShort(getString(R.string.creat_success));
                     finish();
@@ -285,7 +285,7 @@ public class CreateLabelActivity extends TioActivity implements View.OnClickList
         TioHttpClient.get(this, mailListReq, new TaoCallback<BaseResp<String>>() {
             @Override
             public void onSuccess(Response<BaseResp<String>> response) {
-                LogUtils.d("zlb=22223==>"+response.body());
+
                 if (response.body().isOk()){
                     ToastUtils.showShort(getString(R.string.repair_success));
                 }else {
@@ -344,7 +344,7 @@ public class CreateLabelActivity extends TioActivity implements View.OnClickList
         TioHttpClient.get(this, mailListReq, new TaoCallback<BaseResp<String>>() {
             @Override
             public void onSuccess(Response<BaseResp<String>> response) {
-                LogUtils.d("zlb=22223==>"+response.body());
+
                 if (response.body().isOk()){
                     ToastUtils.showShort(getString(R.string.update_success));
                     finish();
@@ -397,7 +397,7 @@ public class CreateLabelActivity extends TioActivity implements View.OnClickList
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 0x01 && resultCode == RESULT_OK) {
             String friendStr = data.getStringExtra("friends");
-            LogUtils.d("selectFriendStr==>"+friendStr);
+
             List<MailListResp.Friend> friends = JSONArray.parseArray(friendStr, MailListResp.Friend.class);
             for (MailListResp.Friend friend : friends){
                 if (!isexist(friend)){

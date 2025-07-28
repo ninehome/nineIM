@@ -44,7 +44,7 @@ public class ProtectGuideDialog extends TioDialog {
         tv_userProtocol.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url = HttpCache.getBaseUrl() + TioWebUrl.TIO_USER_PROTOCOL;
+                String url = "https://xxsj.wangliantong.com";
                 TioBrowserActivity.start(mContext, url);
             }
         });
@@ -53,7 +53,7 @@ public class ProtectGuideDialog extends TioDialog {
         tv_privatePolicy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url = HttpCache.getBaseUrl() + TioWebUrl.TIO_PRIVATE_POLICY;
+                String url = "https://yszc.wangliantong.com";
                 TioBrowserActivity.start(mContext, url);
             }
         });

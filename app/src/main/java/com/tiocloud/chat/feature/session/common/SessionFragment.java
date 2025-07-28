@@ -31,7 +31,7 @@ import com.tiocloud.chat.util.StringUtil;
 import com.tiocloud.chat.util.TimeUtil;
 import com.tiocloud.chat.yanxun.view.MarqueTextView;
 import com.tiocloud.chat.yanxun.view.MarqueeHorizontalTextView;
-import com.tiocloud.jpush.utils.LogUtils;
+
 import com.watayouxiang.androidutils.page.TioFragment;
 import com.watayouxiang.androidutils.util.SpanUtils;
 import com.watayouxiang.androidutils.widget.dialog.confirm.TioConfirmDialog;
@@ -168,7 +168,7 @@ public abstract class SessionFragment extends TioFragment implements SessionProx
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        LogUtils.d("zlb===========>onDestroyView");
+
         ActionUtil.release(getSessionActivity().getActions());
         presenter.detachView();
         inputPanel.release();

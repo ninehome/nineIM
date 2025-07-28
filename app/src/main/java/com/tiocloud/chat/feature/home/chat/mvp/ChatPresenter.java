@@ -6,7 +6,7 @@ import androidx.annotation.NonNull;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.tiocloud.jpush.utils.LogUtils;
+
 import com.watayouxiang.db.event.ChatListTableEvent;
 import com.watayouxiang.httpclient.model.response.ChatListResp;
 import com.watayouxiang.androidutils.mvp.BaseModel;

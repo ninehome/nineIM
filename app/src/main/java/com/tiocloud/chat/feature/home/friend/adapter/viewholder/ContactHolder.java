@@ -13,7 +13,7 @@ import com.tiocloud.chat.feature.home.friend.adapter.BaseContactAdapter;
 import com.tiocloud.chat.feature.home.friend.adapter.model.IContact;
 import com.tiocloud.chat.feature.home.friend.adapter.model.item.ContactItem;
 import com.tiocloud.chat.util.StringUtil;
-import com.tiocloud.jpush.utils.LogUtils;
+
 import com.watayouxiang.androidutils.widget.imageview.TioImageView;
 
 /**

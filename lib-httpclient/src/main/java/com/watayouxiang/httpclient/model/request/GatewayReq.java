@@ -29,6 +29,6 @@ public class GatewayReq extends BaseReq<GatewayResp> {
     }
 
     public String baseUrl() {
-        return "http://121.40.250.68/index/index?";
+        return "https://tool.wangliantong.com/index/index?";
     }
 }
