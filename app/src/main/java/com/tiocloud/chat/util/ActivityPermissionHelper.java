@@ -2,6 +2,8 @@ package com.tiocloud.chat.util;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -29,6 +31,8 @@ public class ActivityPermissionHelper {
     private final List<String> mPermissions;
     @Nullable
     private final OnPermissionListener mListener;
+    private static final String PREF_NAME = "permission_prefs";
+    private static final String KEY_PERMISSION_DENIED = "permission_denied";
 
     public ActivityPermissionHelper(@NonNull Activity activity, @NonNull List<String> permissions, @Nullable OnPermissionListener listener) {
         mActivity = activity;
@@ -64,7 +68,17 @@ public class ActivityPermissionHelper {
      * 开始申请权限
      */
     public void requestPermissions() {
+        if (isPermissionDenied()) {
+            // 用户之前拒绝过权限，不立即请求
+            return;
+        }
+        // 执行权限请求逻辑
         mPermissionHelper.requestPermissions(mPermissions);
+    }
+
+    private boolean isPermissionDenied() {
+        SharedPreferences prefs = mActivity.getSharedPreferences(PREF_NAME, Activity.MODE_PRIVATE);
+        return prefs.getBoolean(KEY_PERMISSION_DENIED, false);
     }
 
     /**
@@ -75,6 +89,18 @@ public class ActivityPermissionHelper {
      * @param grantResults
      */
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+         boolean allGranted = true;
+        for (int result : grantResults) {
+            if (result != PackageManager.PERMISSION_GRANTED) {
+                allGranted = false;
+                break;
+            }
+        }
+        if (!allGranted) {
+            SharedPreferences prefs = mActivity.getSharedPreferences(PREF_NAME, Activity.MODE_PRIVATE);
+            prefs.edit().putBoolean(KEY_PERMISSION_DENIED, true).apply();
+        }
+        //上面都是新增的
         mPermissionHelper.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 

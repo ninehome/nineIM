@@ -167,7 +167,7 @@
 
                     <ImageView
                         android:id="@+id/iv_wallet"
-                        android:layout_width="wrap_content"
+                        android:layout_width="14dp"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:src="@mipmap/icon_my_wallet" />
@@ -178,7 +178,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="@dimen/dp_10"
                         android:layout_toRightOf="@id/iv_wallet"
-                        android:text="@string/my_wallet"
+                        android:text="隐私政策"
                         android:textColor="@color/gray_333333"
                         android:textSize="@dimen/sp_16"
                         android:textStyle="bold" />

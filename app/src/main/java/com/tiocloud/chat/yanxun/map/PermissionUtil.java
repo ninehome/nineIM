@@ -21,6 +21,17 @@ import java.util.List;
  * Created by Administrator on 2017/12/6 0006.
  */
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.pm.PackageManager;
+import android.os.Build;
+import androidx.appcompat.app.AlertDialog;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import java.util.ArrayList;
+import java.util.List;
+
 public class PermissionUtil {
 
     public static boolean checkSelfPermissions(@NonNull Activity activity, @NonNull String... permissions) {
@@ -48,6 +59,51 @@ public class PermissionUtil {
         return null;
     }
 
+    /**
+     * 申请权限并说明使用目的
+     */
+    public static void requestPermissionsWithPurpose(Activity activity, int requestCode, String... permissions) {
+        if (!checkSelfPermissions(activity, permissions)) {
+            List<String> deniedPermissions = getDeniedPermissions(activity, permissions);
+            if (deniedPermissions != null) {
+                showPermissionPurposeDialog(activity, requestCode, deniedPermissions.toArray(new String[0]));
+            }
+        }
+    }
+
+    private static void showPermissionPurposeDialog(final Activity activity, final int requestCode, final String... permissions) {
+        StringBuilder message = new StringBuilder("我们需要以下权限来提供更好的服务：\n");
+        for (String permission : permissions) {
+            switch (permission) {
+                case Manifest.permission.ACCESS_FINE_LOCATION:
+                case Manifest.permission.ACCESS_COARSE_LOCATION:
+                    message.append("- 位置权限：用于显示附近的人和提供基于位置的服务。\n");
+                    break;
+                case Manifest.permission.CAMERA:
+                    message.append("- 相机权限：用于拍照、视频通话和扫描二维码。\n");
+                    break;
+                case Manifest.permission.RECORD_AUDIO:
+                    message.append("- 录音权限：用于语音通话和语音消息。\n");
+                    break;
+                case Manifest.permission.READ_EXTERNAL_STORAGE:
+                case Manifest.permission.WRITE_EXTERNAL_STORAGE:
+                    message.append("- 存储权限：用于保存图片、视频和文件，以及读取本地文件。\n");
+                    break;
+            }
+        }
+        new AlertDialog.Builder(activity)
+               .setTitle("权限申请")
+               .setMessage(message.toString())
+               .setPositiveButton("同意", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        ActivityCompat.requestPermissions(activity, permissions, requestCode);
+                    }
+                })
+               .setNegativeButton("拒绝", null)
+               .setCancelable(false)
+               .show();
+    }
 
     /**
      * 是否拒绝了再次申请权限的请求（选择了不再询问 || 部分机型默认为不在询问）

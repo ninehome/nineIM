@@ -25,6 +25,7 @@ import com.watayouxiang.demoshell.webview.TWebView;
 public class TioBrowserActivity extends BaseActivity {
     private TWebView mTWebView;
     private ProgressBar mProgressBar;
+    public static String EXTRA_URL = "URL";
 
     public static void start(Context context, String url) {
         Intent starter = new Intent(context, TioBrowserActivity.class);

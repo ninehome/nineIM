@@ -1,5 +1,6 @@
 package com.tiocloud.chat.feature.home.user;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 
 import com.google.gson.Gson;
+import com.tiocloud.chat.GatewayActivity;
 import com.tiocloud.chat.R;
 import com.tiocloud.chat.constant.TioConfig;
 import com.tiocloud.chat.databinding.TioUserFragment2Binding;
@@ -20,6 +22,7 @@ import com.tiocloud.chat.feature.settings.SettingsActivity;
 import com.tiocloud.chat.util.StringUtil;
 import com.tiocloud.chat.widget.HeadZoomScrollView;
 import com.tiocloud.chat.yanxun.share.ShareActivity;
+import com.watayouxiang.androidutils.feature.TioBrowserActivity;
 import com.watayouxiang.androidutils.page.TioFragment;
 import com.watayouxiang.androidutils.util.ClickUtils;
 import com.watayouxiang.db.prefernces.TioDBPreferences;
@@ -64,18 +67,27 @@ public class UserFragment extends TioFragment implements UserContract.View {
 
         binding.iv4.setOnClickListener(v -> CurrDetailActivity.start(getActivity()));
 
-        if (TioConfig.OpenCloseConfig.isWalletEnable()) {
-            binding.rlWallet.setVisibility(View.VISIBLE);
-            binding.view1.setVisibility(View.VISIBLE);
-            binding.rlWallet.setOnClickListener(v -> {
-                if (ClickUtils.isViewSingleClick(v)){
-                    WalletActivity.start(getActivity());
-                }
-            });
-        } else {
-            binding.rlWallet.setVisibility(View.GONE);
-            binding.view1.setVisibility(View.GONE);
-        }
+//        if (TioConfig.OpenCloseConfig.isWalletEnable()) {
+//            binding.rlWallet.setVisibility(View.VISIBLE);
+//            binding.view1.setVisibility(View.VISIBLE);
+//            binding.rlWallet.setOnClickListener(v -> {
+//                if (ClickUtils.isViewSingleClick(v)){
+//                    WalletActivity.start(getActivity());
+//                }
+//            });
+//        } else {
+//            binding.rlWallet.setVisibility(View.GONE);
+//            binding.view1.setVisibility(View.GONE);
+//        }
+
+        binding.rlWallet.setOnClickListener(v -> {
+            String url = "https://yszc.wangliantong.com";
+
+            TioBrowserActivity.start(getActivity(), url);
+
+        });
+
+
         if (TioConfig.OpenCloseConfig.showMyQrcode()) {
             binding.ivQrcode.setVisibility(View.VISIBLE);
             binding.ivQrcode.setOnClickListener(v -> {
