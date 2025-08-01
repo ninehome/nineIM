@@ -1,7 +1,9 @@
 package com.watayouxiang.audiorecord;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -65,7 +67,6 @@ public class TioAudioRecorder implements WtMediaRecorder.OnRecorderListener {
     /**
      * 初始化录音视图
      */
-
     public void initRecordView(@NonNull final View view) {
         mContext = view.getContext();
         notifyChangedOnUiThread(1);
@@ -74,21 +75,38 @@ public class TioAudioRecorder implements WtMediaRecorder.OnRecorderListener {
             // 设置点击监听
             setViewOnTouchListener(view);
         } else {
-            // 申请权限
-            view.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(final View view) {
-                    requestPermissions(view);
-                }
-            });
-            view.setOnLongClickListener(new View.OnLongClickListener() {
-                @Override
-                public boolean onLongClick(View view) {
-                    requestPermissions(view);
-                    return true;
-                }
-            });
+            // 显示权限申请对话框
+            showPermissionPurposeDialog(view);
         }
+    }
+
+    /**
+     * 显示权限使用目的对话框
+     */
+    private void showPermissionPurposeDialog(final View view) {
+        if (mContext == null) return;
+
+        StringBuilder message = new StringBuilder("我们需要以下权限来提供录音服务：\n");
+        message.append("- 存储权限：用于保存录制的音频文件到本地设备。\n");
+        message.append("- 麦克风权限：用于录制音频内容。\n");
+
+        new AlertDialog.Builder(mContext)
+               .setTitle("权限申请")
+               .setMessage(message.toString())
+               .setPositiveButton("同意", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        requestPermissions(view);
+                    }
+                })
+               .setNegativeButton("拒绝", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        showToastOnUiThread("权限被拒绝，无法使用录音功能");
+                    }
+                })
+               .setCancelable(false)
+               .show();
     }
 
     private void requestPermissions(final View view) {
@@ -126,13 +144,14 @@ public class TioAudioRecorder implements WtMediaRecorder.OnRecorderListener {
                     case MotionEvent.ACTION_MOVE:
                         cancelAudioRecord(isCancelled(view, event));
                         break;
-                    default:
-                        break;
                 }
                 return true;
             }
         });
     }
+
+
+
 
     /**
      * 释放资源
@@ -167,16 +186,16 @@ public class TioAudioRecorder implements WtMediaRecorder.OnRecorderListener {
     }
 
     private void uploadAudio(@NonNull File audioFile) {
-        if (mChatLinkIds != null){
+        if (mChatLinkIds != null) {
             setCount(mChatLinkIds.size());
-            for(String chatlinkId : mChatLinkIds){
+            for (String chatlinkId : mChatLinkIds) {
                 UploadAudioReq uploadAudioReq = new UploadAudioReq(chatlinkId, audioFile.getAbsolutePath());
                 uploadAudioReq.setCancelTag(this);
                 uploadAudioReq.upload(new TioCallback<String>() {
                     @Override
                     public void onStart(Request<BaseResp<String>, ? extends Request> request) {
                         super.onStart(request);
-                        if (getCount() == mChatLinkIds.size()){
+                        if (getCount() == mChatLinkIds.size()) {
                             ThreadUtils.runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
@@ -190,7 +209,7 @@ public class TioAudioRecorder implements WtMediaRecorder.OnRecorderListener {
 
                     @Override
                     public void onTioSuccess(String s) {
-
+                        // 目前该方法为空，若后续需要实现具体逻辑，请补充代码
                     }
 
                     @Override
@@ -202,7 +221,7 @@ public class TioAudioRecorder implements WtMediaRecorder.OnRecorderListener {
                     public void onFinish() {
                         super.onFinish();
                         countDown();
-                        if (getCount() == 0){
+                        if (getCount() == 0) {
                             ThreadUtils.runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
@@ -215,14 +234,13 @@ public class TioAudioRecorder implements WtMediaRecorder.OnRecorderListener {
                     }
                 });
             }
-        }else {
+        } else {
             UploadAudioReq uploadAudioReq = new UploadAudioReq(mChatLinkId, audioFile.getAbsolutePath());
             uploadAudioReq.setCancelTag(this);
             uploadAudioReq.upload(new TioCallback<String>() {
                 @Override
                 public void onStart(Request<BaseResp<String>, ? extends Request> request) {
                     super.onStart(request);
-
                     ThreadUtils.runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -235,7 +253,7 @@ public class TioAudioRecorder implements WtMediaRecorder.OnRecorderListener {
 
                 @Override
                 public void onTioSuccess(String s) {
-
+                    // 目前该方法为空，若后续需要实现具体逻辑，请补充代码
                 }
 
                 @Override
@@ -246,7 +264,6 @@ public class TioAudioRecorder implements WtMediaRecorder.OnRecorderListener {
                 @Override
                 public void onFinish() {
                     super.onFinish();
-
                     ThreadUtils.runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -310,13 +327,8 @@ public class TioAudioRecorder implements WtMediaRecorder.OnRecorderListener {
     private static boolean isCancelled(View view, MotionEvent event) {
         int[] location = new int[2];
         view.getLocationOnScreen(location);
-
-        if (event.getRawX() < location[0] || event.getRawX() > location[0] + view.getWidth()
-                || event.getRawY() < location[1] - 40) {
-            return true;
-        }
-
-        return false;
+        return event.getRawX() < location[0] || event.getRawX() > location[0] + view.getWidth()
+                || event.getRawY() < location[1] - 40;
     }
 
     private void showOkCancelDialog() {
@@ -397,7 +409,7 @@ public class TioAudioRecorder implements WtMediaRecorder.OnRecorderListener {
 
     @Override
     public void onWtRecorderError(int type) {
-
+        // 目前该方法为空，若后续需要实现具体逻辑，请补充代码
     }
 
     @Override

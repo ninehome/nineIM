@@ -35,17 +35,6 @@
                 android:src="@drawable/arrow_right" />
         </RelativeLayout>
 
-        <TextView
-            android:id="@+id/tv_login_exit"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:text="@string/other_login_type"
-            android:layout_marginLeft="15dp"
-            android:gravity="center_vertical"
-            android:textColor="@color/gray_B3B3B3"
-            android:textSize="@dimen/sp_14"
-            />
-
         <RelativeLayout
             android:id="@+id/rl_tel"
             android:layout_width="match_parent"
@@ -105,7 +94,21 @@
 
         </RelativeLayout>
 
-
+        <RelativeLayout
+            android:id="@+id/rl_logout_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:clickable="true"
+            android:background="?android:attr/selectableItemBackground">
+    
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/logout_account"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+        </RelativeLayout>
 
     </LinearLayout>
 

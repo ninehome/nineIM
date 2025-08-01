@@ -20,7 +20,7 @@ import com.blankj.utilcode.util.LogUtils;
 import com.blankj.utilcode.util.SpanUtils;
 import com.blankj.utilcode.util.Utils;
 import com.chad.library.adapter.base.BaseViewHolder;
-import com.shuyu.gsyvideoplayer.utils.CommonUtil;
+
 import com.tiocloud.chat.R;
 import com.tiocloud.chat.constant.TioConfig;
 import com.tiocloud.chat.util.MoonUtil;

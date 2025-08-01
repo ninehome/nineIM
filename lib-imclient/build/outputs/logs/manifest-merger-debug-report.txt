@@ -25,10 +25,6 @@ uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from /Users/lei/Documents/fighting/im/im_android/lib-imclient/src/main/AndroidManifest.xml:4:5-79
 	android:name
 		ADDED from /Users/lei/Documents/fighting/im/im_android/lib-imclient/src/main/AndroidManifest.xml:4:22-76
-uses-permission#android.permission.READ_PHONE_STATE
-ADDED from /Users/lei/Documents/fighting/im/im_android/lib-imclient/src/main/AndroidManifest.xml:5:5-75
-	android:name
-		ADDED from /Users/lei/Documents/fighting/im/im_android/lib-imclient/src/main/AndroidManifest.xml:5:22-72
 uses-sdk
 INJECTED from /Users/lei/Documents/fighting/im/im_android/lib-imclient/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/lei/Documents/fighting/im/im_android/lib-imclient/src/main/AndroidManifest.xml

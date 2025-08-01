@@ -372,6 +372,7 @@
     <string name="add_member">添加成员</string>
     <string name="lirujiaren">例如：家人、朋友</string>
     <string name="creat_success">创建成功</string>
+    <string name="logout_account">注销账号</string>
     <string name="location_info">位置信息</string>
     <string name="you_not_install_baidumap">您尚未安装百度地图</string>
     <string name="you_not_install_gaodemap">您尚未安装高德地图</string>
