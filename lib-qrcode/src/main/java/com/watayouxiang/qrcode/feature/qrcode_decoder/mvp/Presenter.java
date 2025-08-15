@@ -2,6 +2,7 @@ package com.watayouxiang.qrcode.feature.qrcode_decoder.mvp;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.hardware.Camera;
@@ -208,21 +209,30 @@ public class Presenter extends Contract.Presenter {
     // ====================================================================================
 
     public static void checkPermission(OnCheckPermissionCallback callback, Context context) {
-        PermissionUtils.permission(PermissionConstants.CAMERA, PermissionConstants.STORAGE)
-                .rationale((activity, shouldRequest) -> shouldRequest.again(true))
-                .callback((isAllGranted, granted, deniedForever, denied) -> {
-                    if (isAllGranted) {
-                        if (callback != null) {
-                            callback.onPermissionAllGranted();
-                        }
-                    } else {
-                        if (!deniedForever.isEmpty()) {
-                            PermissionUtils.launchAppDetailsSettings();
-                        }
-                        TioToast.showShort(context.getString(R.string.havenoquanxian));
-                    }
+        // 显示权限用途解释对话框
+        new AlertDialog.Builder(context)
+                .setTitle("权限申请")
+                .setMessage("需要相机权限以扫描二维码，存储权限以从相册选择二维码图片")
+                .setPositiveButton("确定", (dialog, which) -> {
+                    // 用户确认后请求权限
+                    PermissionUtils.permission(PermissionConstants.CAMERA, PermissionConstants.STORAGE)
+                            .rationale((activity, shouldRequest) -> shouldRequest.again(true))
+                            .callback((isAllGranted, granted, deniedForever, denied) -> {
+                                if (isAllGranted) {
+                                    if (callback != null) {
+                                        callback.onPermissionAllGranted();
+                                    }
+                                } else {
+                                    if (!deniedForever.isEmpty()) {
+                                        PermissionUtils.launchAppDetailsSettings();
+                                    }
+                                    TioToast.showShort(context.getString(R.string.havenoquanxian));
+                                }
+                            })
+                            .request();
                 })
-                .request();
+                .setNegativeButton("取消", null)
+                .show();
     }
 
     public interface OnCheckPermissionCallback {

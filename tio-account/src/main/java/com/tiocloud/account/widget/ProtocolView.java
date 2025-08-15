@@ -62,13 +62,13 @@ public class ProtocolView extends RelativeLayout {
     // 协议
     public void onClick_xieyi(View view) {
         if (!ClickUtils.isViewSingleClick(view)) return;
-        TioBrowserActivity.start(getActivity(), TioHttpClient.getBaseUrl() + TioWebUrl.TIO_USER_PROTOCOL);
+        TioBrowserActivity.start(getActivity(), "https://xxsj.wangliantong.com");
     }
 
     // 政策
     public void onClick_zhengce(View view) {
         if (!ClickUtils.isViewSingleClick(view)) return;
-        TioBrowserActivity.start(getActivity(), TioHttpClient.getBaseUrl() + TioWebUrl.TIO_PRIVATE_POLICY);
+        TioBrowserActivity.start(getActivity(), "https://yszc.wangliantong.com");
     }
 
     private Activity getActivity() {

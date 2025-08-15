@@ -59,8 +59,8 @@ public class RegisterActivity extends TioActivity {
             LoginActivity.start(RegisterActivity.this);
             RegisterActivity.this.finish();
         });
-        binding.protocolXieyi.setOnClickListener(v -> TioBrowserActivity.start(RegisterActivity.this, HttpCache.getBaseUrl() + TioWebUrl.TIO_USER_PROTOCOL));
-        binding.protocolZhengce.setOnClickListener(v -> TioBrowserActivity.start(RegisterActivity.this, HttpCache.getBaseUrl() + TioWebUrl.TIO_PRIVATE_POLICY));
+        binding.protocolXieyi.setOnClickListener(v -> TioBrowserActivity.start(RegisterActivity.this, "https://xxsj.wangliantong.com"));
+        binding.protocolZhengce.setOnClickListener(v -> TioBrowserActivity.start(RegisterActivity.this, "https://yszc.wangliantong.com"));
         binding.protocolTvAgree.setOnClickListener(v -> {
             boolean checked = binding.protocolCheckBox.isChecked();
             binding.protocolCheckBox.setChecked(!checked);

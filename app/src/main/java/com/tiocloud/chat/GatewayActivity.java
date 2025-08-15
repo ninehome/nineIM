@@ -19,6 +19,7 @@ import com.blankj.utilcode.util.AppUtils;
 import com.blankj.utilcode.util.PermissionUtils;
 import com.blankj.utilcode.util.ToastUtils;
 import com.tiocloud.account.TioAccount;
+import com.tiocloud.account.feature.login.LoginActivity;
 import com.tiocloud.chat.constant.TioConfig;
 import com.tiocloud.chat.mvp.launcher.LauncherPresenter;
 import com.tiocloud.chat.widget.dialog.tio.ProtectGuideDialog;
@@ -68,6 +69,18 @@ public class GatewayActivity extends AppCompatActivity {
 
 
         CheckBox cbAgreement = findViewById(R.id.cb_agreement);
+         findViewById(R.id.user_protocol).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                TioBrowserActivity.start(GatewayActivity.this, "https://xxsj.wangliantong.com");
+            }
+        });
+        findViewById(R.id.user_private).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                TioBrowserActivity.start(GatewayActivity.this, "https://yszc.wangliantong.com");
+            }
+        });
         btnLogin = findViewById(R.id.btn_login);
          tvLink1 = findViewById(R.id.tv_link1);
         tvLink2 = findViewById(R.id.tv_link2);

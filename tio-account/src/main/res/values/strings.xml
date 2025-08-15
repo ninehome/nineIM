@@ -85,5 +85,6 @@
     <string name="bindshouji">绑定该手机</string>
     <string name="huanqitashouji">换其他手机</string>
     <string name="quedingtuichuma">确定要退出吗？</string>
+    <string name="please_agree_privacy">请勾选同意用户协议与隐私协议</string>
 
 </resources>

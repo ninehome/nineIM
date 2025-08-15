@@ -56,12 +56,30 @@
                             android:inputType="text"
                             android:layout_marginBottom="10dp"/>
 
-                        <CheckBox
-                            android:id="@+id/cb_agreement"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/app_black"
-                            android:text="已阅读并同意《用户协议》和《隐私政策》"/>
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+
+                           android:layout_height="wrap_content">
+                           <CheckBox
+                               android:id="@+id/cb_agreement"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:textColor="@color/app_black"
+                               android:text="已阅读并同意"/>
+                           <TextView
+                               android:id="@+id/user_protocol"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="《用户协议》"
+                               />
+                           <TextView
+                               android:id="@+id/user_private"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="《隐私政策》"
+                               />
+
+                       </LinearLayout>
 
                         <Button
                             android:id="@+id/btn_login"

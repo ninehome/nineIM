@@ -30,7 +30,12 @@ public class LauncherPresenter extends LauncherContract.Presenter {
     public void init() {
         startTime = System.currentTimeMillis();
         // 显示隐私政策确认弹窗
-        new ProtectGuideDialog(getView().getActivity(), this::reqPermission).checkConfirm();
+        new ProtectGuideDialog(getView().getActivity(), () -> {
+            // 移除启动时的权限请求
+            // reqPermission();
+            // 直接进入配置请求
+            reqConfig();
+        }).checkConfirm();
     }
 
     private void reqPermission() {

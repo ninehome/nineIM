@@ -239,29 +239,30 @@
             android:layout_marginBottom="104dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
-            <TextView
+            <!-- 替换为CheckBox -->
+            <CheckBox
+                android:id="@+id/cb_privacy_agreement"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_14"
-                android:textColor="#FF999999"
-                android:text="@string/login_agree"/>
+                android:button="@drawable/account_checkbox_selector"
+                android:checked="false"
+                android:text="@string/read_and_agree"
+                android:textColor="@color/gray_999999"
+                android:textSize="14sp" />
             <TextView
+                android:id="@+id/tv_user_use_protocal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_14"
+                android:textSize="14sp"
                 android:textColor="@color/theme_color"
                 android:text="@string/user_use_protocal"/>
-
             <TextView
+                android:id="@+id/tv_privacy_protocals"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/privacy_protocals"
                 android:textColor="@color/theme_color"
-                android:textSize="@dimen/sp_14"
-                app:layout_constraintStart_toStartOf="@id/ll_protocal"
-                app:layout_constraintEnd_toEndOf="@id/ll_protocal"
-                app:layout_constraintTop_toBottomOf="@id/ll_protocal"
-                tools:ignore="MissingConstraints" />
+                android:textSize="14sp"/>
         </LinearLayout>
 
         <LinearLayout

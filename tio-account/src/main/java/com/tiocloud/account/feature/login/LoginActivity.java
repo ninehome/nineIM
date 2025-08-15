@@ -8,6 +8,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.CheckBox;
 
 import androidx.annotation.Nullable;
 import androidx.databinding.ObservableField;
@@ -33,6 +34,7 @@ import com.umeng.umverify.UMResultCode;
 import com.umeng.umverify.UMVerifyHelper;
 import com.umeng.umverify.listener.UMTokenResultListener;
 import com.umeng.umverify.model.UMTokenRet;
+import com.watayouxiang.androidutils.feature.TioBrowserActivity;
 import com.watayouxiang.androidutils.page.easy.EasyActivity;
 import com.watayouxiang.androidutils.util.ClickUtils;
 import com.watayouxiang.androidutils.yanxun.ConstantUtils;
@@ -290,6 +292,20 @@ public class LoginActivity extends EasyActivity<AccountLoginActivityBinding> imp
 
         // 设置显示账号
         String account = AccountSP.getLoginName();
+
+        findViewById(R.id.tv_user_use_protocal).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                TioBrowserActivity.start(LoginActivity.this, "https://xxsj.wangliantong.com");
+            }
+        });
+        findViewById(R.id.tv_privacy_protocals).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                TioBrowserActivity.start(LoginActivity.this, "https://yszc.wangliantong.com");
+            }
+        });
+
         if (account != null) {
             txt_account.set(account);
         }
@@ -328,6 +344,12 @@ public class LoginActivity extends EasyActivity<AccountLoginActivityBinding> imp
     // 登录
     public void onClick_ok(View view) {
         if (!ClickUtils.isViewSingleClick(view)) return;
+        // 检查隐私政策复选框状态
+        CheckBox cbPrivacy = findViewById(R.id.cb_privacy_agreement);
+        if (!cbPrivacy.isChecked()) {
+            ToastUtils.showShort(getString(R.string.please_agree_privacy));
+            return;
+        }
         presenter.pwdLogin(txt_account.get(), txt_pwd.get(), getActivity());
     }
 
