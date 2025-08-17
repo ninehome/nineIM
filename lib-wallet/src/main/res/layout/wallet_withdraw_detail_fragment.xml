@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.text.TextUtils" />
+
+        <variable
+            name="data"
+            type="com.watayouxiang.wallet.feature.withdraw_detail.WithdrawDetailFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_brief"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="29dp"
+            android:drawableTop="@drawable/wallet_withdraw_record_icon"
+            android:drawablePadding="10dp"
+            android:text="@{data.brief}"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:text="@{data.money_receive}"
+            android:textColor="#333333"
+            android:textSize="37sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_brief" />
+
+        <!--三个点-->
+
+        <ImageView
+            android:id="@+id/iv_point1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="29dp"
+            android:src="@drawable/wallet_process_point_blue"
+            app:layout_constraintEnd_toStartOf="@id/iv_point2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_money" />
+
+        <ImageView
+            android:id="@+id/iv_point2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/wallet_process_point_blue"
+            app:layout_constraintBottom_toBottomOf="@id/iv_point1"
+            app:layout_constraintEnd_toStartOf="@id/iv_point3"
+            app:layout_constraintStart_toEndOf="@id/iv_point1"
+            app:layout_constraintTop_toTopOf="@id/iv_point1" />
+
+        <ImageView
+            android:id="@+id/iv_point3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/wallet_process_point_blue"
+            app:layout_constraintBottom_toBottomOf="@id/iv_point2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_point2"
+            app:layout_constraintTop_toTopOf="@id/iv_point2" />
+
+        <!--两条线-->
+
+        <View
+            android:id="@+id/v_line1"
+            android:layout_width="0dp"
+            android:layout_height="0.8dp"
+            android:background="#AFCFFF"
+            app:layout_constraintBottom_toBottomOf="@id/iv_point1"
+            app:layout_constraintEnd_toStartOf="@id/iv_point2"
+            app:layout_constraintStart_toEndOf="@id/iv_point1"
+            app:layout_constraintTop_toTopOf="@id/iv_point1" />
+
+        <View
+            android:id="@+id/v_line2"
+            android:layout_width="0dp"
+            android:layout_height="0.8dp"
+            android:background="#AFCFFF"
+            app:layout_constraintBottom_toBottomOf="@id/iv_point2"
+            app:layout_constraintEnd_toStartOf="@id/iv_point3"
+            app:layout_constraintStart_toEndOf="@id/iv_point2"
+            app:layout_constraintTop_toTopOf="@id/iv_point2" />
+
+        <!--三个文案-->
+
+        <TextView
+            android:id="@+id/tv_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/tixianshenqing"
+            android:textColor="#888888"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/iv_point1"
+            app:layout_constraintStart_toStartOf="@id/iv_point1"
+            app:layout_constraintTop_toBottomOf="@id/iv_point1" />
+
+        <TextView
+            android:id="@+id/tv_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/yinhangchulizhong"
+            android:textColor="#888888"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/iv_point2"
+            app:layout_constraintStart_toStartOf="@id/iv_point2"
+            app:layout_constraintTop_toBottomOf="@id/iv_point2" />
+
+        <TextView
+            android:id="@+id/tv_text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/tip_withdraw_success"
+            android:textColor="#888888"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/iv_point3"
+            app:layout_constraintStart_toStartOf="@id/iv_point3"
+            app:layout_constraintTop_toBottomOf="@id/iv_point3" />
+
+        <!--分割线-->
+
+        <View
+            android:id="@+id/v_divider"
+            android:layout_width="0dp"
+            android:layout_height="0.8dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="15dp"
+            android:background="#E8E8E8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_text1" />
+
+        <!--明细-->
+
+        <LinearLayout
+            android:id="@+id/ll_infoContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/v_divider">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="29dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tixianjine"
+                    android:textColor="#666666"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="@{data.money_total}"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="29dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/shouxufei"
+                    android:textColor="#666666"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="@{data.money_fee}"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="29dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/danhao"
+                    android:textColor="#666666"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="@{data.serialNumber}"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="29dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/daozhangyinhang"
+                    android:textColor="#666666"
+                    android:textSize="14sp" />
+
+                <com.watayouxiang.androidutils.widget.imageview.TioImageView
+                    android:id="@+id/tiv_bankIcon"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_toLeftOf="@id/tv_bankInfo" />
+
+                <TextView
+                    android:id="@+id/tv_bankInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="@{data.bankInfo}"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="29dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tijaioshijian"
+                    android:textColor="#666666"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="@{data.submitTime}"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="29dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{data.lastItem_key}"
+                    android:textColor="#666666"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="@{data.lastItem_value}"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,50 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.1"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {
+        enabled true
+    }
+
+    android.libraryVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "${project.name}-${defaultConfig.versionName}-${buildType.name}.aar"
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+
+    testImplementation 'junit:junit:4.13.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+
+    implementation project(path: ':lib-httpclient')
+    implementation 'com.blankj:utilcodex:1.30.5'
+    implementation 'com.facebook.fresco:fresco:2.3.0'
+    implementation 'com.facebook.fresco:animated-gif:2.3.0'
+    implementation 'com.facebook.fresco:soloader:2.3.0'
+
+}

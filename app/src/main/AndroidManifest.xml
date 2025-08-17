@@ -1,0 +1,498 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.tiocloud.chat"
+    >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- <uses-permission android:name="android.permission.READ_PHONE_STATE" /> -->
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT " />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+<!--    <uses-permission android:name="android.permission.CALL_PHONE" />-->
+
+
+    <application
+        android:name="TioApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/TioTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning">
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.tiocloud.chat.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/merged_file_paths"
+                tools:replace="android:resource"/>
+        </provider>
+        <meta-data
+            android:name="OUT_APK_TIME"
+            android:value="${OUT_APK_TIME}" />
+
+        <!-- 修改 Activity 名称 -->
+        <activity android:name=".GatewayActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 闪屏页 -->
+        <activity
+            android:name=".feature.splash.SplashActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioWelcomeTheme">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
+
+        <!-- 登录页 -->
+        <activity
+            android:name=".feature.account.login.LoginActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme" />
+
+        <!-- 注册页 -->
+        <activity
+            android:name=".feature.account.register.RegisterActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme" />
+
+        <!-- 找回密码页 -->
+        <activity
+            android:name=".feature.account.pwd.RetrievePwdActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme" />
+
+        <!-- 主页 -->
+        <activity
+            android:name=".feature.main.MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/TioTheme" />
+
+        <!-- 群会话页 -->
+        <activity
+            android:name=".feature.session.group.GroupSessionActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme2" />
+
+        <!-- 私聊会话页 -->
+        <activity
+            android:name=".feature.session.p2p.P2PSessionActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme2" />
+
+        <!-- 搜索好友群组 -->
+        <activity
+            android:name=".feature.search.curr.SearchActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme"
+            android:windowSoftInputMode="stateVisible" />
+
+        <!--搜索并添加用户页-->
+        <activity
+            android:name=".feature.search.user.SearchUserActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme"
+            android:windowSoftInputMode="stateVisible" />
+
+        <!-- 设置页 -->
+        <activity
+            android:name=".feature.settings.SettingsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme2" />
+
+        <!-- 个人信息页 -->
+        <activity
+            android:name=".feature.user.detail.UserDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme2" />
+
+        <!--群信息页-->
+        <activity
+            android:name=".feature.group.info.GroupInfoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme2" />
+
+        <!--申请列表-->
+        <activity
+            android:name=".feature.user.applylist.ApplyListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme2" />
+
+        <!--创建群组-->
+        <!--键盘弹出时，不影响布局，而是覆盖屏幕-->
+        <activity
+            android:name=".feature.group.create.CreateGroupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme2"
+            android:windowSoftInputMode="stateVisible|adjustResize|adjustPan" />
+
+        <!--群成员列表-->
+        <activity
+            android:name=".feature.group.member.GroupMemberActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme2" />
+
+        <!--邀请入群-->
+        <activity
+            android:name=".feature.group.invitemember.InviteMemberActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme2"
+            android:windowSoftInputMode="stateVisible" />
+
+        <!--转让群-->
+        <activity
+            android:name=".feature.group.transfergroup.TransferGroupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme2"
+            android:windowSoftInputMode="stateVisible" />
+
+        <!--移除成员-->
+        <activity
+            android:name=".feature.group.removemember.RemoveMemberActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme2"
+            android:windowSoftInputMode="stateVisible" />
+
+        <!--个人信息页-->
+        <activity
+            android:name=".feature.curr.detail.CurrDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme2" />
+
+        <!--修改密码-->
+        <activity
+            android:name=".feature.account.pwd.ModifyPwdActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme2" />
+
+        <!--信息修改页-->
+        <activity
+            android:name=".feature.curr.modify.ModifyActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme2" />
+
+        <!--选择好友-->
+        <!--键盘弹出时，不影响布局，而是覆盖屏幕-->
+        <activity
+            android:name=".feature.user.selectfriend.SelectFriendActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme"
+            android:windowSoftInputMode="stateVisible|adjustResize|adjustPan" />
+
+        <!--选择群聊-->
+        <!--键盘弹出时，不影响布局，而是覆盖屏幕-->
+        <activity
+            android:name=".feature.group.card.GroupCardActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme"
+            android:windowSoftInputMode="stateVisible|adjustResize|adjustPan" />
+
+        <!--电话页-->
+        <activity
+            android:name=".feature.webrtc.CallActivity"
+            android:configChanges="orientation|smallestScreenSize|screenSize|screenLayout"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme" />
+
+        <!--视频播放页-->
+        <activity
+            android:name=".feature.player.VideoPlayerActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/WtTheme.Blue.FullScreen" />
+
+        <!--把 "好友" 分享给 "好友/群聊"-->
+        <activity
+            android:name=".feature.share.friend.ShareFriendActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme" />
+
+        <!--把 "群组" 分享给 "好友/群聊"-->
+        <activity
+            android:name=".feature.share.group.ShareGroupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme" />
+
+        <!--把 "消息" 转发给 "好友/群聊"-->
+        <activity
+            android:name=".feature.share.msg.ShareMsgActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme" />
+
+        <!--@群好友-->
+        <activity
+            android:name=".feature.group.at.AtActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme" />
+
+        <!--群管理-->
+        <activity
+            android:name=".feature.group.mgr.GroupMgrActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme2" />
+
+        <activity
+            android:name=".feature.group.silent.SilentMgrActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme" />
+
+        <!-- 测试页 -->
+        <activity
+            android:name=".test.TestActivity"
+            android:theme="@style/WtTheme.Blue.DarkActionBar" />
+        <activity
+            android:name=".test.activity.PermissionTestActivity"
+            android:theme="@style/WtTheme.Blue.DarkActionBar" />
+        <activity
+            android:name=".test.activity.HttpTestActivity"
+            android:theme="@style/WtTheme.Blue.DarkActionBar" />
+        <activity
+            android:name=".test.activity.UITestActivity"
+            android:theme="@style/WtTheme.Blue.DarkActionBar" />
+        <activity
+            android:name=".test.activity.TestWebRTCActivity"
+            android:theme="@style/WtTheme.Blue.DarkActionBar" />
+        <activity
+            android:name=".test.activity.FilePickerTestActivity"
+            android:theme="@style/WtTheme.Blue.DarkActionBar" />
+        <activity
+            android:name=".test.activity.RecordTestActivity"
+            android:theme="@style/WtTheme.Blue.DarkActionBar" />
+        <!--群列表界面-->
+        <activity
+            android:name=".yanxun.group.MainGroupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme"
+            />
+        <activity
+            android:name=".yanxun.lable.LableActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme"
+            />
+        <activity
+            android:name=".yanxun.lable.CreateLabelActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme"/>
+
+        <activity
+            android:name=".yanxun.lable.LabelActivityNewUI"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme"/>
+        <activity android:name=".yanxun.lable.create.CreateLableSelectContactActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme"
+            />
+        <activity android:name=".yanxun.groupsend.SelectGroupSendActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme"
+            />
+        <activity android:name=".yanxun.groupsend.select.SelectRoomActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme"
+            />
+        <activity android:name=".yanxun.groupsend.GroupSendMessageActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme"
+            />
+        <activity android:name=".yanxun.groupsend.SelectLabelActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme"
+            />
+        <activity android:name=".yanxun.group.apply.InviteVerifyActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme"
+            />
+        <activity
+            android:name=".yanxun.map.MapPickerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme"
+            />
+        <activity
+            android:name=".yanxun.map.MapActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme"
+            />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".feature.session.p2p.P2PMoreInfoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme2"
+            />
+        <activity android:name=".yanxun.share.ShareActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme"
+            />
+        <activity android:name=".feature.search.curr.msg.MsgSearchResultActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme"
+            />
+        <activity android:name=".feature.share.msg.HistoryMsgActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/TioTheme"
+            />
+
+        <activity android:name=".feature.account.safe.AccountSafeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            android:theme="@style/TioTheme"
+            />
+
+        <activity android:name=".feature.account.safe.PrivacyActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            android:theme="@style/TioTheme"
+            />
+
+        <activity android:name=".feature.account.safe.AboutActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            android:theme="@style/TioTheme"
+            />
+
+        <activity android:name=".feature.account.safe.DisturbActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            android:theme="@style/TioTheme"
+            />
+
+        <activity android:name=".feature.account.pwd.OtherModifyPwdActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            android:theme="@style/TioTheme"
+            />
+
+        <activity android:name=".feature.account.safe.UnBindActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            android:theme="@style/TioTheme"
+            />
+
+        <activity android:name=".feature.account.safe.UnBindActivityOther"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            android:theme="@style/TioTheme"
+            />
+
+        <activity android:name=".feature.account.safe.BindActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            android:theme="@style/TioTheme"
+            />
+
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+        <service
+            android:name=".service.LiveSerice"
+            android:enabled="true"
+             />
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="tdjrCcNMluQBziW4oF8fqVcOOvLP6UQL" />
+    </application>
+
+</manifest>

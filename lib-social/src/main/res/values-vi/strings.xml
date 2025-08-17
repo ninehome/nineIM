@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="social_cancel">đã hủy</string>
+    <string name="social_share_error">chia sẻ thất bại</string>
+    <string name="social_error">nhận tin nhắn thất bại</string>
+    <string name="social_qq_uninstall">chưa cài đặt QQ</string>
+    <string name="social_qq_unionid_not_set">chưa làm lệnh unionId</string>
+    <string name="social_wx_uninstall">chưa cài đặt WECHAT</string>
+    <string name="social_wb_uninstall">chưa cài đặt WEIBO</string>
+    <string name="social_img_not_found">chưa tìm thấy ảnh chia sẻ</string>
+    <string name="social_wx_version_low_error">WECHAT4.2 trở lên mới được hỗ trợ chia sẻ bảng tin, vui lòng nâng cấp WECHAT</string>
+    <string name="social_error_appid_empty">appId hoặc appSecret hoặc redirectUrl để trống</string>
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.watayouxiang.androidutils.widget.WtTitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tb_tvRight_background="@drawable/sel_titlebar_ok_multichoose"
+        app:tb_tvRight_enable="true"
+        app:tb_background="@color/grayf4f5f6"
+        app:tb_tvRight_text="@string/confirm"
+        app:tb_tvRight_textColor="@color/white"
+        app:tb_tvTitle_text="@string/xuanzebiaoqian" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_e9e9e9"
+        />
+
+    <ListView
+        android:id="@+id/label_lv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:divider="@null"
+        android:layout_weight="1" />
+
+</LinearLayout>

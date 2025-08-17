@@ -1,0 +1,78 @@
+<resources>
+    <string name="app_name1">EasyPhotos</string>
+
+    <string name="selector_folder_all_easy_photos">toàn bộ hình ảnh</string>
+
+    <string name="selector_folder_all_video_photo_easy_photos">hình ảnh và video</string>
+
+    <string name="selector_folder_video_easy_photos">toàn bộ video</string>
+
+    <string name="selector_easy_photos">chọn</string>
+
+    <!--http://stackoverflow.com/questions/17502824/whats-wrong-with-this-format-string-->
+    <string name="selector_action_done_easy_photos">Hoàn(%1$d/%2$d)</string>
+
+    <string name="selector_preview_easy_photos">xem trước</string>
+
+    <string name="selector_reach_max_hint_easy_photos">số chọn lựa quá lớn</string>
+
+    <string name="selector_reach_max_image_hint_easy_photos">cao nhất chỉ được chọn %d tấm ảnh</string>
+
+    <string name="selector_reach_max_video_hint_easy_photos">cao nhất chỉ được chọn %d video</string>
+
+    <string name="selector_single_type_hint_easy_photos">phải chọn file cùng loại với nhau</string>
+
+    <string name="msg_no_camera_easy_photos">không mở được máy ảnh！</string>
+
+    <string name="camera_temp_file_error_easy_photos">lỗi hình ảnh</string>
+
+    <string name="selector_permission_error_easy_photos">quyền hạn bị lỗi, không thể thao tác bình thường！</string>
+
+    <string name="selector_image_size_error_easy_photos">chiều rộng của hình ảnh phải cao hơn %1$d, độ cao phải to hơn %2$d</string>
+
+    <string name="selector_image_type_error_easy_photos">không hỗ trợ định dạng hình ảnh này</string>
+
+    <string name="edit_easy_photos">soạn</string>
+
+    <string name="empty_easy_photos">xóa</string>
+
+    <string name="no_photos_easy_photos">không có hình ảnh phù hợp yêu cầu, hãy chụp 1 ảnh nhé</string>
+
+    <string name="no_videos_easy_photos">không có video phù hợp yêu cầu</string>
+
+    <string name="permissions_again_easy_photos">vui lòng nhấn vào và cho phép quyền hạn liên quan</string>
+
+    <string name="permissions_die_easy_photos">vui lòng nhấn vào và trong lúc cài đặt cho phép quyền hạn liên quan</string>
+
+    <string name="original_easy_photos">ảnh gốc</string>
+
+    <string name="preview_current_number_easy_photos">%1$d/%2$d</string>
+
+    <string name="done_easy_photos">hoàn thành</string>
+
+    <string name="cancel_easy_photos">hủy bỏ</string>
+
+    <string name="template_easy_photos">khuôn mẫu</string>
+
+    <string name="text_sticker_easy_photos">văn tự</string>
+
+    <string name="text_sticker_date_easy_photos">ngày tháng</string>
+
+    <string name="text_sticker_hint_easy_photos">nhấn 2 lần để soạn</string>
+
+    <string name="text_sticker_hint_name_easy_photos">tùy chỉnh</string>
+
+    <string name="picture_selection_easy_photos">chọn ảnh</string>
+
+    <string name="video_selection_easy_photos">chọn video</string>
+
+    <string name="puzzle_easy_photos">ghép 1 ảnh</string>
+
+    <string name="select_puzzle_photos">vui lòng chọn 2 \- 9 tấm ảnh</string>
+
+    <string name="gif_easy_photos">ảnh động</string>
+
+    <string name="video_easy_photos">video</string>
+
+
+</resources>

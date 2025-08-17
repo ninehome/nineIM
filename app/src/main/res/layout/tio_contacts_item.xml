@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?attr/selectableItemBackground">
+
+    <com.watayouxiang.androidutils.widget.imageview.TioImageView
+        android:id="@+id/contact_avatar"
+        android:layout_width="@dimen/dp_44"
+        android:layout_height="@dimen/dp_44"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_6"
+        android:layout_marginBottom="@dimen/dp_6"
+        app:roundAsCircle="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--在线状态-->
+    <View
+        android:id="@+id/v_status"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_margin="3dp"
+        android:background="@drawable/online_selector2"
+        app:layout_constraintEnd_toEndOf="@id/contact_avatar"
+        app:layout_constraintTop_toTopOf="@id/contact_avatar"  />
+    <LinearLayout
+        android:id="@+id/line"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/contact_avatar"
+        app:layout_constraintTop_toTopOf="@id/contact_avatar"
+        >
+        <TextView
+            android:id="@+id/contacts_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            android:singleLine="true"
+            android:text="@string/test"
+            android:textStyle="bold"
+            android:textColor="@color/gray_333333"
+            android:textSize="@dimen/sp_16"
+             />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_online_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp5"
+            android:textColor="@color/gray_c1c1c1"
+            android:textSize="10sp"
+            android:text="离线"
+            android:background="@drawable/dot_offline_bg"
+            />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/v_divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+
+        android:background="@color/gray_e9e9e9"
+        android:visibility="visible"
+        android:layout_marginLeft="@dimen/dp70"
+        app:layout_constraintBottom_toBottomOf="parent"
+         />
+    <!--<View
+        android:id="@+id/divide_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_e9e9e9"
+        android:layout_marginLeft="@dimen/dp70"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />-->
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+    <<< new >>>
+    大驼峰命名法
+    {模块名称}{用在哪个控件}
+     -->
+
+    <!--webrtc-->
+
+    <style name="WebrtcLocalRenderer">
+        <item name="android:layout_width">@dimen/dp_78</item>
+        <item name="android:layout_height">@dimen/dp_138</item>
+    </style>
+
+    <style name="WebrtcAvatar">
+        <item name="android:layout_width">95dp</item>
+        <item name="android:layout_height">95dp</item>
+    </style>
+
+    <style name="WebrtcNick">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_20</item>
+    </style>
+
+    <style name="WebrtcTip">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="WebrtcNegativeBtn">
+        <item name="android:layout_width">@dimen/dp_111</item>
+        <item name="android:layout_height">@dimen/dp_42</item>
+        <item name="android:background">@drawable/tio_bg_call_negative_btn</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="WebrtcPositiveBtn">
+        <item name="android:layout_width">@dimen/dp_111</item>
+        <item name="android:layout_height">@dimen/dp_42</item>
+        <item name="android:background">@drawable/tio_bg_call_positive_btn</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="WebrtcTime">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+    </style>
+
+    <style name="WebrtcDrawableButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawablePadding">@dimen/dp_10</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+    </style>
+
+    <!--account-->
+
+    <style name="AccountTip">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/blue_4c94ff</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="AccountEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/dp_75</item>
+        <item name="android:layout_marginRight">@dimen/dp_75</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:paddingLeft">@dimen/dp_2</item>
+        <item name="android:paddingTop">@dimen/dp_5</item>
+        <item name="android:paddingBottom">@dimen/dp_5</item>
+        <item name="android:selectAllOnFocus">true</item>
+        <item name="android:textColor">@color/gray_333333</item>
+        <item name="android:textColorHint">#FFD5D5D5</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="AccountOkBtn">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_account_confirm</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+    </style>
+
+    <style name="AccountLightTip">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/gray_999999</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="AccountDarkTip">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/blue_4c94ff</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="AccountTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">@dimen/dp_15</item>
+        <item name="android:textColor">@color/gray_333333</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="AccountForward">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginRight">@dimen/dp_15</item>
+    </style>
+
+    <style name="AccountSubtitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">@dimen/dp_4</item>
+        <item name="android:layout_marginRight">@dimen/dp_4</item>
+        <item name="android:gravity">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/gray_9c9c9c</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="AccountLine">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:layout_marginLeft">@dimen/dp_15</item>
+        <item name="android:layout_marginRight">@dimen/dp_15</item>
+        <item name="android:background">@color/gray_e9e9e9</item>
+    </style>
+
+    <style name="Line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/gray_e9e9e9</item>
+    </style>
+
+    <style name="apply_friend_dialog" parent="@android:style/Theme.Dialog">
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 模糊 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 遮罩层 -->
+        <item name="android:backgroundDimAmount">0.5</item>
+    </style>
+
+    <style name="LeftBottomPopAnim" parent="@android:style/Animation.Activity">
+        <item name="android:windowEnterAnimation">@anim/left_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/left_bottom_out</item>
+    </style>
+
+    <style name="Base_Theme_AppCompat_Empty" />
+</resources>

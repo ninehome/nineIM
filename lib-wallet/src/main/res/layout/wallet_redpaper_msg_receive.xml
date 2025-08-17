@@ -1,0 +1,16 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/tv_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:drawableLeft="@drawable/icon_redbag16"
+        android:drawablePadding="4dp"
+        android:gravity="center"
+        android:text="小生领取了你的红包"
+        android:textColor="#FFB7B7B7"
+        android:textSize="13sp" />
+
+</merge>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:id="@+id/map_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.watayouxiang.androidutils.widget.WtTitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tb_tvTitle_text="@string/location_info" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gray_f4f5f6">
+
+        <TextView
+            android:id="@+id/address_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_left_text_size" />
+
+        <ImageView
+            android:id="@+id/dh_iv"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:padding="7dp"
+            android:src="@drawable/daohang" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

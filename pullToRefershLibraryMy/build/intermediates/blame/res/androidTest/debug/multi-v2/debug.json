@@ -1,0 +1,50 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/stan/Desktop/wechat/tio_im_android/pullToRefershLibraryMy/build/intermediates/res/merged/androidTest/debug/values_values.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/stan/Desktop/wechat/tio_im_android/pullToRefershLibraryMy/build/intermediates/packaged_res/debug/values/values.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,96,138,202,266,321,378,433,471,511,548,620,698,773,833,899,963",
+                        "endLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,92",
+                        "endColumns": "40,41,63,63,54,56,54,37,39,36,71,77,74,59,65,63,24",
+                        "endOffsets": "91,133,197,261,316,373,428,466,506,543,615,693,768,828,894,958,4476"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/stan/Desktop/wechat/tio_im_android/pullToRefershLibraryMy/build/intermediates/res/merged/androidTest/debug/values-zh-rCN_values-zh-rCN.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/stan/Desktop/wechat/tio_im_android/pullToRefershLibraryMy/build/intermediates/packaged_res/debug/values-zh-rCN/values-zh-rCN.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "55,127,205,280,340,406",
+                        "endColumns": "71,77,74,59,65,63",
+                        "endOffsets": "122,200,275,335,401,465"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/stan/Desktop/wechat/tio_im_android/pullToRefershLibraryMy/build/intermediates/res/merged/androidTest/debug/values-en_values-en.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/stan/Desktop/wechat/tio_im_android/pullToRefershLibraryMy/build/intermediates/packaged_res/debug/values-en/values-en.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "55,157,271,379,451,521",
+                        "endColumns": "101,113,107,71,69,77",
+                        "endOffsets": "152,266,374,446,516,594"
+                    }
+                }
+            ]
+        }
+    ]
+}

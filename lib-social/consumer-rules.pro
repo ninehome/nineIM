@@ -1,0 +1,10 @@
+-keep class com.tencent.**{*;}
+-keep class com.sina.weibo.sdk.** { *; }
+-keep class com.tencent.mm.opensdk.** { *; }
+-keep class packageName.wxapi.** { *; }
+-keep class com.google.gson.** {*;}
+-keep class com.google.**{*;}
+-keep class sun.misc.Unsafe { *; }
+-keep class com.google.gson.stream.** { *; }
+-keep class com.google.gson.examples.android.model.** { *; }
+-keep class com.watayouxiang.social.**{*;}

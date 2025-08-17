@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_botton_bg"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/tv_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        android:layout_centerVertical="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_16"
+        android:gravity="center"
+        android:padding="15dp"
+        />
+<!--    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="这是一个长按事件"
+        android:layout_centerVertical="true"
+        android:textColor="@color/gray_9c9c9c"
+        android:textSize="@dimen/sp_12"
+        android:gravity="center"
+        />-->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/grayf4f5f6"
+        android:layout_marginTop="15dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_close"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="取消"
+        android:layout_centerVertical="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_16"
+        android:gravity="center"
+        android:padding="16dp"
+        />
+
+
+</LinearLayout>

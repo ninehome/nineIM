@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/dp_210"
+    android:layout_height="@dimen/dp_87"
+    android:background="@drawable/bg_card_session">
+
+    <com.watayouxiang.androidutils.widget.imageview.TioImageView
+        android:id="@+id/hiv_avatar"
+        android:layout_width="@dimen/avatar_wh_44"
+        android:layout_height="@dimen/avatar_wh_44"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_usrName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_4"
+        android:layout_marginRight="@dimen/dp_12"
+        android:singleLine="true"
+        android:text="名称"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintBottom_toBottomOf="@id/hiv_avatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/hiv_avatar"
+        app:layout_constraintTop_toTopOf="@id/hiv_avatar" />
+
+    <ImageView
+        android:id="@+id/iv_cardType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:layout_marginBottom="@dimen/dp_6"
+        android:src="@drawable/ic_user_card_type_session"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_cardType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_2"
+        android:layout_marginRight="@dimen/dp_12"
+        android:singleLine="true"
+        android:text="个人名片"
+        android:textColor="@color/gary_b5b5b5"
+        android:textSize="@dimen/sp_11"
+        app:layout_constraintBottom_toBottomOf="@id/iv_cardType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_cardType"
+        app:layout_constraintTop_toTopOf="@id/iv_cardType" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

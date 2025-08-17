@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/ll_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layer_list_top"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginRight="@dimen/dp15"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="15dp">
+
+        <TextView
+            android:id="@+id/tvLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textColor="@color/gray_333333"
+            android:textSize="14sp"
+            android:text="@string/xuanze_group_zhuanfa"
+            />
+
+        <TextView
+            android:id="@+id/tvValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/Grey_400"
+            android:textSize="12sp"
+            android:visibility="gone"
+            android:text="@string/xuanze_group_zhuanfa"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+</LinearLayout>
+
+                

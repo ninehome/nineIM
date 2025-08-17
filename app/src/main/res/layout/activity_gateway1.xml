@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_centerVertical="true"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hi! 很高兴见到你"
+            android:textSize="18sp"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="欢迎使用亿讯企业版"
+            android:textSize="24sp"
+            android:layout_marginBottom="20dp"/>
+
+        <TabHost
+            android:id="@android:id/tabhost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:id="@+id/tab_phone_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <EditText
+                            android:id="@+id/et_enterprise_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="请输入企业号"
+                            android:inputType="text"
+                            android:layout_marginBottom="10dp"/>
+
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+
+                           android:layout_height="wrap_content">
+                           <CheckBox
+                               android:id="@+id/cb_agreement"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:textColor="@color/app_black"
+                               android:text="已阅读并同意"/>
+                           <TextView
+                               android:id="@+id/user_protocol"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="《用户协议》"
+                               />
+                           <TextView
+                               android:id="@+id/user_private"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="《隐私政策》"
+                               />
+
+                       </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btn_login"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="下一步"
+                            android:background="#0000FF"
+                            android:textColor="#FFFFFF"
+                            android:layout_marginTop="20dp"/>
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+
+
+        </TabHost>
+
+
+    </LinearLayout>
+
+
+    <!-- 底部超链接容器 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tv_link1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="免责声明"
+            android:textColor="@color/app_black"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp" />
+
+        <TextView
+            android:id="@+id/tv_link2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="隐私政策"
+            android:textColor="@color/app_black"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp" />
+
+        <TextView
+            android:id="@+id/tv_link3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用户协议"
+            android:textColor="@color/app_black"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp" />
+    </LinearLayout>
+
+</RelativeLayout>
+
+

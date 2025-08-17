@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="app_black">#ff000000</color>
+
+    <color name="normal_bg">#f2f2f2</color>
+
+    <color name="text_black">#FF2E2F33</color>
+    <color name="button_text">#FF007AFF</color>
+
+    <color name="Grey_600">#757575</color>
+
+    <color name="redpacket_bg">#D85940</color>
+    <color name="scan_recharge_title">#ff333333</color>
+    <color name="grey">#ffa7a7a7</color>
+
+    <color name="orange">#fffa6015</color>
+    <color name="purple">#ffc47cf2</color>
+    <color name="btn_live_2">#43b199</color>
+
+    <color name="scan_recharge_confirm">#0092FC</color>
+</resources>

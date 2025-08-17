@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="message_search_size">13sp</dimen>
+
+    <dimen name="sp_slide_bar_text_size">30sp</dimen>
+
+
+
+    <dimen name="message_nick_size">15sp</dimen>
+
+    <dimen name="BigTextSize">15sp</dimen>
+
+    <dimen name="NormalTextSize">13sp</dimen>
+
+    <dimen name="title_left_text_size">16sp</dimen>
+</resources>

@@ -1,0 +1,21 @@
+package com.tiocloud.chat.feature.session.common.action.model;
+
+import com.tiocloud.chat.R;
+import com.tiocloud.chat.feature.session.common.action.model.base.BaseRedPaperAction;
+import com.watayouxiang.wallet.feature.redpaper.RedPaperActivity;
+
+/**
+ * author : TaoWang
+ * date : 2020/3/5
+ * desc :
+ */
+public class P2PRedPaperAction extends BaseRedPaperAction {
+    public P2PRedPaperAction() {
+        super(R.drawable.icon_im_hongbao, R.string.red_paper);
+    }
+
+    @Override
+    public void onClick() {
+        RedPaperActivity.startP2P(activity, chatLinkIds.get(0));
+    }
+}

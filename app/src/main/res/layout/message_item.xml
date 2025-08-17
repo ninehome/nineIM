@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dp_15"
+    android:paddingTop="@dimen/dp_8"
+    android:paddingRight="@dimen/dp_15"
+    android:paddingBottom="@dimen/dp_8">
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        style="@style/TioCheckboxTheme"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:visibility="gone"
+        android:layout_marginRight="10dp"
+         />
+
+    <com.tiocloud.chat.widget.IntercpetLayout
+        android:id="@+id/root_rl"
+        android:layout_toRightOf="@id/checkBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--左侧头像-->
+        <com.watayouxiang.androidutils.widget.imageview.TioImageView
+            android:id="@+id/message_item_portrait_left"
+            android:layout_width="@dimen/avatar_wh_44"
+            android:layout_height="@dimen/avatar_wh_44"
+            android:layout_centerVertical="true"
+            app:roundAsCircle="true"
+            android:layout_marginRight="10dp"
+            android:visibility="visible" />
+        <TextView
+            android:id="@+id/iv_lable_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/label_qunzhu"
+            android:textSize="10sp"
+            tools:text="群主"
+            android:background="#BBEEEEEE"
+            android:textColor="@color/black"
+            android:gravity="center_horizontal"
+            android:layout_alignBottom="@+id/message_item_portrait_left"
+            android:layout_alignEnd="@+id/message_item_portrait_left"
+            android:layout_alignStart="@+id/message_item_portrait_left"
+            android:visibility="visible"
+            />
+        <!--右侧头像-->
+        <com.watayouxiang.androidutils.widget.imageview.TioImageView
+            android:id="@+id/message_item_portrait_right"
+            android:layout_width="@dimen/avatar_wh_44"
+            android:layout_height="@dimen/avatar_wh_44"
+            app:roundAsCircle="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:visibility="visible" />
+        <TextView
+            android:id="@+id/iv_lable_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/label_qunzhu"
+            android:textSize="10sp"
+            android:background="#BBEEEEEE"
+            android:textColor="@color/black"
+            android:layout_alignBottom="@+id/message_item_portrait_right"
+            android:layout_alignEnd="@+id/message_item_portrait_right"
+            android:layout_alignStart="@+id/message_item_portrait_right"
+            android:visibility="gone"
+            />
+        <LinearLayout
+            android:id="@+id/message_item_name_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:layout_toLeftOf="@id/message_item_portrait_right"
+            android:layout_toRightOf="@id/message_item_portrait_left"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!--左侧昵称-->
+            <TextView
+                android:id="@+id/message_item_nickname_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:maxWidth="160dip"
+                android:singleLine="true"
+                android:text="@string/nickname"
+                android:textColor="#FF909090"
+                android:textSize="12sp"
+                android:visibility="visible" />
+
+            <!--时间-->
+            <TextView
+                android:id="@+id/message_item_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="@string/time_test"
+                android:textColor="#FFCDD0D3"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <!--右侧昵称-->
+            <TextView
+                android:id="@+id/message_item_nickname_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:maxWidth="160dip"
+                android:singleLine="true"
+                android:text="@string/nickname"
+                android:textColor="#FF909090"
+                android:textSize="12sp"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/message_item_name_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_toLeftOf="@id/message_item_portrait_right"
+            android:layout_toRightOf="@id/message_item_portrait_left"
+            android:background="@android:color/transparent"
+            android:gravity="center">
+
+            <!--左侧接收标记-->
+            <TextView
+                android:id="@+id/tv_receipt_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginRight="@dimen/dp_5"
+                android:text="@string/have_read"
+                android:textColor="@color/sel_tv_receipt_txt"
+                android:textSize="12sp"
+                android:visibility="visible" />
+
+            <!--内容区域-->
+            <FrameLayout
+                android:id="@+id/message_item_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/message_item_name_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_toLeftOf="@id/message_item_portrait_right"
+                android:layout_toRightOf="@id/message_item_portrait_left"
+                android:background="@android:color/transparent" />
+
+            <!--右侧接收标记-->
+            <TextView
+                android:id="@+id/tv_receipt_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:text="@string/have_read"
+                android:textColor="@color/sel_tv_receipt_txt"
+                android:textSize="12sp"
+                android:visibility="visible" />
+        </LinearLayout>
+    </com.tiocloud.chat.widget.IntercpetLayout>
+
+
+
+</RelativeLayout>

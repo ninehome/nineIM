@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.text.TextUtils" />
+
+        <variable
+            name="data"
+            type="com.tiocloud.account.feature.login_sms.InputCodeFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--状态栏-->
+        <FrameLayout
+            android:id="@+id/statusBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--顶部底图-->
+        <ImageView
+            android:id="@+id/iv_top_bg"
+            android:layout_width="match_parent"
+            android:layout_height="138dp"
+            android:visibility="invisible"
+            android:background="@drawable/account_page_top_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/statusBar" />
+
+        <!--logo-->
+        <TextView
+            android:id="@+id/tv_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="43dp"
+            android:drawableTop="@drawable/account_ic_logo"
+            android:drawablePadding="16dp"
+            android:gravity="center_horizontal"
+            android:text="@string/app_name"
+            android:textColor="#666666"
+            android:textSize="22sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_top_bg" />
+
+        <!--标题-->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="52dp"
+            android:text="@string/code_sended_to"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_top_bg" />
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="12dp"
+            tools:text="1811111111"
+            android:textColor="@color/gray_909090"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+        <!--验证码-->
+        <com.watayouxiang.androidutils.widget.TioShadowLayout
+            android:id="@+id/ll_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="52dp"
+            android:layout_marginRight="36dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/phone">
+
+            <com.tiocloud.account.widget.PhoneCodeView
+                android:id="@+id/phone_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.watayouxiang.androidutils.widget.TioShadowLayout>
+
+        <!--注册-->
+        <com.watayouxiang.androidutils.widget.TioShadowLayout
+            android:id="@+id/ll_ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginRight="36dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_code">
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:enabled="@{!TextUtils.isEmpty(data.txt_code)}"
+                android:gravity="center"
+                android:onClick="@{data.onClick_ok}"
+                android:text="@string/login"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:qmui_backgroundColor="@color/account_sel_ok_bg_color"
+                app:qmui_borderColor="@color/transparent"
+                app:qmui_borderWidth="0px"
+                app:qmui_radius="24dp" />
+        </com.watayouxiang.androidutils.widget.TioShadowLayout>
+
+        <!--三方登录-->
+        <com.tiocloud.account.widget.ThirdPartyLoginView
+            android:id="@+id/thirdPartyLoginView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <com.qmuiteam.qmui.alpha.QMUIAlphaImageButton
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_close_black"
+            android:layout_marginTop="@dimen/dp_50"
+            android:layout_marginLeft="@dimen/dp_50"
+            android:background="@null"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

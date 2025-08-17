@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <View
+        android:layout_width="48dp"
+        android:layout_height="1dp"
+        android:background="#FFF0F0F0" />
+
+    <TextView
+        android:id="@+id/tv_contactCount"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:gravity="center"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:includeFontPadding="false"
+        android:text="0位联系人"
+        android:textColor="#FF909090"
+        android:textSize="12sp" />
+
+    <View
+        android:layout_width="48dp"
+        android:layout_height="1dp"
+        android:background="#FFF0F0F0" />
+
+</LinearLayout>

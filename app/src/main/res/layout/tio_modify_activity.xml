@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <com.watayouxiang.androidutils.widget.WtTitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tb_tvRight_background="@drawable/sel_titlebar_ok_multichoose"
+        app:tb_background="@color/grayf4f5f6"
+        app:tb_tvRight_enable="true"
+        app:tb_tvRight_text="@string/submit"
+        app:tb_tvRight_textColor="@color/white" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_e9e9e9"
+        />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="start|top"
+        android:minHeight="60dp"
+        tools:text="高级java后台开发工程师，高级安卓应用开发工程师"
+        android:padding="@dimen/dp_15"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_14" />
+
+    <TextView
+        android:id="@+id/tv_wordCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_12"
+        android:background="@color/white"
+        android:gravity="end"
+        android:paddingLeft="@dimen/dp_15"
+        android:paddingTop="@dimen/dp_12"
+        android:paddingRight="@dimen/dp_15"
+        android:paddingBottom="@dimen/dp_10"
+        android:text="0/00"
+        android:textColor="@color/gray_888888"
+        android:textSize="@dimen/sp_14" />
+    <LinearLayout
+        android:id="@+id/tip_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        <View
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="1dp"
+            android:background="#ffd8d8d8"
+            />
+        <TextView
+            android:id="@+id/tip_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_12_text_size"
+            android:textColor="@color/gray_999999"
+            tools:text="@string/only_grouper_repair"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="@dimen/dp_8"
+            />
+        <View
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="1dp"
+            android:background="#ffd8d8d8"
+            />
+    </LinearLayout>
+</LinearLayout>

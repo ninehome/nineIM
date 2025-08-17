@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_topBg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_230"
+            android:background="@drawable/bg_me"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_10"
+            android:src="@drawable/btn_return_white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_pageDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_2"
+            android:text="@string/find_pwd"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintBottom_toBottomOf="@id/iv_backBtn"
+            app:layout_constraintStart_toEndOf="@id/iv_backBtn"
+            app:layout_constraintTop_toTopOf="@id/iv_backBtn" />
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="@dimen/dp_72"
+            android:layout_height="@dimen/dp_72"
+            android:layout_below="@id/tv_pageDesc"
+            android:layout_marginTop="@dimen/dp_12"
+            android:src="@drawable/ic_account_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_pageDesc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_logo"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_logo" />
+
+        <TextView
+            android:id="@+id/tv_emailTxt"
+            style="@style/AccountTip"
+            android:layout_marginLeft="@dimen/dp_75"
+            android:layout_marginTop="36dp"
+            android:text="@string/email"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_topBg" />
+
+        <com.watayouxiang.androidutils.widget.edittext.TioEditText
+            android:id="@+id/edit_account"
+            style="@style/AccountEditText"
+            android:hint="请输入您的邮箱"
+            android:imeOptions="actionDone"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_emailTxt" />
+
+        <View
+            android:id="@+id/v_emailLine"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_0_8"
+            android:background="@color/blue_58b6ff"
+            app:layout_constraintBottom_toBottomOf="@id/edit_account"
+            app:layout_constraintEnd_toEndOf="@id/edit_account"
+            app:layout_constraintStart_toStartOf="@id/edit_account" />
+
+        <TextView
+            android:id="@+id/button_find"
+            style="@style/AccountOkBtn"
+            android:layout_marginTop="50dp"
+            android:text="@string/find_pwd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_account" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

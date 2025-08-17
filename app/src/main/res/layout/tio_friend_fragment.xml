@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.tiocloud.chat.widget.TioRefreshView
+            android:id="@+id/refresh_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/contact_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="@color/transparent"
+                android:divider="@color/transparent"
+                android:dividerHeight="0dp"
+                android:listSelector="@color/transparent"
+                android:scrollbars="none" />
+        </com.tiocloud.chat.widget.TioRefreshView>
+
+        <com.tiocloud.chat.widget.ContactsCatalogView
+            android:id="@+id/contacts_catalog_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+</layout>

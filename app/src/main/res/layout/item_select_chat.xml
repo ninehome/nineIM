@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_friend_warp"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@drawable/list_selector_background_ripple"
+    android:clickable="true"
+    android:descendantFocusability="blocksDescendants"
+   >
+
+    <CheckBox
+        android:id="@+id/cbSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:clickable="false"
+        />
+
+    <com.watayouxiang.androidutils.widget.imageview.TioImageView
+        android:id="@+id/hvHead"
+        android:layout_toRightOf="@id/cbSelect"
+        app:roundAsCircle="true"
+        android:layout_width="@dimen/dp40"
+        android:layout_height="@dimen/dp40"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginBottom="@dimen/dp_8" />
+
+    <LinearLayout
+        android:id="@+id/ll_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+       android:layout_toRightOf="@id/hvHead"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvNickName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/message_nick_size"
+            tools:text="小张" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/vDividerVertical"
+        android:layout_width="0.1dp"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:layout_toStartOf="@+id/cbSelect"
+        android:background="@color/divbg"
+        android:visibility="gone" />
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_e9e9e9"
+        android:layout_alignParentBottom="true"
+         />
+    <View
+        style="@style/View_Line"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@id/hvHead"
+        android:visibility="gone" />
+
+</RelativeLayout>

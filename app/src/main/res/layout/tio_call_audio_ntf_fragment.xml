@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:keepScreenOn="true">
+
+        <!--图像预览-->
+        <org.webrtc.SurfaceViewRenderer
+            android:id="@+id/remote_video_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <org.webrtc.SurfaceViewRenderer
+            android:id="@+id/local_video_view"
+            style="@style/WebrtcLocalRenderer"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_marginRight="@dimen/dp_15" />
+
+        <!--未接听-->
+        <RelativeLayout
+            android:id="@+id/rl_reply"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/tio_bg_call_audio"
+            android:visibility="gone">
+
+            <com.watayouxiang.androidutils.widget.imageview.TioImageView
+                android:id="@+id/iv_reply_avatar"
+                style="@style/WebrtcAvatar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_56" />
+
+            <TextView
+                android:id="@+id/tv_reply_nick"
+                style="@style/WebrtcNick"
+                android:layout_below="@id/iv_reply_avatar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="@string/nick" />
+
+            <TextView
+                android:id="@+id/tv_tip"
+                style="@style/WebrtcTip"
+                android:layout_below="@id/tv_reply_nick"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_184"
+                android:layout_marginRight="@dimen/dp_10"
+                android:text="@string/audio_call_ntf_tip" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/dp_58"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_reply_disagree"
+                    style="@style/WebrtcNegativeBtn"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:text="@string/hangup" />
+
+                <TextView
+                    android:id="@+id/tv_reply_agree"
+                    style="@style/WebrtcPositiveBtn"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:text="@string/answer_call" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!--通话中-->
+        <RelativeLayout
+            android:id="@+id/rl_calling"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/tio_bg_call_audio"
+            android:visibility="gone">
+
+            <com.watayouxiang.androidutils.widget.imageview.TioImageView
+                android:id="@+id/iv_calling_avatar"
+                style="@style/WebrtcAvatar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_56" />
+
+            <TextView
+                android:id="@+id/tv_calling_nick"
+                style="@style/WebrtcNick"
+                android:layout_below="@id/iv_calling_avatar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="@string/nick" />
+
+            <TextView
+                android:id="@+id/tv_calling_timer"
+                style="@style/WebrtcTime"
+                android:layout_above="@id/tv_calling_hangup"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/dp_66"
+                android:text="@string/timer_init_time" />
+
+            <TextView
+                android:id="@+id/tv_calling_toggle_mic"
+                style="@style/WebrtcDrawableButton"
+                android:layout_alignTop="@id/tv_calling_hangup"
+                android:layout_marginRight="@dimen/dp_29"
+                android:layout_toLeftOf="@id/tv_calling_hangup"
+                android:drawableTop="@drawable/tio_bg_local_audio_btn"
+                android:text="@string/silence" />
+
+            <TextView
+                android:id="@+id/tv_calling_hangup"
+                style="@style/WebrtcNegativeBtn"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/dp_58"
+                android:text="@string/hangup" />
+
+            <TextView
+                android:id="@+id/tv_calling_toggle_audio"
+                style="@style/WebrtcDrawableButton"
+                android:layout_alignTop="@id/tv_calling_hangup"
+                android:layout_marginLeft="@dimen/dp_29"
+                android:layout_toRightOf="@id/tv_calling_hangup"
+                android:drawableTop="@drawable/tio_bg_audio_btn"
+                android:text="@string/hands_free" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_topBg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_230"
+            android:background="@drawable/bg_me"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_pageDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_12"
+            android:text="@string/welcome_register"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="@dimen/dp_72"
+            android:layout_height="@dimen/dp_72"
+            android:layout_below="@id/tv_pageDesc"
+            android:layout_marginTop="@dimen/dp_12"
+            android:src="@drawable/ic_account_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_pageDesc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_logo"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_logo" />
+
+        <TextView
+            android:id="@+id/tv_emailTxt"
+            style="@style/AccountTip"
+            android:layout_marginLeft="@dimen/dp_75"
+            android:layout_marginTop="36dp"
+            android:text="@string/email"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_topBg" />
+
+        <com.watayouxiang.androidutils.widget.edittext.TioEditText
+            android:id="@+id/edit_register_account"
+            style="@style/AccountEditText"
+            android:hint="请输入您的邮箱"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_emailTxt" />
+
+        <View
+            android:id="@+id/v_emailLine"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_0_8"
+            android:background="@color/blue_58b6ff"
+            app:layout_constraintBottom_toBottomOf="@id/edit_register_account"
+            app:layout_constraintEnd_toEndOf="@id/edit_register_account"
+            app:layout_constraintStart_toStartOf="@id/edit_register_account" />
+
+        <TextView
+            android:id="@+id/tv_nickTxt"
+            style="@style/AccountTip"
+            android:layout_marginTop="25dp"
+            android:text="@string/nick"
+            app:layout_constraintStart_toStartOf="@id/edit_register_account"
+            app:layout_constraintTop_toBottomOf="@id/edit_register_account" />
+
+        <com.watayouxiang.androidutils.widget.edittext.TioEditText
+            android:id="@+id/edit_register_nick"
+            style="@style/AccountEditText"
+            android:hint="请输入您的昵称"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_nickTxt" />
+
+        <View
+            android:id="@+id/v_nickLine"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_0_8"
+            android:background="@color/blue_58b6ff"
+            app:layout_constraintBottom_toBottomOf="@id/edit_register_nick"
+            app:layout_constraintEnd_toEndOf="@id/edit_register_nick"
+            app:layout_constraintStart_toStartOf="@id/edit_register_nick" />
+
+        <TextView
+            android:id="@+id/tv_pwdTxt"
+            style="@style/AccountTip"
+            android:layout_marginTop="25dp"
+            android:text="@string/set_pwd"
+            app:layout_constraintStart_toStartOf="@id/edit_register_nick"
+            app:layout_constraintTop_toBottomOf="@id/edit_register_nick" />
+
+        <com.watayouxiang.androidutils.widget.edittext.TioEditText
+            android:id="@+id/edit_register_password"
+            style="@style/AccountEditText"
+            android:hint="请输入您的密码"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_pwdTxt" />
+
+        <View
+            android:id="@+id/v_pwdLine"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_0_8"
+            android:background="@color/blue_58b6ff"
+            app:layout_constraintBottom_toBottomOf="@id/edit_register_password"
+            app:layout_constraintEnd_toEndOf="@id/edit_register_password"
+            app:layout_constraintStart_toStartOf="@id/edit_register_password" />
+
+        <LinearLayout
+            android:id="@+id/protocol_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/button_register_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_register_password">
+
+            <CheckBox
+                android:id="@+id/protocol_checkBox"
+                style="@style/TioCheckboxTheme3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/protocol_tv_agree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:text="同意"
+                android:textColor="@color/gray_999999"
+                android:textSize="@dimen/sp_13" />
+
+            <TextView
+                android:id="@+id/protocol_xieyi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="《用户服务协议》"
+                android:textColor="@color/blue_4c94ff"
+                android:textSize="@dimen/sp_13" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="和"
+                android:textColor="@color/gray_999999"
+                android:textSize="@dimen/sp_13" />
+
+            <TextView
+                android:id="@+id/protocol_zhengce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="《隐私政策》"
+                android:textColor="@color/blue_4c94ff"
+                android:textSize="@dimen/sp_13" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/button_register_button"
+            style="@style/AccountOkBtn"
+            android:layout_marginTop="50dp"
+            android:text="@string/register"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_register_password" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_15"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button_register_button">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已有帐号，"
+                android:textColor="@color/gray_999999"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/button_register_login"
+                style="@style/AccountDarkTip"
+                android:text="去登录" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

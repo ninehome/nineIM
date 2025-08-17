@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@drawable/tio_group_oper_dialog_top_item_bg" />
+
+        <RelativeLayout
+            android:id="@+id/rl_chatTop"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:background="@color/white"
+            android:foreground="?attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/tv_chatTop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/session_top"
+                android:textColor="@color/tio_dialog_btn_selector"
+                android:textSize="@dimen/sp_16" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/gray_f8f8f8" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_DND"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:background="@color/white"
+            android:foreground="?attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/tv_DND"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/message_no_disturb"
+                android:textColor="@color/tio_dialog_btn_selector"
+                android:textSize="@dimen/sp_16" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/gray_f8f8f8" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_report"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:background="@color/white"
+            android:foreground="?attr/selectableItemBackground">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/report_user"
+                android:textColor="@color/tio_dialog_btn_selector"
+                android:textSize="@dimen/sp_16" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/gray_f8f8f8" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_friendInfo"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:background="@color/white"
+            android:foreground="?attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/tv_friendInfo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/query_friend_message"
+                android:textColor="@color/tio_dialog_btn_selector"
+                android:textSize="@dimen/sp_16" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/gray_f8f8f8" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/gray_f8f8f8" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:background="@color/white"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="@color/gray_111111"
+            android:textSize="@dimen/sp_16" />
+
+    </LinearLayout>
+</layout>

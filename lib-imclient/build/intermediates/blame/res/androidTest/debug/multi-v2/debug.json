@@ -1,0 +1,69 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/stan/Desktop/wechat/tio_im_android/lib-imclient/build/intermediates/res/merged/androidTest/debug/values-vi_values-vi.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/stan/Desktop/wechat/tio_im_android/lib-imclient/build/intermediates/packaged_res/debug/values-vi/values-vi.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,91,155,209,257,303,369,429,481,532,592,658,717,774,837,875,936,989,1040,1105,1151,1198,1257,1316,1385,1444,1501,1572,1628,1741,1897,2035,2154,2195,2253,2289,2348,2408,2466",
+                        "endColumns": "35,63,53,47,45,65,59,51,50,59,65,58,56,62,37,60,52,50,64,45,46,58,58,68,58,56,70,55,112,155,137,118,40,57,35,58,59,57,64",
+                        "endOffsets": "86,150,204,252,298,364,424,476,527,587,653,712,769,832,870,931,984,1035,1100,1146,1193,1252,1311,1380,1439,1496,1567,1623,1736,1892,2030,2149,2190,2248,2284,2343,2403,2461,2526"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/stan/Desktop/wechat/tio_im_android/lib-imclient/build/intermediates/res/merged/androidTest/debug/values_values.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/stan/.gradle/caches/transforms-2/files-2.1/a023512ec66c8c3fdec3cb969f97204b/jetified-utilcodex-1.30.5/res/values/values.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "13",
+                        "endColumns": "12",
+                        "endOffsets": "791"
+                    },
+                    "to": {
+                        "startLines": "41",
+                        "startColumns": "4",
+                        "startOffsets": "1937",
+                        "endLines": "52",
+                        "endColumns": "12",
+                        "endOffsets": "2673"
+                    }
+                },
+                {
+                    "source": "/Users/stan/Desktop/wechat/tio_im_android/lib-imclient/build/intermediates/packaged_res/debug/values/values.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,89,134,177,219,260,311,357,399,440,489,541,591,641,696,732,779,822,863,912,953,992,1041,1089,1136,1183,1229,1281,1330,1399,1478,1556,1628,1667,1716,1750,1798,1845,1889",
+                        "endColumns": "33,44,42,41,40,50,45,41,40,48,51,49,49,54,35,46,42,40,48,40,38,48,47,46,46,45,51,48,68,78,77,71,38,48,33,47,46,43,47",
+                        "endOffsets": "84,129,172,214,255,306,352,394,435,484,536,586,636,691,727,774,817,858,907,948,987,1036,1084,1131,1178,1224,1276,1325,1394,1473,1551,1623,1662,1711,1745,1793,1840,1884,1932"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/stan/Desktop/wechat/tio_im_android/lib-imclient/build/intermediates/res/merged/androidTest/debug/values-v21_values-v21.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/stan/.gradle/caches/transforms-2/files-2.1/a023512ec66c8c3fdec3cb969f97204b/jetified-utilcodex-1.30.5/res/values-v21/values-v21.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "14",
+                        "endColumns": "12",
+                        "endOffsets": "869"
+                    }
+                }
+            ]
+        }
+    ]
+}

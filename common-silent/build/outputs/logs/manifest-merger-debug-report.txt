@@ -1,0 +1,19 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/stan/Desktop/wechat/tio_im_android/common-silent/src/main/AndroidManifest.xml:1:1-51
+INJECTED from /Users/stan/Desktop/wechat/tio_im_android/common-silent/src/main/AndroidManifest.xml:1:1-51
+INJECTED from /Users/stan/Desktop/wechat/tio_im_android/common-silent/src/main/AndroidManifest.xml:1:1-51
+	package
+		ADDED from /Users/stan/Desktop/wechat/tio_im_android/common-silent/src/main/AndroidManifest.xml:1:11-48
+		INJECTED from /Users/stan/Desktop/wechat/tio_im_android/common-silent/src/main/AndroidManifest.xml
+		INJECTED from /Users/stan/Desktop/wechat/tio_im_android/common-silent/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/stan/Desktop/wechat/tio_im_android/common-silent/src/main/AndroidManifest.xml:1:1-51
+uses-sdk
+INJECTED from /Users/stan/Desktop/wechat/tio_im_android/common-silent/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/stan/Desktop/wechat/tio_im_android/common-silent/src/main/AndroidManifest.xml
+INJECTED from /Users/stan/Desktop/wechat/tio_im_android/common-silent/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/stan/Desktop/wechat/tio_im_android/common-silent/src/main/AndroidManifest.xml
+		ADDED from /Users/stan/Desktop/wechat/tio_im_android/common-silent/src/main/AndroidManifest.xml
+		INJECTED from /Users/stan/Desktop/wechat/tio_im_android/common-silent/src/main/AndroidManifest.xml

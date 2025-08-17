@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="view"
+            type="com.watayouxiang.wallet.widget.RedPaperDialog" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_paperBg"
+            android:layout_width="260dp"
+            android:layout_height="438dp"
+            android:src="@drawable/bg_redbag_popup"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <ImageView
+            android:id="@+id/iv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:onClick="@{view.clickCancel}"
+            android:src="@drawable/btn_close_white40"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_paperBg" />
+
+        <com.watayouxiang.androidutils.widget.imageview.TioImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="55dp"
+            app:layout_constraintEnd_toEndOf="@id/iv_paperBg"
+            app:layout_constraintStart_toStartOf="@id/iv_paperBg"
+            app:layout_constraintTop_toTopOf="@id/iv_paperBg" />
+
+        <TextView
+            android:id="@+id/tv_fromInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@{view.fromInfo}"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            tools:text="老李"
+            app:layout_constraintEnd_toEndOf="@id/iv_avatar"
+            app:layout_constraintStart_toStartOf="@id/iv_avatar"
+            app:layout_constraintTop_toBottomOf="@id/iv_avatar" />
+
+        <TextView
+            android:id="@+id/tv_gift"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:text="@{view.gift}"
+            android:textColor="#FFFFD04E"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            tools:text="@string/gongxifacai"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="@id/iv_paperBg"
+            app:layout_constraintStart_toStartOf="@id/iv_paperBg"
+            app:layout_constraintTop_toBottomOf="@id/tv_fromInfo" />
+
+        <ImageView
+            android:id="@+id/tv_open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/btn_open"
+            android:gravity="center"
+            android:onClick="@{view.clickOpen}"
+            android:text="@string/lijilngqu"
+            android:textColor="#FFF45846"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_gift"
+            app:layout_constraintEnd_toEndOf="@id/iv_paperBg"
+            app:layout_constraintStart_toStartOf="@id/iv_paperBg" />
+
+        <TextView
+            android:id="@+id/tv_showDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp40"
+            android:layout_marginBottom="32dp"
+            android:drawableRight="@drawable/wallet_arrow_right_yellow"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:onClick="@{view.clickShowDetail}"
+            android:text="@string/kankandajia"
+            android:textColor="#FFFED4A3"
+            android:textSize="14sp"
+            android:visibility="@{view.showDetail?View.VISIBLE:View.GONE}"
+            app:layout_constraintTop_toBottomOf="@id/tv_open"
+            app:layout_constraintBottom_toBottomOf="@id/iv_paperBg"
+            app:layout_constraintEnd_toEndOf="@id/iv_paperBg"
+            app:layout_constraintStart_toStartOf="@id/iv_paperBg" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="CHOOSE_PER_TEST" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="1.8" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/common-silent" />
+            <option value="$PROJECT_DIR$/easyPhotos" />
+            <option value="$PROJECT_DIR$/jpush" />
+            <option value="$PROJECT_DIR$/lib-androidutils" />
+            <option value="$PROJECT_DIR$/lib-appupdate" />
+            <option value="$PROJECT_DIR$/lib-audiorecord" />
+            <option value="$PROJECT_DIR$/lib-baseRecyclerView" />
+            <option value="$PROJECT_DIR$/lib-db" />
+            <option value="$PROJECT_DIR$/lib-httpclient" />
+            <option value="$PROJECT_DIR$/lib-imclient" />
+            <option value="$PROJECT_DIR$/lib-qrcode" />
+            <option value="$PROJECT_DIR$/lib-social" />
+            <option value="$PROJECT_DIR$/lib-wallet" />
+            <option value="$PROJECT_DIR$/lib-webrtclib" />
+            <option value="$PROJECT_DIR$/pay-ease" />
+            <option value="$PROJECT_DIR$/pullToRefershLibraryMy" />
+            <option value="$PROJECT_DIR$/tio-account" />
+            <option value="$PROJECT_DIR$/tio-social" />
+            <option value="$PROJECT_DIR$/tio-verification" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

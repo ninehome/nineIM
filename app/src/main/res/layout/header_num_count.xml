@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_34">
+
+        <View
+            android:layout_width="@dimen/dp_46"
+            android:layout_height="@dimen/dp_0_8"
+            android:layout_marginRight="@dimen/dp_14"
+            android:background="@color/gray_f0f0f0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_centerTxt"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_centerTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1359个群聊"
+            android:textColor="@color/gray_bebebe"
+            android:textSize="@dimen/sp_13"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="@dimen/dp_46"
+            android:layout_height="@dimen/dp_0_8"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:background="@color/gray_f0f0f0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_centerTxt"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

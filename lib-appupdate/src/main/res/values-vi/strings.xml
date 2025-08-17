@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="empty" />
+    <!--app tải bản cập nhật-->
+    <string name="down_cancel">hủy cập nhật</string>
+    <string name="down_browser" >tải trình duyệt</string>
+    <string name="update_text" >cập nhật ngay</string>
+    <string name="update_later" >cập nhật sau</string>
+    <string name="update_retry">thử lại</string>
+    <string name="update_exit" > hủy</string>
+    <string name="update_permission" >cập nhật ứng dụng:hãy cấp quyền truy cập bộ nhớ</string>
+
+    <string name="test_update_title" >phát hiện phiên bản mới v2.1.0</string>
+    <string name="test_update_content" >
+        1、thêm mới tin tức ngoại tuyến
+        \n2、thêm mới lời nhắc thêm tin mới lời nhắc thêm tin mớilời nhắc thêm tin mới lời nhắc thêm tin mới lời nhắc
+        \n3、thêm mới lịch sử tin nhắn xóa
+        \n4、bộ phận hình mẫu tối ưu hóa bộ phận hình mẫu tối ưu hóa bộ phận hình mẫu tối ưu hóa bộ phận hình mẫu tối ưu hóa 
+        \n5、thêm mới tin tức ngoại tuyến
+        \n6、thêm mới lời nhắc thêm tin mới lời nhắc thêm tin mớilời nhắc thêm tin mới lời nhắc thêm tin mới lời nhắc
+        \n7、thêm mới lịch sử tin nhắn xóa
+        \n8、bộ phận hình mẫu tối ưu hóa bộ phận hình mẫu tối ưu hóa bộ phận hình mẫu tối ưu hóa bộ phận hình mẫu tối ưu hóa
+    </string>
+</resources>

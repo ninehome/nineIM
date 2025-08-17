@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.watayouxiang.androidutils.widget.WtTitleBar
+        android:id="@+id/titleBar"
+        app:tb_background="@color/gray_f4f5f6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:id="@+id/tv_type_name"
+            android:width="80dp"
+            style="@style/AccountTitle"
+            android:textStyle="bold"
+            android:text="@string/phone" />
+
+        <TextView
+            android:id="@+id/tv_tel"
+            style="@style/AccountTitle"
+            android:text="188888888"
+            android:layout_marginLeft="0dp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/tv_type_name"
+            />
+
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="15dp"
+        android:background="@color/gray_e9e9e9" />
+
+    <!--原密码-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/checkcode"
+            style="@style/AccountTitle"
+            android:width="80dp"
+            android:textStyle="bold"
+            android:text="@string/code" />
+
+
+        <TextView
+            android:id="@+id/tv_checkcode"
+            style="@style/AccountTitle"
+            android:textStyle="bold"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingRight="15dp"
+            android:textColor="@color/color_06D89A"
+            android:background="@drawable/selector_common"
+            android:layout_alignParentRight="true"
+            android:text="@string/get_code" />
+
+
+        <com.watayouxiang.androidutils.widget.edittext.TioEditText
+            android:id="@+id/et_code"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/checkcode"
+            android:layout_toLeftOf="@id/tv_checkcode"
+            android:background="@color/transparent"
+            android:gravity="center_vertical"
+            android:hint="请输入验证码"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textColor="@color/gray_333333"
+            android:textColorHint="@color/gray_9c9c9c"
+            android:textSize="@dimen/sp_14" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="15dp"
+        android:background="@color/gray_e9e9e9"
+       />
+
+    <!--新密码-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/new_pwd"
+            style="@style/AccountTitle"
+            android:textStyle="bold"
+            android:width="80dp"
+            android:text="@string/new_pwd" />
+
+
+
+        <com.watayouxiang.androidutils.widget.edittext.TioEditText
+            android:id="@+id/et_newPwd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/new_pwd"
+            android:layout_marginRight="15dp"
+            android:background="@color/transparent"
+            android:gravity="center_vertical"
+            android:hint="@string/pwd"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="@color/gray_333333"
+            android:textColorHint="@color/gray_9c9c9c"
+            android:textSize="@dimen/sp_14" />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="15dp"
+        android:background="@color/gray_e9e9e9"
+        android:layout_alignParentBottom="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/confirm_pwd"
+            style="@style/AccountTitle"
+            android:textStyle="bold"
+            android:width="80dp"
+            android:text="@string/confirm_pwd" />
+
+
+        <com.watayouxiang.androidutils.widget.edittext.TioEditText
+            android:id="@+id/et_newPwdConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/confirm_pwd"
+            android:layout_marginRight="15dp"
+            android:background="@color/transparent"
+            android:gravity="center_vertical"
+            android:hint="@string/confirm_new_pwd"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="@color/gray_333333"
+            android:textColorHint="@color/gray_9c9c9c"
+            android:textSize="@dimen/sp_14" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_f4f5f6"
+        >
+        <Button
+            android:id="@+id/bt_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/selector_confirm"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="32dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16"
+            android:text="@string/confirm"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

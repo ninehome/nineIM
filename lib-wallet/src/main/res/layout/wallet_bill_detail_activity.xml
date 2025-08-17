@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.watayouxiang.wallet.feature.bill_detail.BillDetailActivity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/statusBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.watayouxiang.androidutils.widget.WtTitleBar
+            android:id="@+id/titleBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/statusBar"
+            app:tb_isLightMode="true"
+            app:tb_tvTitle_text="交易详情" />
+
+        <ImageView
+            android:id="@+id/iv_bg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/wallet_bill_detail_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleBar" />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="29dp"
+            android:textColor="#333333"
+            android:text="@{data.desc}"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/iv_bg"
+            app:layout_constraintStart_toStartOf="@id/iv_bg"
+            app:layout_constraintTop_toTopOf="@id/iv_bg" />
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:textColor="#333333"
+            android:textSize="30sp"
+            android:text="@{data.money}"
+            app:layout_constraintEnd_toEndOf="@id/iv_bg"
+            app:layout_constraintStart_toStartOf="@id/iv_bg"
+            app:layout_constraintTop_toBottomOf="@id/tv_desc" />
+
+        <RelativeLayout
+            android:id="@+id/rl_type"
+            android:layout_width="0dp"
+            android:layout_height="29dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginRight="28dp"
+            app:layout_constraintEnd_toEndOf="@id/iv_bg"
+            app:layout_constraintStart_toStartOf="@id/iv_bg"
+            app:layout_constraintTop_toBottomOf="@id/tv_money">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/leixing"
+                android:textColor="#666666"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@{data.type}"
+                android:layout_centerVertical="true"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_status"
+            android:layout_width="0dp"
+            android:layout_height="29dp"
+            android:layout_marginLeft="28dp"
+
+            android:layout_marginRight="28dp"
+            app:layout_constraintEnd_toEndOf="@id/iv_bg"
+            app:layout_constraintStart_toStartOf="@id/iv_bg"
+            app:layout_constraintTop_toBottomOf="@id/rl_type">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/zhuangtai"
+                android:textColor="#666666"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="@{data.status}"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_time"
+            android:layout_width="0dp"
+            android:layout_height="29dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="28dp"
+            app:layout_constraintEnd_toEndOf="@id/iv_bg"
+            app:layout_constraintStart_toStartOf="@id/iv_bg"
+            app:layout_constraintTop_toBottomOf="@id/rl_status">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/shijian"
+                android:textColor="#666666"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="@{data.time}"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_serialNumber"
+            android:layout_width="0dp"
+            android:layout_height="29dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="28dp"
+            app:layout_constraintEnd_toEndOf="@id/iv_bg"
+            app:layout_constraintStart_toStartOf="@id/iv_bg"
+            app:layout_constraintTop_toBottomOf="@id/rl_time">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/danhao"
+                android:textColor="#666666"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@{data.serialNumber}"
+                android:layout_centerVertical="true"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_desc"
+            android:layout_width="0dp"
+            android:layout_height="29dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="28dp"
+            app:layout_constraintEnd_toEndOf="@id/iv_bg"
+            app:layout_constraintStart_toStartOf="@id/iv_bg"
+            app:layout_constraintTop_toBottomOf="@id/rl_serialNumber">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/miaoshu"
+                android:textColor="#666666"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="@{data.desc}"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_reason"
+            android:layout_width="0dp"
+            android:layout_height="29dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="28dp"
+            app:layout_constraintEnd_toEndOf="@id/iv_bg"
+            app:layout_constraintStart_toStartOf="@id/iv_bg"
+            app:layout_constraintTop_toBottomOf="@id/rl_desc">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/shenheyijian"
+                android:textColor="#666666"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_reason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

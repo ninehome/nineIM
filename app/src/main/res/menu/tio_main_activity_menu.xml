@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/more_btn"
+        android:icon="@drawable/tio_add_icon_main"
+        android:title=""
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/create_group"
+                android:icon="@drawable/tio_create_group_layerlist"
+                android:title="@string/create_group" />
+            <item
+                android:id="@+id/add_friend"
+                android:icon="@drawable/tio_add_friend_layerlist"
+                android:title="@string/add_friend" />
+            <item
+                android:id="@+id/invite_friend"
+                android:icon="@drawable/tio_invite_friend_layerlist"
+                android:title="@string/invite_friend" />
+        </menu>
+    </item>
+
+</menu>

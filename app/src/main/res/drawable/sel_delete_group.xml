@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/dp_4" />
+            <solid android:color="@color/gray_f8f8f8" />
+            <size
+                android:width="@dimen/dp_48"
+                android:height="@dimen/dp_48" />
+        </shape>
+    </item>
+
+    <item
+        android:drawable="@drawable/ic_delete_group"
+        android:gravity="center" />
+</layer-list>

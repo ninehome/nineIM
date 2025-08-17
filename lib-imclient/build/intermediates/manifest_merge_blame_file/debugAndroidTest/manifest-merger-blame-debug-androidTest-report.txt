@@ -1,0 +1,92 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.watayouxiang.imclient.test" >
+4
+5    <uses-sdk
+5-->/Users/stan/Desktop/wechat/tio_im_android/lib-imclient/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger2241040906736290747.xml:5:5-74
+6        android:minSdkVersion="14"
+6-->/Users/stan/Desktop/wechat/tio_im_android/lib-imclient/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger2241040906736290747.xml:5:15-41
+7        android:targetSdkVersion="29" />
+7-->/Users/stan/Desktop/wechat/tio_im_android/lib-imclient/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger2241040906736290747.xml:5:42-71
+8
+9    <instrumentation
+9-->/Users/stan/Desktop/wechat/tio_im_android/lib-imclient/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger2241040906736290747.xml:11:5-15:80
+10        android:name="android.test.InstrumentationTestRunner"
+10-->/Users/stan/Desktop/wechat/tio_im_android/lib-imclient/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger2241040906736290747.xml:11:22-75
+11        android:functionalTest="false"
+11-->/Users/stan/Desktop/wechat/tio_im_android/lib-imclient/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger2241040906736290747.xml:14:22-52
+12        android:handleProfiling="false"
+12-->/Users/stan/Desktop/wechat/tio_im_android/lib-imclient/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger2241040906736290747.xml:13:22-53
+13        android:label="Tests for com.watayouxiang.imclient.test"
+13-->/Users/stan/Desktop/wechat/tio_im_android/lib-imclient/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger2241040906736290747.xml:15:22-78
+14        android:targetPackage="com.watayouxiang.imclient.test" />
+14-->/Users/stan/Desktop/wechat/tio_im_android/lib-imclient/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger2241040906736290747.xml:12:22-76
+15
+16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+16-->[__tested_artifact__::lib-imclient] /Users/stan/Desktop/wechat/tio_im_android/lib-imclient/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-79
+16-->[__tested_artifact__::lib-imclient] /Users/stan/Desktop/wechat/tio_im_android/lib-imclient/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:22-76
+17
+18    <application android:debuggable="true" >
+18-->/Users/stan/Desktop/wechat/tio_im_android/lib-imclient/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger2241040906736290747.xml:7:5-9:19
+18-->/Users/stan/Desktop/wechat/tio_im_android/lib-imclient/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger2241040906736290747.xml:7:18-43
+19        <uses-library android:name="android.test.runner" />
+19-->/Users/stan/Desktop/wechat/tio_im_android/lib-imclient/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger2241040906736290747.xml:8:9-60
+19-->/Users/stan/Desktop/wechat/tio_im_android/lib-imclient/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger2241040906736290747.xml:8:23-57
+20
+21        <activity
+21-->[com.blankj:utilcodex:1.30.5] /Users/stan/.gradle/caches/transforms-2/files-2.1/a023512ec66c8c3fdec3cb969f97204b/jetified-utilcodex-1.30.5/AndroidManifest.xml:10:9-14:75
+22            android:name="com.blankj.utilcode.util.UtilsTransActivity4MainProcess"
+22-->[com.blankj:utilcodex:1.30.5] /Users/stan/.gradle/caches/transforms-2/files-2.1/a023512ec66c8c3fdec3cb969f97204b/jetified-utilcodex-1.30.5/AndroidManifest.xml:11:13-83
+23            android:configChanges="orientation|keyboardHidden|screenSize"
+23-->[com.blankj:utilcodex:1.30.5] /Users/stan/.gradle/caches/transforms-2/files-2.1/a023512ec66c8c3fdec3cb969f97204b/jetified-utilcodex-1.30.5/AndroidManifest.xml:12:13-74
+24            android:theme="@style/ActivityTranslucent"
+24-->[com.blankj:utilcodex:1.30.5] /Users/stan/.gradle/caches/transforms-2/files-2.1/a023512ec66c8c3fdec3cb969f97204b/jetified-utilcodex-1.30.5/AndroidManifest.xml:13:13-55
+25            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+25-->[com.blankj:utilcodex:1.30.5] /Users/stan/.gradle/caches/transforms-2/files-2.1/a023512ec66c8c3fdec3cb969f97204b/jetified-utilcodex-1.30.5/AndroidManifest.xml:14:13-72
+26        <activity
+26-->[com.blankj:utilcodex:1.30.5] /Users/stan/.gradle/caches/transforms-2/files-2.1/a023512ec66c8c3fdec3cb969f97204b/jetified-utilcodex-1.30.5/AndroidManifest.xml:15:9-20:75
+27            android:name="com.blankj.utilcode.util.UtilsTransActivity"
+27-->[com.blankj:utilcodex:1.30.5] /Users/stan/.gradle/caches/transforms-2/files-2.1/a023512ec66c8c3fdec3cb969f97204b/jetified-utilcodex-1.30.5/AndroidManifest.xml:16:13-71
+28            android:configChanges="orientation|keyboardHidden|screenSize"
+28-->[com.blankj:utilcodex:1.30.5] /Users/stan/.gradle/caches/transforms-2/files-2.1/a023512ec66c8c3fdec3cb969f97204b/jetified-utilcodex-1.30.5/AndroidManifest.xml:17:13-74
+29            android:multiprocess="true"
+29-->[com.blankj:utilcodex:1.30.5] /Users/stan/.gradle/caches/transforms-2/files-2.1/a023512ec66c8c3fdec3cb969f97204b/jetified-utilcodex-1.30.5/AndroidManifest.xml:18:13-40
+30            android:theme="@style/ActivityTranslucent"
+30-->[com.blankj:utilcodex:1.30.5] /Users/stan/.gradle/caches/transforms-2/files-2.1/a023512ec66c8c3fdec3cb969f97204b/jetified-utilcodex-1.30.5/AndroidManifest.xml:19:13-55
+31            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+31-->[com.blankj:utilcodex:1.30.5] /Users/stan/.gradle/caches/transforms-2/files-2.1/a023512ec66c8c3fdec3cb969f97204b/jetified-utilcodex-1.30.5/AndroidManifest.xml:20:13-72
+32
+33        <provider
+33-->[com.blankj:utilcodex:1.30.5] /Users/stan/.gradle/caches/transforms-2/files-2.1/a023512ec66c8c3fdec3cb969f97204b/jetified-utilcodex-1.30.5/AndroidManifest.xml:22:9-30:20
+34            android:name="com.blankj.utilcode.util.UtilsFileProvider"
+34-->[com.blankj:utilcodex:1.30.5] /Users/stan/.gradle/caches/transforms-2/files-2.1/a023512ec66c8c3fdec3cb969f97204b/jetified-utilcodex-1.30.5/AndroidManifest.xml:23:13-70
+35            android:authorities="com.watayouxiang.imclient.test.utilcode.provider"
+35-->[com.blankj:utilcodex:1.30.5] /Users/stan/.gradle/caches/transforms-2/files-2.1/a023512ec66c8c3fdec3cb969f97204b/jetified-utilcodex-1.30.5/AndroidManifest.xml:24:13-69
+36            android:exported="false"
+36-->[com.blankj:utilcodex:1.30.5] /Users/stan/.gradle/caches/transforms-2/files-2.1/a023512ec66c8c3fdec3cb969f97204b/jetified-utilcodex-1.30.5/AndroidManifest.xml:25:13-37
+37            android:grantUriPermissions="true" >
+37-->[com.blankj:utilcodex:1.30.5] /Users/stan/.gradle/caches/transforms-2/files-2.1/a023512ec66c8c3fdec3cb969f97204b/jetified-utilcodex-1.30.5/AndroidManifest.xml:26:13-47
+38            <meta-data
+38-->[com.blankj:utilcodex:1.30.5] /Users/stan/.gradle/caches/transforms-2/files-2.1/a023512ec66c8c3fdec3cb969f97204b/jetified-utilcodex-1.30.5/AndroidManifest.xml:27:13-29:68
+39                android:name="android.support.FILE_PROVIDER_PATHS"
+39-->[com.blankj:utilcodex:1.30.5] /Users/stan/.gradle/caches/transforms-2/files-2.1/a023512ec66c8c3fdec3cb969f97204b/jetified-utilcodex-1.30.5/AndroidManifest.xml:28:17-67
+40                android:resource="@xml/util_code_provider_paths" />
+40-->[com.blankj:utilcodex:1.30.5] /Users/stan/.gradle/caches/transforms-2/files-2.1/a023512ec66c8c3fdec3cb969f97204b/jetified-utilcodex-1.30.5/AndroidManifest.xml:29:17-65
+41        </provider>
+42
+43        <service
+43-->[com.blankj:utilcodex:1.30.5] /Users/stan/.gradle/caches/transforms-2/files-2.1/a023512ec66c8c3fdec3cb969f97204b/jetified-utilcodex-1.30.5/AndroidManifest.xml:32:9-38:19
+44            android:name="com.blankj.utilcode.util.MessengerUtils$ServerService"
+44-->[com.blankj:utilcodex:1.30.5] /Users/stan/.gradle/caches/transforms-2/files-2.1/a023512ec66c8c3fdec3cb969f97204b/jetified-utilcodex-1.30.5/AndroidManifest.xml:33:13-81
+45            android:exported="false" >
+45-->[com.blankj:utilcodex:1.30.5] /Users/stan/.gradle/caches/transforms-2/files-2.1/a023512ec66c8c3fdec3cb969f97204b/jetified-utilcodex-1.30.5/AndroidManifest.xml:34:13-37
+46            <intent-filter>
+46-->[com.blankj:utilcodex:1.30.5] /Users/stan/.gradle/caches/transforms-2/files-2.1/a023512ec66c8c3fdec3cb969f97204b/jetified-utilcodex-1.30.5/AndroidManifest.xml:35:13-37:29
+47                <action android:name="com.watayouxiang.imclient.test.messenger" />
+47-->[com.blankj:utilcodex:1.30.5] /Users/stan/.gradle/caches/transforms-2/files-2.1/a023512ec66c8c3fdec3cb969f97204b/jetified-utilcodex-1.30.5/AndroidManifest.xml:36:17-69
+47-->[com.blankj:utilcodex:1.30.5] /Users/stan/.gradle/caches/transforms-2/files-2.1/a023512ec66c8c3fdec3cb969f97204b/jetified-utilcodex-1.30.5/AndroidManifest.xml:36:25-66
+48            </intent-filter>
+49        </service>
+50    </application>
+51
+52</manifest>

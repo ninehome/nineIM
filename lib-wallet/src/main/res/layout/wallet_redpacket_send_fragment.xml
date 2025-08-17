@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.watayouxiang.wallet.feature.redpacket.feature.send.SendFragment" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:orientation="vertical"
+            app:elevation="0dp">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentScrim="@color/transparent"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <!--<<< 折叠区 >>>-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!--背景-->
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!--头像-->
+                    <FrameLayout
+                        android:id="@+id/fl_avatar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_16"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.watayouxiang.androidutils.widget.imageview.TioImageView
+                            android:id="@+id/iv_avatar"
+                            android:layout_width="80dp"
+                            app:roundAsCircle="true"
+                            android:layout_height="80dp"
+                            app:roundingBorderColor="@color/white"
+                            app:roundingBorderWidth="2.5dp" />
+                    </FrameLayout>
+
+                    <!--用户信息-->
+                    <TextView
+                        android:id="@+id/tv_userInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@{data.userInfo}"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_16"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/fl_avatar" />
+
+                    <!--金额-->
+                    <TextView
+                        android:id="@+id/tv_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@{data.money}"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/sp_36"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_userInfo" />
+
+                    <!--元-->
+                    <TextView
+                        android:id="@+id/tv_yuan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/yuan"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_16"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_money"
+                        app:layout_constraintStart_toEndOf="@id/tv_money" />
+
+                    <!--左侧中间文字-->
+                    <TextView
+                        android:id="@+id/tv_center_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_14"
+                        android:layout_marginBottom="22dp"
+                        android:text="@string/fahongbaoshu"
+                        android:textColor="#999999"
+                        android:textSize="@dimen/sp_14"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/tv_center_right"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_money" />
+
+                    <!--右侧中间文字-->
+                    <TextView
+                        android:id="@+id/tv_center_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:text="@{data.packetAmount}"
+                        android:textColor="@color/theme_color"
+                        android:textSize="@dimen/sp_16"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_center_left"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/tv_center_left"
+                        app:layout_constraintTop_toTopOf="@id/tv_center_left" />
+
+                    <!--底部分割线-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="12dp"
+                        android:background="#F8F8F8"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+            <!--<<< 悬浮区 >>>-->
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!--<<< 内容区 >>>-->
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

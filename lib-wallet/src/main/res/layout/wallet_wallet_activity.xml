@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="view"
+            type="com.watayouxiang.wallet.feature.wallet.WalletActivity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@drawable/wallet_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/statusBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.watayouxiang.androidutils.widget.WtTitleBar
+            android:id="@+id/titleBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/statusBar"
+            app:tb_isLightMode="false"
+            app:tb_background="@color/transparent"
+            app:tb_tvTitle_text="@string/my_wallet" />
+
+        <!--<View
+            android:id="@+id/bg_1"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/blue_4c94ff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleBar" />-->
+        <ImageView
+            android:id="@+id/img_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/img_circle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleBar"
+            android:layout_marginTop="@dimen/dp_36"
+            />
+
+        <!--<View
+            android:id="@+id/bg_2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@drawable/wallet_bg_wallet"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_withdraw" />-->
+
+        <TextView
+            android:id="@+id/tv_moneyEye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_48"
+            android:drawableLeft="@drawable/wallet_sel_eye"
+            android:drawablePadding="@dimen/dp_2"
+            android:gravity="center_vertical"
+            android:onClick="@{view.clickEye}"
+            android:text="@string/wodeyue"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/img_circle" />
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            android:text="￥0.00"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_32"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_moneyEye" />
+
+        <TextView
+            android:id="@+id/tv_withdraw"
+            android:layout_width="145dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@drawable/wallet_sel_wallet_btn"
+            android:gravity="center"
+            android:onClick="@{view.clickWithdraw}"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:text="@string/tixian"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintEnd_toStartOf="@id/tv_recharge"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_circle" />
+
+        <TextView
+            android:id="@+id/tv_recharge"
+            android:layout_width="145dp"
+            android:layout_height="44dp"
+            android:background="@drawable/wallet_sel_wallet_btn"
+            android:gravity="center"
+            android:onClick="@{view.clickRecharge}"
+            android:text="@string/chongzhi"
+            android:layout_marginRight="@dimen/dp_30"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16"
+            android:layout_marginLeft="@dimen/dp_25"
+            app:layout_constraintBottom_toBottomOf="@id/tv_withdraw"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_withdraw"
+            app:layout_constraintTop_toTopOf="@id/tv_withdraw" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/tv_recharge"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:paddingLeft="@dimen/dp_22"
+            android:paddingRight="@dimen/dp_22"
+            android:paddingTop="@dimen/dp_24"
+            android:paddingBottom="@dimen/dp_24"
+            android:background="@drawable/shape_wallet_item"
+            android:layout_marginTop="@dimen/dp_32"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+
+           <!-- <RelativeLayout
+                android:id="@+id/rl_accountDetail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_58"
+                android:visibility="gone"
+                android:foreground="?attr/selectableItemBackground"
+                android:onClick="@{view::clickAccountDetail}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_withdraw">
+
+                <ImageView
+                    android:id="@+id/iv_accountDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:src="@drawable/wallet_ic_account" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:layout_toRightOf="@id/iv_accountDetail"
+                    android:text="账户信息"
+                    android:textColor="@color/gray_333333"
+                    android:textSize="@dimen/sp_16" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:src="@drawable/wt_btn_forward" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_0_8"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="43dp"
+                    android:background="@color/gray_e9e9e9" />
+            </RelativeLayout>-->
+
+            <!--钱包明细-->
+            <RelativeLayout
+                android:id="@+id/rl_walletDetail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_60"
+                android:background="@drawable/shape_wallet_item"
+                android:onClick="@{view.clickWalletDetail}"
+               >
+
+                <ImageView
+                    android:id="@+id/iv_walletDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_21"
+                    android:src="@drawable/icon_mywallet01" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_toRightOf="@id/iv_walletDetail"
+                    android:text="@string/qianbaomingxi"
+                    android:textColor="@color/gray_333333"
+                    android:textSize="@dimen/sp_16" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:src="@drawable/icon_arrowr_gray" />
+            </RelativeLayout>
+
+            <!--红包记录-->
+            <RelativeLayout
+                android:id="@+id/rl_redPaperRecord"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_60"
+                android:layout_marginTop="@dimen/dp_16"
+                android:onClick="@{view.clickRedPaperRecord}"
+                android:background="@drawable/shape_wallet_item"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rl_walletDetail">
+
+                <ImageView
+                    android:id="@+id/iv_redPaperRecord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_21"
+                    android:src="@drawable/icon_mywallet02" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_toRightOf="@id/iv_redPaperRecord"
+                    android:text="@string/hongbaojilu"
+                    android:textColor="@color/gray_333333"
+                    android:textSize="@dimen/sp_16" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:src="@drawable/icon_arrowr_gray" />
+            </RelativeLayout>
+
+            <!--我的银行卡-->
+            <RelativeLayout
+                android:id="@+id/rl_bank"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_58"
+                android:onClick="@{view.clickBank}"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rl_redPaperRecord">
+
+                <ImageView
+                    android:id="@+id/iv_bank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:src="@drawable/wallet_ic_bank" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:layout_toRightOf="@id/iv_bank"
+                    android:text="@string/yinhangka"
+                    android:textColor="@color/gray_333333"
+                    android:textSize="@dimen/sp_16" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:src="@drawable/wt_btn_forward" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_0_8"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="43dp"
+                    android:background="@color/gray_e9e9e9" />
+            </RelativeLayout>
+
+            <!--安全设置-->
+            <RelativeLayout
+                android:id="@+id/rl_safe"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_60"
+                android:onClick="@{view.clickSafe}"
+                android:layout_marginTop="@dimen/dp_16"
+                android:background="@drawable/shape_wallet_item"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rl_bank">
+
+                <ImageView
+                    android:id="@+id/iv_safe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_21"
+                    android:src="@drawable/icon_mywallet03" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_toRightOf="@id/iv_safe"
+                    android:text="@string/xiugaimima"
+                    android:textColor="@color/gray_333333"
+                    android:textSize="@dimen/sp_16" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:src="@drawable/icon_arrowr_gray" />
+
+                <!--<View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_0_8"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="43dp"
+                    android:background="@color/gray_e9e9e9" />-->
+            </RelativeLayout>
+
+            <!--帮助中心-->
+            <RelativeLayout
+                android:id="@+id/rl_help"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_58"
+                android:foreground="?attr/selectableItemBackground"
+                android:onClick="@{view.clickHelp}"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rl_safe">
+
+                <ImageView
+                    android:id="@+id/iv_help"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:src="@drawable/wallet_ic_help" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:layout_toRightOf="@id/iv_help"
+                    android:text="@string/bangzhuzhongxin"
+                    android:textColor="@color/gray_333333"
+                    android:textSize="@dimen/sp_16" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:src="@drawable/wt_btn_forward" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_0_8"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="43dp"
+                    android:background="@color/gray_e9e9e9" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_bottomInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_19"
+            android:text="本服务由***提供"
+            android:textColor="@color/gray_999999"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

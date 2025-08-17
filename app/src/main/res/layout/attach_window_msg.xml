@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/radius_4"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_withdraw"
+            android:layout_width="69dp"
+            android:layout_height="48dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:paddingLeft="@dimen/dp_20"
+            android:text="@string/withdraw"
+            android:textColor="@color/gray_333333"
+            android:textSize="@dimen/sp_16" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_copy"
+            android:layout_width="69dp"
+            android:layout_height="48dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:paddingLeft="@dimen/dp_20"
+            android:text="@string/copy"
+            android:textColor="@color/gray_333333"
+            android:textSize="@dimen/sp_16" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_forward"
+            android:layout_width="69dp"
+            android:layout_height="48dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:paddingLeft="@dimen/dp_20"
+            android:text="@string/forward"
+            android:textColor="@color/gray_333333"
+            android:textSize="@dimen/sp_16" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_delete"
+            android:layout_width="69dp"
+            android:layout_height="48dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:paddingLeft="@dimen/dp_20"
+            android:text="@string/delete"
+            android:textColor="@color/gray_333333"
+            android:textSize="@dimen/sp_16" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="download">tải xuống </string>
+    <string name="save_abulm_success">album lưu thành công </string>
+    <string name="download_fail">tải thất bại </string>
+    <string name="use">sử dụng </string>
+    <string name="appsaoyisao">quét APP ，thêm tôi làm bạn tốt </string>
+    <string name="myqrcode">mã QR của tôi </string>
+    <string name="openshanguangdeng">mở đèn led </string>
+    <string name="xiangce">album </string>
+    <string name="duizhun">chỉnh mã QR trong khung，có thể tự động quét </string>
+    <string name="havenoquanxian" >quyền hạn không đủ, không thể sử dụng</string>
+    <string name="open_error" >lỗi mở máy ảnh</string>
+    <string name="qrcode_look_s">kết quả nhận dạng mã QR：%s</string>
+    <string name="taixinlianmeng">liên minh titan</string>
+    <string name="scan_add_cahat">quét mã để vào trò chuyện nhóm</string>
+    <string name="app_scan_add_friend">sử dụng APP quét mã, thêm tôi làm bạn bè</string>
+    <string name="shibieshibai">nhận dạng thất bại</string>
+    <string name="qrcode_creat_fail">tạo mã QR thất bại</string>
+    <string name="group_qrcode">mã  của nhóm </string>
+    <string name="closeshanguangdeng">tắt đèn flash</string>
+</resources>

@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/stan/Desktop/wechat/tio_im_android/lib-imclient/build/intermediates/res/merged/androidTest/debug/layout_utils_toast_view.xml.flat",
+        "source": "/Users/stan/.gradle/caches/transforms-2/files-2.1/a023512ec66c8c3fdec3cb969f97204b/jetified-utilcodex-1.30.5/res/layout/utils_toast_view.xml"
+    },
+    {
+        "merged": "/Users/stan/Desktop/wechat/tio_im_android/lib-imclient/build/intermediates/res/merged/androidTest/debug/xml_util_code_provider_paths.xml.flat",
+        "source": "/Users/stan/.gradle/caches/transforms-2/files-2.1/a023512ec66c8c3fdec3cb969f97204b/jetified-utilcodex-1.30.5/res/xml/util_code_provider_paths.xml"
+    },
+    {
+        "merged": "/Users/stan/Desktop/wechat/tio_im_android/lib-imclient/build/intermediates/res/merged/androidTest/debug/drawable_utils_toast_bg.xml.flat",
+        "source": "/Users/stan/.gradle/caches/transforms-2/files-2.1/a023512ec66c8c3fdec3cb969f97204b/jetified-utilcodex-1.30.5/res/drawable/utils_toast_bg.xml"
+    }
+]

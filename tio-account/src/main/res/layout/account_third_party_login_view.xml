@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.tiocloud.account.widget.ThirdPartyLoginView" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+
+            android:id="@+id/tv_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/other_type_login"
+            android:textColor="#BBBBBB"
+            android:textSize="13sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/v_line1"
+            android:layout_width="100dp"
+            android:layout_height="0.8dp"
+            android:layout_marginRight="12dp"
+            android:background="#EFEFEF"
+            app:layout_constraintBottom_toBottomOf="@id/tv_tip"
+            app:layout_constraintEnd_toStartOf="@id/tv_tip"
+            app:layout_constraintTop_toTopOf="@id/tv_tip" />
+
+        <View
+            android:id="@+id/v_line2"
+            android:layout_width="100dp"
+            android:layout_height="0.8dp"
+            android:layout_marginLeft="12dp"
+            android:background="#EFEFEF"
+            app:layout_constraintBottom_toBottomOf="@id/tv_tip"
+            app:layout_constraintStart_toEndOf="@id/tv_tip"
+            app:layout_constraintTop_toTopOf="@id/tv_tip" />
+
+        <ImageView
+            android:id="@+id/iv_qq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:onClick="@{data.onClick_qq}"
+            android:src="@drawable/account_ic_qq"
+            app:layout_constraintEnd_toStartOf="@id/iv_wx"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_tip" />
+
+        <ImageView
+            android:id="@+id/iv_wx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{data.onClick_wx}"
+            android:src="@drawable/account_ic_wx"
+            app:layout_constraintBottom_toBottomOf="@id/iv_qq"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_qq"
+            app:layout_constraintTop_toTopOf="@id/iv_qq" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

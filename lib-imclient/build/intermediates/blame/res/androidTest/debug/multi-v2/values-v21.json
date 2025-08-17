@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/stan/Desktop/wechat/tio_im_android/lib-imclient/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-v21/values-v21.xml",
+            "map": [
+                {
+                    "source": "/Users/stan/.gradle/caches/transforms-2/files-2.1/a023512ec66c8c3fdec3cb969f97204b/jetified-utilcodex-1.30.5/res/values-v21/values-v21.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "14",
+                        "endColumns": "12",
+                        "endOffsets": "869"
+                    }
+                }
+            ]
+        }
+    ]
+}
