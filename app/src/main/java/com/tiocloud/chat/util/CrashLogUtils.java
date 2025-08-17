@@ -1,6 +1,7 @@
 package com.tiocloud.chat.util;
 
 import com.blankj.utilcode.util.CrashUtils;
+import com.blankj.utilcode.util.LogUtils;
 import com.blankj.utilcode.util.SDCardUtils;
 import com.blankj.utilcode.util.ThreadUtils;
 import com.blankj.utilcode.util.Utils;
@@ -40,7 +41,9 @@ public class CrashLogUtils {
     public void listener() {
         // 生成的崩溃日志如下：
         // "/storage/emulated/0/Android/data/com.tiocloud.chat/files/crash/2020_07_01-15_07_33.txt"
-        CrashUtils.init();
+        CrashUtils.init(crashInfo -> {
+            LogUtils.e("崩溃日志：" + crashInfo.toString());
+        });
     }
 
     /**

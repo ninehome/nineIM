@@ -1,17 +1,14 @@
 package com.tiocloud.chat;
 
 import android.app.Activity;
-import android.app.ActivityManager;
 import android.app.Application;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Gravity;
 
 import androidx.core.app.NotificationCompat;
@@ -20,23 +17,20 @@ import com.blankj.utilcode.BuildConfig;
 import com.blankj.utilcode.util.ActivityUtils;
 import com.blankj.utilcode.util.AppUtils;
 import com.blankj.utilcode.util.ProcessUtils;
-import com.blankj.utilcode.util.ToastUtils;
 import com.blankj.utilcode.util.Utils;
+import com.shuyu.gsyvideoplayer.player.PlayerFactory;
 import com.tiocloud.account.TioAccount;
 import com.tiocloud.account.mvp.logout.LogoutPresenter;
 import com.tiocloud.chat.constant.TioConfig;
 import com.tiocloud.chat.feature.main.MainActivity;
-import com.tiocloud.chat.feature.splash.SplashActivity;
 import com.tiocloud.chat.feature.webrtc.CallActivity;
 import com.tiocloud.chat.feature.webrtc.data.CallNtf;
 import com.tiocloud.chat.mvp.card.CardContract;
 import com.tiocloud.chat.mvp.card.CardPresenter;
 import com.tiocloud.chat.util.CrashLogUtils;
 import com.tiocloud.chat.util.MultiLanguageService;
-import com.tiocloud.chat.widget.YxRefreshLayout;
 import com.tiocloud.chat.yanxun.map.helper.BdLocationHelper;
 import com.tiocloud.chat.yanxun.map.helper.MapHelper;
-
 import com.watayouxiang.androidutils.AndroidUtils;
 import com.watayouxiang.androidutils.util.TioLogger;
 import com.watayouxiang.androidutils.widget.dialog.confirm.SingletonConfirmDialog;
@@ -54,8 +48,9 @@ import com.watayouxiang.qrcode.TioQRCode;
 import com.watayouxiang.webrtclib.TioWebRTC;
 import com.watayouxiang.webrtclib.listener.OnSimpleRTCListener;
 
-import java.util.List;
 import java.util.Locale;
+
+import tv.danmaku.ijk.media.exo2.Exo2PlayerManager;
 
 public class TioApplication extends Application {
     private static TioApplication INSTANCE = null;
@@ -100,6 +95,8 @@ public class TioApplication extends Application {
         TioDBHelper.init(app);
         // AndroidUtils
         AndroidUtils.init(app);
+        //指定播放器内核-exo2
+        PlayerFactory.setPlayManager(Exo2PlayerManager.class);
         //初始化地图
         initMap();
         // jpush
