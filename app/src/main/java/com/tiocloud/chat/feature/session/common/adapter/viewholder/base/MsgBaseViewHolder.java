@@ -147,8 +147,8 @@ public abstract class MsgBaseViewHolder extends RecyclerViewHolder<MsgAdapter, B
 
     private void refresh(BaseViewHolder holder) {
         if (message.isGroupMsg()){
-                isOwner = false;
-                isAdmin = false;
+            isOwner = false;
+            isAdmin = false;
             int groupRole = CacheTableCrud.getGroupRole(String.valueOf(-Integer.parseInt(message.getChatLinkId())), Long.parseLong(message.getUid()));
             if (groupRole == 1){
                 isOwner = true;
@@ -532,8 +532,8 @@ public abstract class MsgBaseViewHolder extends RecyclerViewHolder<MsgAdapter, B
         Context context = attachView.getContext();
         if (context instanceof Activity) {
             SessionMsgDialog sessionMsgDialog = new SessionMsgDialog((Activity) context);
-                    // 复制
-                    sessionMsgDialog.setCopyData(copyText)
+            // 复制
+            sessionMsgDialog.setCopyData(copyText)
                     // 消息撤回
                     .setWithdrawData(isUpManager, getAdapter().getChatLinkId(), mid, getMessage(), getMessage().getMsgType())
                     // 消息删除
@@ -544,20 +544,19 @@ public abstract class MsgBaseViewHolder extends RecyclerViewHolder<MsgAdapter, B
                     .setCollectData(getPicWH(), getPicUrl(), isCollect(), getMessage())
                     // 举报
                     .setComplaintData(chatLinkId, mid, getMessage().getMsgType())
+                    //保存媒体
+                    .setSaveMediaData(getMessage().getContentObj(), getMessage().getMsgType())
                     // 显示
                     .show_canceledOnTouchOutside(attachView.getContext());
 
-            sessionMsgDialog.getMutiChooseView().setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    int  pos = getMsgPosition(Long.parseLong(getMessage().getId()));
-                    getAdapter().setMsgId(getMessage().getId());
-                    getAdapter().selectedChecbox.put(pos,true);
-                    sessionMsgDialog.dismiss();
-                    getAdapter().isMultiChoose = true;
-                    getAdapter().notifyDataSetChanged();
-                    getAdapter().showBotomDialog();
-                }
+            sessionMsgDialog.getMutiChooseView().setOnClickListener(v -> {
+                int  pos = getMsgPosition(Long.parseLong(getMessage().getId()));
+                getAdapter().setMsgId(getMessage().getId());
+                getAdapter().selectedChecbox.put(pos,true);
+                sessionMsgDialog.dismiss();
+                getAdapter().isMultiChoose = true;
+                getAdapter().notifyDataSetChanged();
+                getAdapter().showBotomDialog();
             });
 
         }

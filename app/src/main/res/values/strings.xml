@@ -411,6 +411,7 @@
     <string name="query_friend_message">查看好友信息</string>
     <string name="report">举报</string>
     <string name="add_to_emo">添加到表情</string>
+    <string name="save_media">保存</string>
     <string name="zaixian">在线</string>
     <string name="weiliaojie">未连接</string>
     <string name="lianjiezhong">连接中...</string>

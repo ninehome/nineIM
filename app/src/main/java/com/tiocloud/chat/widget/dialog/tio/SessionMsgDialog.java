@@ -1,22 +1,48 @@
 package com.tiocloud.chat.widget.dialog.tio;
 
 import android.app.Activity;
+import android.content.Context;
+import android.media.MediaScannerConnection;
+import android.os.Environment;
+import android.text.format.Formatter;
+import android.util.Log;
 import android.view.View;
+import android.webkit.MimeTypeMap;
 import android.widget.TextView;
 
+import com.blankj.utilcode.constant.PermissionConstants;
+import com.blankj.utilcode.util.AppUtils;
+import com.blankj.utilcode.util.ImageUtils;
+import com.blankj.utilcode.util.LogUtils;
+import com.blankj.utilcode.util.PermissionUtils;
 import com.blankj.utilcode.util.ToastUtils;
+import com.blankj.utilcode.util.Utils;
+import com.lzy.okgo.OkGo;
+import com.lzy.okgo.model.Progress;
+import com.lzy.okgo.model.Response;
+import com.lzy.okgo.request.base.Request;
 import com.tiocloud.chat.R;
 import com.tiocloud.chat.constant.TioConfig;
 import com.tiocloud.chat.feature.session.common.adapter.model.TioMsgType;
 import com.tiocloud.chat.feature.session.common.adapter.msg.TioMsg;
 import com.tiocloud.chat.feature.share.msg.ShareMsgActivity;
 import com.tiocloud.chat.util.StringUtil;
+import com.watayouxiang.androidutils.util.TioLogger;
 import com.watayouxiang.androidutils.widget.TioToast;
 import com.watayouxiang.androidutils.widget.dialog.TioDialog;
+import com.watayouxiang.androidutils.widget.dialog.progress.SingletonProgressDialog;
 import com.watayouxiang.httpclient.callback.TioCallback;
+import com.watayouxiang.httpclient.callback.TioFileCallback;
 import com.watayouxiang.httpclient.model.request.CollectEmotionReq;
 import com.watayouxiang.httpclient.model.request.MsgOperReq;
+import com.watayouxiang.httpclient.prefernces.HttpCache;
 import com.watayouxiang.imclient.model.body.wx.msg.InnerMsgCard;
+import com.watayouxiang.imclient.model.body.wx.msg.InnerMsgFile;
+import com.watayouxiang.imclient.model.body.wx.msg.InnerMsgImage;
+import com.watayouxiang.imclient.model.body.wx.msg.InnerMsgVideo;
+
+import java.io.File;
+import java.text.NumberFormat;
 
 /**
  * <pre>
@@ -49,6 +75,7 @@ public class SessionMsgDialog extends TioDialog {
         initCollectView();
         initComplaintView();
         initMultiChooseView();
+        initSaveMediaView();
     }
 
     // ====================================================================================
@@ -345,5 +372,121 @@ public class SessionMsgDialog extends TioDialog {
         } else {
             tv_copy.setVisibility(View.GONE);
         }
+    }
+
+    // ====================================================================================
+    // 保存图片/视频到本地相册
+    // ====================================================================================
+    private Boolean ifMedia = false;
+    private Object msgMediaContent;
+    private TioMsgType mediaMsgType;
+    public SessionMsgDialog setSaveMediaData(Object content, TioMsgType msgType) {
+        if (msgType == TioMsgType.image || msgType == TioMsgType.video) {
+            ifMedia = true;
+            mediaMsgType = msgType;
+            msgMediaContent = content;
+        }
+        return this;
+    }
+
+    private void initSaveMediaView() {
+        TextView tvSaveMedia = findViewById(R.id.tv_save_media);
+        if (ifMedia) {
+            tvSaveMedia.setVisibility(View.VISIBLE);
+            tvSaveMedia.setOnClickListener(v -> {
+                dismiss();
+                if (msgMediaContent != null) {
+                    mediaPermissionCheck(() -> {
+                        if (msgMediaContent instanceof InnerMsgImage) { //图片消息
+                            downloadFile(((InnerMsgImage) msgMediaContent).url);
+                        } else if (msgMediaContent instanceof InnerMsgVideo) {
+                            downloadFile(((InnerMsgVideo) msgMediaContent).url);
+                        }
+                    });
+                }
+            });
+        } else {
+            tvSaveMedia.setVisibility(View.GONE);
+        }
+    }
+
+    /**
+     * 权限校验
+     * @param runnable
+     */
+    private void mediaPermissionCheck(Runnable runnable) {
+        PermissionUtils.permission(PermissionConstants.STORAGE).callback(new PermissionUtils.SimpleCallback() {
+            @Override
+            public void onGranted() {
+                runnable.run();
+            }
+
+            @Override
+            public void onDenied() {
+                ToastUtils.showShort("存储权限获取失败！");
+            }
+        }).request();
+    }
+
+    private void downloadFile(String url) {
+        //公共目录
+        File publicMediaDir = Environment.getExternalStoragePublicDirectory(mediaMsgType == TioMsgType.image ? Environment.DIRECTORY_PICTURES : Environment.DIRECTORY_MOVIES);
+        //自己的文件夹
+        File appPicturesDir = new File(publicMediaDir, AppUtils.getAppName());
+        if (!appPicturesDir.exists()) {
+            appPicturesDir.mkdirs();
+        }
+
+        OkGo.<File>get(HttpCache.getResUrl(url)).execute(new TioFileCallback(appPicturesDir.getAbsolutePath(), getFileNameFromUrl(url)) {
+            @Override
+            public void onStart(Request<File, ? extends Request> request) {
+                SingletonProgressDialog.show_unCancel(activity, "保存中...");
+            }
+
+            @Override
+            public void onSuccess(Response<File> response) {
+                notifyMediaScanner(response.body(), () -> TioToast.showShort("保存完成"));
+            }
+
+            @Override
+            public void onError(Response<File> response) {
+                TioToast.showShort("保存失败");
+            }
+
+            @Override
+            public void onFinish() {
+                super.onFinish();
+                SingletonProgressDialog.dismiss();
+            }
+        });
+    }
+
+    public void notifyMediaScanner(File file, Runnable runnable) {
+        MediaScannerConnection.scanFile(activity, new String[]{file.getAbsolutePath()}, new String[]{getMimeType(file)}, (path, uri) -> {
+            LogUtils.e("已扫描: " + path);
+            runnable.run();
+        });
+    }
+
+    private String getMimeType(File file) {
+        String ext = MimeTypeMap.getFileExtensionFromUrl(file.getName().toLowerCase());
+        return ext != null ? MimeTypeMap.getSingleton().getMimeTypeFromExtension(ext) : "image/jpeg";
+    }
+
+    public static String getFileNameFromUrl(String url) {
+        if (url == null || url.isEmpty()) {
+            return "unknown_file";
+        }
+
+        int queryIndex = url.indexOf('?');
+        String baseUrl = (queryIndex == -1) ? url : url.substring(0, queryIndex);
+
+        int lastSlashIndex = baseUrl.lastIndexOf('/');
+
+        if (lastSlashIndex >= 0 && lastSlashIndex < baseUrl.length() - 1) {
+            return baseUrl.substring(lastSlashIndex + 1);
+        }
+
+        return "unknown_file";
     }
 }
