@@ -204,4 +204,36 @@ public class TimeUtil {
         DecimalFormat df = new DecimalFormat("00");
         return String.format("%s:%s", df.format(min), df.format(sec));
     }
+
+    /**
+     * 判断是否是合法时间戳字符串（支持秒级/毫秒级）
+     * @param str
+     * @return
+     */
+    public static boolean isTimestamp(String str) {
+        if (str == null || str.isEmpty()) return false;
+        if (!isNumeric(str)) return false;
+        try {
+            long ts = Long.parseLong(str);
+            if (ts <= 0) return false;
+            Date date = (str.length() <= 10) ? new Date(ts * 1000L) : new Date(ts);
+            return date.getTime() > 0; // 简单校验是否合理
+        } catch (NumberFormatException e) {
+            return false;
+        }
+    }
+
+    /**
+     * 判断是否为纯数字
+     * @param str
+     * @return
+     */
+    private static boolean isNumeric(String str) {
+        try {
+            Long.parseLong(str);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
+    }
 }

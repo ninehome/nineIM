@@ -9,13 +9,13 @@ import android.widget.TextView;
 import com.blankj.utilcode.util.SpanUtils;
 import com.blankj.utilcode.util.TimeUtils;
 import com.chad.library.adapter.base.BaseViewHolder;
-import com.shuyu.gsyvideoplayer.utils.CommonUtil;
 import com.tiocloud.chat.R;
 import com.tiocloud.chat.feature.session.common.adapter.MsgAdapter;
 import com.tiocloud.chat.feature.session.common.adapter.msg.TioMsg;
 import com.tiocloud.chat.feature.session.common.adapter.msg.TioP2PErrorMsg;
 import com.tiocloud.chat.feature.session.common.adapter.viewholder.base.MsgBaseViewHolder;
 import com.tiocloud.chat.mvp.addfriend.AddFriendContract;
+import com.tiocloud.chat.util.TimeUtil;
 import com.watayouxiang.androidutils.widget.TioToast;
 import com.watayouxiang.httpclient.model.response.AddFriendResp;
 import com.watayouxiang.httpclient.model.response.FriendApplyResp;
@@ -110,7 +110,8 @@ public class MsgTipViewHolder extends MsgBaseViewHolder {
         if (TextUtils.isEmpty(content)) {
             content = getContext().getResources().getString(R.string.unknown_notification);
         }
-        if (content.startsWith("16")){
+
+        if (TimeUtil.isTimestamp(content)) { //消息时间戳
             try {
                 Long l = Long.parseLong(content);
                 if (DateUtils.isToday(l)){
@@ -126,7 +127,6 @@ public class MsgTipViewHolder extends MsgBaseViewHolder {
                 .append(content)
                 .setForegroundColor(Color.parseColor("#FF909090"))
                 .create();
-
     }
 
     @Override
