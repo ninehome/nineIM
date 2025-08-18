@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <paths>
-    <external-files-path 
+    <external-files-path
         name="easy_photos_cache"
         path="Pictures/" />
-    <external-path 
-        name="external_root" 
+    <external-path
+        name="external_root"
         path="." />
 </paths>
