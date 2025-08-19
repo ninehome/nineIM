@@ -537,7 +537,7 @@ public abstract class MsgBaseViewHolder extends RecyclerViewHolder<MsgAdapter, B
                     // 消息撤回
                     .setWithdrawData(isUpManager, getAdapter().getChatLinkId(), mid, getMessage(), getMessage().getMsgType())
                     // 消息删除
-                    .setDeleteData(getAdapter().getChatLinkId(), mid)
+                    .setDeleteData(isUpManager, getAdapter().getChatLinkId(), mid)
                     // 消息转发
                     .setForwardData(chatLinkId, mid, getMessage())
                     //收藏

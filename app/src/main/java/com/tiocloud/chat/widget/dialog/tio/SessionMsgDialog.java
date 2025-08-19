@@ -25,6 +25,7 @@ import com.tiocloud.chat.R;
 import com.tiocloud.chat.constant.TioConfig;
 import com.tiocloud.chat.feature.session.common.adapter.model.TioMsgType;
 import com.tiocloud.chat.feature.session.common.adapter.msg.TioMsg;
+import com.tiocloud.chat.feature.session.group.GroupSessionActivity;
 import com.tiocloud.chat.feature.share.msg.ShareMsgActivity;
 import com.tiocloud.chat.util.StringUtil;
 import com.watayouxiang.androidutils.util.TioLogger;
@@ -264,9 +265,17 @@ public class SessionMsgDialog extends TioDialog {
     private String delete_chatlinkid;
     private String delete_mids;
 
-    public SessionMsgDialog setDeleteData(String chatlinkid, String mids) {
-        this.delete_chatlinkid = chatlinkid;
-        this.delete_mids = mids;
+    public SessionMsgDialog setDeleteData(boolean isUpManager, String chatlinkid, String mids) {
+        if (activity instanceof GroupSessionActivity) { //群聊页面下，必须是管理员/群主才会显示删除按钮
+            if (isUpManager) {
+                this.delete_chatlinkid = chatlinkid;
+                this.delete_mids = mids;
+            }
+        } else  {
+            this.delete_chatlinkid = chatlinkid;
+            this.delete_mids = mids;
+        }
+
         return this;
     }
 
