@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.blankj.utilcode.util.ClickUtils;
+import com.blankj.utilcode.util.LogUtils;
 import com.blankj.utilcode.util.SizeUtils;
 import com.blankj.utilcode.util.StringUtils;
 import com.chad.library.adapter.base.BaseViewHolder;
@@ -431,9 +432,9 @@ public abstract class MsgBaseViewHolder extends RecyclerViewHolder<MsgAdapter, B
                 if (groupSessionFragment == null){
                     UserDetailActivity.start(context, message.getUid(),false, false);
                 }else {
-                    Integer myRole = CacheTableCrud.getGroupRole(String.valueOf(-Integer.parseInt(message.getChatLinkId())), Long.parseLong(message.getUid()));
-
-                    UserDetailActivity.start(context, message.getUid(),myRole == 1 || myRole == 3 ? false : !groupSessionFragment.canFriend, myRole == 1 || myRole == 3);
+//                    Integer myRole = CacheTableCrud.getGroupRole(String.valueOf(-Integer.parseInt(message.getChatLinkId())), Long.parseLong(message.getUid()));
+                    Integer myRole = groupSessionFragment.myrole;
+                    UserDetailActivity.start(context, message.getUid(), (myRole == 1 || myRole == 3) ? false : !groupSessionFragment.canFriend, myRole == 1 || myRole == 3);
                 }
                 // 进入用户信息页
             }
