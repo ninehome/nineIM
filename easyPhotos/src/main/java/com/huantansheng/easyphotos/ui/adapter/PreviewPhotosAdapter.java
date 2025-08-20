@@ -126,9 +126,13 @@ public class PreviewPhotosAdapter extends RecyclerView.Adapter<PreviewPhotosAdap
     private void toPlayVideo(View v, Uri uri, String type) {
         Context context = v.getContext();
         Intent intent = new Intent(Intent.ACTION_VIEW);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-            intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
+        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            try {
+                context.getContentResolver().takePersistableUriPermission(uri, Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            } catch (SecurityException e) {
+                e.printStackTrace();
+            }
         }
         intent.setDataAndType(uri, type);
         context.startActivity(intent);
