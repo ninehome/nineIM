@@ -1137,8 +1137,7 @@ public class HistoryMsgAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
         in.addCategory("android.intent.category.DEFAULT");
         Uri data;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            // "net.csdn.blog.ruancoder.fileprovider"即是在清单文件中配置的authorities
-            data = FileProvider.getUriForFile(context,  BuildConfig.APPLICATION_ID + ".fileprovider", docFile);
+            data = FileProvider.getUriForFile(context, "com.tiocloud.chat.fileprovider", docFile);
             // 给目标应用一个临时授权
             in.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         } else {
