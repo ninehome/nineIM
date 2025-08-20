@@ -21,6 +21,7 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.blankj.utilcode.util.ClickUtils;
+import com.blankj.utilcode.util.LogUtils;
 import com.blankj.utilcode.util.ToastUtils;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.google.android.material.switchmaterial.SwitchMaterial;
@@ -68,6 +69,9 @@ import java.io.File;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Locale;
+
+import top.zibin.luban.Luban;
+import top.zibin.luban.OnCompressListener;
 
 /**
  * author : TaoWang
@@ -323,8 +327,7 @@ public class GroupInfoFragment extends TioFragment implements FragmentGroupInfoC
                         .withMaxResultSize(512, 512)
                         // 配置参数
                         .withOptions(options)
-                        .start(getActivity(), GroupInfoFragment.this, UCrop.REQUEST_CROP);
-//                uploadAvatar(photo.path);
+                        .start(requireActivity(), GroupInfoFragment.this, UCrop.REQUEST_CROP);
             }
         }else if (requestCode == UCrop.REQUEST_CROP){
             handleCropResult(data);
@@ -338,8 +341,25 @@ public class GroupInfoFragment extends TioFragment implements FragmentGroupInfoC
      */
     private void handleCropResult(Intent result) {
         try {
-            String path = mDestination.getPath();
-            uploadAvatar(path);
+            final Uri resultUri = UCrop.getOutput(result);
+            Luban.with(requireActivity()).load(resultUri).ignoreBy(100).setTargetDir(requireActivity().getCacheDir().getAbsolutePath()).setCompressListener(new OnCompressListener() {
+                @Override
+                public void onStart() {
+                    LogUtils.i("压缩开始");
+                }
+
+                @Override
+                public void onSuccess(File file) {
+                    LogUtils.i("压缩成功");
+                    uploadAvatar(file.getPath());
+                }
+
+                @Override
+                public void onError(Throwable e) {
+                    LogUtils.e("压缩失败" + e.getMessage());
+                    uploadAvatar(resultUri.getPath());
+                }
+            }).launch();
         }catch (Exception e){
             Toast.makeText(getActivity(), getString(R.string.cannot_crop_pic), Toast.LENGTH_SHORT).show();
             e.printStackTrace();

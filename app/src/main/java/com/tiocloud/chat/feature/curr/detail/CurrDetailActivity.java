@@ -13,6 +13,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 
+import com.blankj.utilcode.util.LogUtils;
 import com.blankj.utilcode.util.ToastUtils;
 import com.huantansheng.easyphotos.EasyPhotos;
 import com.huantansheng.easyphotos.models.album.entity.Photo;
@@ -47,6 +48,9 @@ import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Locale;
 
+import top.zibin.luban.Luban;
+import top.zibin.luban.OnCompressListener;
+
 /**
  * author : TaoWang
  * date : 2020/3/12
@@ -77,18 +81,13 @@ public class CurrDetailActivity extends TioActivity implements CurrInfoContract.
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-//        presenter.getAvatarDialog().onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQ_CODE_IMAGE_GIF) {
             // 容错处理
             if (data == null) return;
             //返回对象集合：如果你需要了解图片的宽、高、大小、用户是否选中原图选项等信息，可以用这个
             ArrayList<Photo> resultPhotos = data.getParcelableArrayListExtra(EasyPhotos.RESULT_PHOTOS);
-            //返回图片地址集合时如果你需要知道用户选择图片时是否选择了原图选项，用如下方法获取
-            boolean selectedOriginal = data.getBooleanExtra(EasyPhotos.RESULT_SELECTED_ORIGINAL, false);
-            TioLogger.i(String.valueOf(resultPhotos));
-
             // 容错处理
-            if (resultPhotos == null || resultPhotos.size() == 0) {
+            if (resultPhotos == null || resultPhotos.isEmpty()) {
                 return;
             }
 
@@ -129,8 +128,25 @@ public class CurrDetailActivity extends TioActivity implements CurrInfoContract.
      */
     private void handleCropResult(Intent result) {
         try {
-            String path = mDestination.getPath();
-            uploadAvatar(path);
+            final Uri resultUri = UCrop.getOutput(result);
+            Luban.with(this).load(resultUri).ignoreBy(100).setTargetDir(this.getCacheDir().getAbsolutePath()).setCompressListener(new OnCompressListener() {
+                @Override
+                public void onStart() {
+                    LogUtils.i("压缩开始");
+                }
+
+                @Override
+                public void onSuccess(File file) {
+                    LogUtils.i("压缩成功");
+                    uploadAvatar(file.getPath());
+                }
+
+                @Override
+                public void onError(Throwable e) {
+                    LogUtils.e("压缩失败" + e.getMessage());
+                    uploadAvatar(resultUri.getPath());
+                }
+            }).launch();
         }catch (Exception e){
             Toast.makeText(this, getString(R.string.cannot_crop_pic), Toast.LENGTH_SHORT).show();
             e.printStackTrace();
@@ -149,7 +165,7 @@ public class CurrDetailActivity extends TioActivity implements CurrInfoContract.
 
             @Override
             public void onTioError(String msg) {
-
+                ToastUtils.showShort(msg);
             }
         });
     }
