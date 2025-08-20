@@ -169,7 +169,7 @@ public class FriendPresenter extends FriendContract.Presenter {
         iData.add(new FuncItem(0));
         iData.add(new ButtonItem(getView().getActivity().getString(R.string.group_chat), ButtonItem.BtnType.GROUP,R.mipmap.icon_groupchat));
         iData.add(new ButtonItem(getView().getActivity().getString(R.string.label), ButtonItem.BtnType.LABLE, R.mipmap.icon_label));
-        iData.add(new ButtonItem(getView().getActivity().getString(R.string.group_send), ButtonItem.BtnType.GROUPSEND, R.mipmap.icon_groupfa));
+//        iData.add(new ButtonItem(getView().getActivity().getString(R.string.group_send), ButtonItem.BtnType.GROUPSEND, R.mipmap.icon_groupfa));
         // 获取联系人
         getModel().requestMailList(iData, taskData -> {
             if (taskData.ok) {
