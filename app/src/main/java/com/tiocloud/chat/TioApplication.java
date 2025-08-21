@@ -108,8 +108,8 @@ public class TioApplication extends Application {
         // WebRTC 来电监听
         setWebRtcListener();
         // 崩溃日志
-        CrashLogUtils.getInstance().listener();
-        CrashLogUtils.getInstance().upload();
+//        CrashLogUtils.getInstance().listener();
+//        CrashLogUtils.getInstance().upload();
         // debug
         try {
             if (BuildConfig.DEBUG) {

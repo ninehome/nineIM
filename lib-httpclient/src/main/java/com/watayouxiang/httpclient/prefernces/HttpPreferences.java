@@ -29,7 +29,7 @@ public class HttpPreferences extends PreferencesUtils {
     }
 
     public static String getGatewayId() {
-        return getString(KEY_GETWAY_ID, "0");
+        return getString(KEY_GETWAY_ID, "");
     }
     public static String getBaseUrl() {
         return getString(KEY_BASE_URL, null);

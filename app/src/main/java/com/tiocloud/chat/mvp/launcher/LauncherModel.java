@@ -1,13 +1,10 @@
 package com.tiocloud.chat.mvp.launcher;
 
-import com.alibaba.fastjson.JSON;
-import com.google.gson.Gson;
 import com.lzy.okgo.cache.CacheMode;
 import com.tiocloud.account.TioAccount;
 import com.tiocloud.chat.constant.TioConfig;
 import com.tiocloud.chat.feature.main.fragment.Nav1Fragment;
 import com.tiocloud.chat.preferences.ConfigPreferences;
-//import com.tiocloud.jpush.utils.LogUtils;
 import com.watayouxiang.androidutils.util.TioLogger;
 import com.watayouxiang.androidutils.yanxun.ConstantUtils;
 import com.watayouxiang.db.dao.CacheTableCrud;
