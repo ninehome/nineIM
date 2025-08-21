@@ -44,7 +44,7 @@ public class LauncherPresenter extends LauncherContract.Presenter {
             public void onFailure(String msg) {
                 super.onFailure(msg);
                 SingletonProgressDialog.dismiss();
-                exitApp(getView().getActivity().getString(R.string.get_locationinfo_fail) + msg);
+                relaunchApp(getView().getActivity().getString(R.string.get_locationinfo_fail) + msg);
             }
         });
     }
@@ -58,8 +58,9 @@ public class LauncherPresenter extends LauncherContract.Presenter {
         getView().finish();
     }
 
-    private void exitApp(String reason) {
+    private void relaunchApp(String reason) {
         TioToast.showShort(reason);
-        new Handler().postDelayed(() -> AppUtils.exitApp(), 2000);
+
+        new Handler().postDelayed(() -> AppUtils.relaunchApp(), 2000);
     }
 }
