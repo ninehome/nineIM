@@ -2,17 +2,14 @@ package com.tiocloud.chat.mvp.launcher;
 
 import android.os.Handler;
 
-import com.blankj.utilcode.constant.PermissionConstants;
 import com.blankj.utilcode.util.AppUtils;
-import com.blankj.utilcode.util.LogUtils;
-import com.blankj.utilcode.util.PermissionUtils;
 import com.blankj.utilcode.util.ToastUtils;
 import com.tiocloud.account.TioAccount;
 import com.tiocloud.chat.R;
 import com.tiocloud.chat.constant.TioConfig;
-import com.tiocloud.chat.widget.dialog.tio.ProtectGuideDialog;
 import com.watayouxiang.androidutils.mvp.BaseModel;
 import com.watayouxiang.androidutils.widget.TioToast;
+import com.watayouxiang.androidutils.widget.dialog.progress.SingletonProgressDialog;
 
 /**
  * author : TaoWang
@@ -20,7 +17,6 @@ import com.watayouxiang.androidutils.widget.TioToast;
  * desc : 应用启动表现层
  */
 public class LauncherPresenter extends LauncherContract.Presenter {
-    private long startTime;
 
     public LauncherPresenter(LauncherContract.View view) {
         super(view);
@@ -28,23 +24,7 @@ public class LauncherPresenter extends LauncherContract.Presenter {
 
     @Override
     public void init() {
-        startTime = System.currentTimeMillis();
-        // 显示隐私政策确认弹窗
-        new ProtectGuideDialog(getView().getActivity(), () -> {
-            // 移除启动时的权限请求
-            // reqPermission();
-            // 直接进入配置请求
-            reqConfig();
-        }).checkConfirm();
-    }
-
-    private void reqPermission() {
-        PermissionUtils.permission(PermissionConstants.PHONE, PermissionConstants.LOCATION)
-                .rationale((activity, shouldRequest) -> shouldRequest.again(true))
-                .callback((isAllGranted, granted, deniedForever, denied) -> {
-                    reqConfig();
-                })
-                .request();
+        reqConfig();
     }
 
     private void reqConfig() {
@@ -56,27 +36,20 @@ public class LauncherPresenter extends LauncherContract.Presenter {
                     TioAccount.initUmVerify(getView().getActivity().getApplicationContext(), TioConfig.um_appkey, TioConfig.um_secry);
                 }
                 TioAccount.isWxLoginEnable = TioConfig.OpenCloseConfig.isShowWxLogin();
+                SingletonProgressDialog.dismiss();
                 openNextPage();
             }
 
             @Override
             public void onFailure(String msg) {
                 super.onFailure(msg);
-                openNextPage();
-                if (TioConfig.OpenCloseConfig.enterGroupChatCheck()){
-                    exitApp(getView().getActivity().getString(R.string.get_locationinfo_fail) + msg);
-                }else {
-                    ToastUtils.showShort(getView().getActivity().getString(R.string.get_locationinfo_fail) + msg);
-                }
+                SingletonProgressDialog.dismiss();
+                relaunchApp(getView().getActivity().getString(R.string.get_locationinfo_fail) + msg);
             }
         });
     }
 
-    public void toNext(){
-        if (!getConfig){
-            LogUtils.e("未获取到配置不跳转");
-            return;
-        }
+    private void openNextPage() {
         if (!getModel().isLogin()) {
             getView().openLoginPage();
         } else {
@@ -84,33 +57,10 @@ public class LauncherPresenter extends LauncherContract.Presenter {
         }
         getView().finish();
     }
-    boolean getConfig = false;
-    private void openNextPage() {
-        getConfig = true;
-        long d = System.currentTimeMillis() - startTime;
-        if (d < TioConfig.OpenCloseConfig.getSplashTime()){
-            LogUtils.e("不够3秒不跳转:"+d);
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    if (getView().getActivity().isFinishing()){
-                        return;
-                    }
-                    toNext();
-                }
-            }, 3000);
-            return;
-        }
-        toNext();
-    }
 
-    private void exitApp(String reason) {
+    private void relaunchApp(String reason) {
         TioToast.showShort(reason);
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                AppUtils.exitApp();
-            }
-        }, 2000);
+
+        new Handler().postDelayed(() -> AppUtils.relaunchApp(), 2000);
     }
 }

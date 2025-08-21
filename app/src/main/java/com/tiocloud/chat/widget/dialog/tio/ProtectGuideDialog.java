@@ -5,6 +5,7 @@ import android.view.View;
 
 import androidx.annotation.NonNull;
 
+import com.blankj.utilcode.util.AppUtils;
 import com.tiocloud.chat.R;
 import com.watayouxiang.httpclient.TioWebUrl;
 import com.watayouxiang.androidutils.feature.TioBrowserActivity;
@@ -41,47 +42,33 @@ public class ProtectGuideDialog extends TioDialog {
     protected void initDialogContentView() {
         super.initDialogContentView();
         View tv_userProtocol = findViewById(R.id.tv_userProtocol);
-        tv_userProtocol.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String url = "https://xxsj.wangliantong.com";
-                TioBrowserActivity.start(mContext, url);
-            }
+        tv_userProtocol.setOnClickListener(v -> {
+            String url = "https://xxsj.wangliantong.com";
+            TioBrowserActivity.start(mContext, url);
         });
 
         View tv_privatePolicy = findViewById(R.id.tv_privatePolicy);
-        tv_privatePolicy.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String url = "https://yszc.wangliantong.com";
-                TioBrowserActivity.start(mContext, url);
-            }
+        tv_privatePolicy.setOnClickListener(v -> {
+            String url = "https://yszc.wangliantong.com";
+            TioBrowserActivity.start(mContext, url);
         });
 
         View tv_negativeBtn = findViewById(R.id.tv_negativeBtn);
-        tv_negativeBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // 存储状态
-                ConfigPreferences.saveAgreeProtectGuide(false);
-                // 关闭页面
-                mContext.finish();
-                // 关闭弹窗
-                dismiss();
-            }
+        tv_negativeBtn.setOnClickListener(v -> {
+            // 存储状态
+            ConfigPreferences.saveAgreeProtectGuide(false);
+            //退出整个APP
+            AppUtils.exitApp();
         });
 
         View tv_positiveBtn = findViewById(R.id.tv_positiveBtn);
-        tv_positiveBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // 存储状态
-                ConfigPreferences.saveAgreeProtectGuide(true);
-                // 关闭弹窗
-                dismiss();
-                // 回调
-                onConfirmListener.onConfirm();
-            }
+        tv_positiveBtn.setOnClickListener(v -> {
+            // 存储状态
+            ConfigPreferences.saveAgreeProtectGuide(true);
+            // 关闭弹窗
+            dismiss();
+            // 回调
+            onConfirmListener.onConfirm();
         });
     }
 

@@ -18,5 +18,6 @@ include ':pullToRefershLibraryMy'
 include ':app'
 include ':easyPhotos'
 include ':lib-baseRecyclerView'
+include ':tuicallkit-kt'
 
 rootProject.name = "TioIm-New-UI"

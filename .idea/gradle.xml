@@ -29,6 +29,7 @@
             <option value="$PROJECT_DIR$/tio-account" />
             <option value="$PROJECT_DIR$/tio-social" />
             <option value="$PROJECT_DIR$/tio-verification" />
+            <option value="$PROJECT_DIR$/tuicallkit-kt" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />
