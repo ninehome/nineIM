@@ -113,11 +113,11 @@ public class LoginActivity extends EasyActivity<AccountLoginActivityBinding> imp
         presenter = new LoginPresenter(this);
         resetUI();
 
-        if (TioAccount.useOnkeyLogin){
-            sdkInit();
-            mUIConfig = BaseUIConfig.init(this, mPhoneNumberAuthHelper);
-            oneKeyLogin();
-        }
+//        if (TioAccount.useOnkeyLogin){
+//            sdkInit();
+//            mUIConfig = BaseUIConfig.init(this, mPhoneNumberAuthHelper);
+//            oneKeyLogin();
+//        }
         if (TioAccount.isWxLoginEnable){
             binding.llWx.setVisibility(View.VISIBLE);
         }else {
@@ -320,18 +320,18 @@ public class LoginActivity extends EasyActivity<AccountLoginActivityBinding> imp
             binding.tvCodeLogin.setVisibility(View.INVISIBLE);
         }
 
-        if (TioAccount.useOnkeyLogin){
-            binding.tvTitle2.setVisibility(View.VISIBLE);
-            binding.tvTitle2.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-//                    OneKeyLoginActivity.start(LoginActivity.this);
-                    oneKeyLogin();
-                }
-            });
-        }else {
+//        if (TioAccount.useOnkeyLogin){
+//            binding.tvTitle2.setVisibility(View.VISIBLE);
+//            binding.tvTitle2.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+////                    OneKeyLoginActivity.start(LoginActivity.this);
+//                    oneKeyLogin();
+//                }
+//            });
+//        }else {
             binding.tvTitle2.setVisibility(View.GONE);
-        }
+//        }
     }
 
     // 注册
