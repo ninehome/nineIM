@@ -255,7 +255,7 @@ public class MainChatFragment extends MainTabFragment {
 
     private void setAppendTitle(String append) {
         if (homeTitleBar != null) {
-            homeTitleBar.setAppendTitle(append);
+//            homeTitleBar.setAppendTitle(append);
         }
     }
 
